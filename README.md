@@ -35,6 +35,8 @@ utils.
 ### Fusion
 
 - [X] `useAsync` (analogous to [Fusion Eventuals])
+- [ ] `useCoroutine`
+- [ ] `useThread`
 
 ### Misc
 
