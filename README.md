@@ -10,9 +10,6 @@ utils.
 
 ### Existing
 
-- [ ] `useAsyncCallback`
-- [ ] `useAsyncEffect` (unlikely as Fusion has no concept of effects)
-- [ ] `useAsync`
 - [X] `useCamera`
 - [ ] `useDebounceCallback`
 - [ ] `useDebounceEffect` (unlikely as Fusion has no concept of effects)
@@ -37,7 +34,7 @@ utils.
 
 ### Fusion
 
-- [ ] `useEvent` (analogous to Elttob/LibOpen's Event module)
+- [X] `useAsync` (analogous to [Fusion Eventuals])
 
 ### Misc
 
@@ -45,5 +42,6 @@ utils.
 - [ ] TypeScript support (waiting for `@rbxts/fusion@0.3`. may defer to using `@znotfireman/fusion`)
 - [ ] Memoize utility for some utilities e.g. `usePx` really should be cached
 
+[Fusion Eventuals]: https://github.com/dphfox/Fusion/issues/4
 [`pretty-vide-utils`]: https://github.com/PepeElToro41/pretty-vide-utils
 [`pretty-react-hooks`]: https://github.com/littensy/pretty-react-hooks
