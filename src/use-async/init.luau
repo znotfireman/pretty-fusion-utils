@@ -16,15 +16,15 @@ type Become = <T>(value: T) -> T
 
 -- FUTURE: This util is to be obsolete once Fusion issue #4 is implemented:
 -- https://github.com/dphfox/Fusion/issues/4
-local function useAsync<Scope, Eventual>(
+local function useAsync<Scope, Result>(
   outerScope: Scope & Types.FusionScope,
-  fallback: Eventual,
+  fallback: Result,
   processor: (
     use: Types.Use,
     become: Become,
     scope: Scope
-  ) -> Eventual
-): Types.StateObject<Eventual>
+  ) -> Result
+): Types.StateObject<Result>
   local scope = outerScope:scoped()
   local peek = scope.peek
 
