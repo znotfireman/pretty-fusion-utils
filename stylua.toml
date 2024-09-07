@@ -1,0 +1,12 @@
+# WE DONT FUCKING CARE.
+column_width = 100
+
+line_endings = "Unix"
+indent_type = "Spaces"
+indent_width = 2
+quote_style = "AutoPreferDouble"
+call_parentheses = "Input"
+collapse_simple_statement = "Never"
+
+[sort_requires]
+  enabled = true

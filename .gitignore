@@ -1,0 +1,11 @@
+/*.rbxlx.lock
+/*.rbxl.lock
+**/.DS_Store
+Packages/
+**/*.rbx[lm]*
+.DS_Store
+roblox.yml
+roblox.toml
+globalTypes.d.lua
+**/sourcemap.json
+dist/
