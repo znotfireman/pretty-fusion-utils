@@ -4,6 +4,8 @@ Reimplements utilities and hooks from [`pretty-vide-utils`] and
 [`pretty-react-hooks`] for Fusion 0.3, including a bevy of Fusion specific
 utils.
 
+<img src="./assets/death-battle.png"/>
+
 ## Prerelease
 
 ### Existing
