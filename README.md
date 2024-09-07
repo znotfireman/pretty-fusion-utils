@@ -1,10 +1,8 @@
 # pretty-fusion-utils
 
-Reimplements utilities and hooks from
-[`pretty-vide-utils`](https://github.com/PepeElToro41/pretty-vide-utils/tree/main)
-and
-[`pretty-react-hooks`](https://www.npmjs.com/package/@rbxts/pretty-react-hooks)
-for Fusion 0.3, including a bevy of Fusion specific utils.
+Reimplements utilities and hooks from [`pretty-vide-utils`] and
+[`pretty-react-hooks`] for Fusion 0.3, including a bevy of Fusion specific
+utils.
 
 ## Prerelease
 
@@ -43,3 +41,7 @@ for Fusion 0.3, including a bevy of Fusion specific utils.
 
 - [ ] Darklua setup & build system
 - [ ] TypeScript support (waiting for `@rbxts/fusion@0.3`. may defer to using `@znotfireman/fusion`)
+- [ ] Memoize utility for some utilities e.g. `usePx` really should be cached
+
+[`pretty-vide-utils`]: https://github.com/PepeElToro41/pretty-vide-utils
+[`pretty-react-hooks`]: https://github.com/littensy/pretty-react-hooks
