@@ -2,7 +2,7 @@ local CollectionService = game:GetService("CollectionService")
 
 local Types = require("src/types")
 local lockValue = require("src/utils/lock-value")
-local useEventListener = require("src/use-event-listener")
+local useEvent = require("src/use-event")
 
 --[=[
   Returns a state object with every instance of a given tag. Updates when new
@@ -14,13 +14,13 @@ local function useTagged(scope: Types.FusionScope, tag: string): Types.StateObje
   local peek = scope.peek
   local instances = scope:Value(CollectionService:GetTagged(tag))
 
-  useEventListener(scope, CollectionService:GetInstanceAddedSignal(tag), function(instance)
+  useEvent(scope, CollectionService:GetInstanceAddedSignal(tag), function(instance)
     local freshInstances = table.clone(peek(instances))
     table.insert(freshInstances, instance)
     instances:set(freshInstances)
   end)
 
-  useEventListener(scope, CollectionService:GetInstanceRemovedSignal(tag), function(instance)
+  useEvent(scope, CollectionService:GetInstanceRemovedSignal(tag), function(instance)
     local freshInstances = table.clone(peek(instances))
     local index = table.find(freshInstances, instance)
     if index then

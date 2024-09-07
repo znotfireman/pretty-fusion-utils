@@ -1,7 +1,7 @@
 local RunService = game:GetService("RunService")
 
 local Types = require("src/types")
-local useEventListener = require("src/use-event-listener")
+local useEvent = require("src/use-event")
 
 type Timer = Types.Value<number> & {
   start: (self: Timer) -> (),
@@ -18,7 +18,7 @@ local function useTimer(scope: Types.Scope<Types.Fusion>, initial: number?): Tim
   local timer = scope:Value(initial or 0)
   local running = true
 
-  useEventListener(scope, RunService.Heartbeat, function(dt: number)
+  useEvent(scope, RunService.Heartbeat, function(dt: number)
     if running then
       timer:set(scope.peek(timer) + dt)
     end

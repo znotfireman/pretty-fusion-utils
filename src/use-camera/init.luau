@@ -2,7 +2,7 @@ local Workspace = game:GetService("Workspace")
 
 local Types = require("src/types")
 local lockValue = require("src/utils/lock-value")
-local useEventListener = require("src/use-event-listener")
+local useEvent = require("src/use-event")
 
 local onCameraChanged = Workspace:GetPropertyChangedSignal("CurrentCamera")
 
@@ -14,7 +14,7 @@ local onCameraChanged = Workspace:GetPropertyChangedSignal("CurrentCamera")
 local function useCamera(scope: Types.Scope<Types.Fusion>)
   local camera = scope:Value(Workspace.CurrentCamera)
 
-  useEventListener(scope, onCameraChanged, function()
+  useEvent(scope, onCameraChanged, function()
     if Workspace.CurrentCamera then
       camera:set(Workspace.CurrentCamera)
     end

@@ -55,7 +55,7 @@ end
   @param listener The listener to subscribe with.
   @return The connection object.
 ]=]
-local function useEventListener(
+local function useEvent(
   scope: Types.Scope<Types.Fusion>,
   event: EventLike,
   listener: (...any) -> ()
@@ -65,4 +65,4 @@ local function useEventListener(
   return disconnect
 end
 
-return useEventListener
+return useEvent
