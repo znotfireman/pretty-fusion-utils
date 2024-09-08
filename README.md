@@ -1,10 +1,17 @@
+<img
+  src="./assets/logo-light.svg#gh-light-mode-only"
+  width="100px"
+  alt="Flower bouquet with Fusion accent colors"
+/><img
+  src="./assets/logo-dark.svg#gh-dark-mode-only"
+  width="100px"
+  alt="Flower bouquet with Fusion accent colors"/>
+
 # pretty-fusion-utils
 
-Reimplements utilities and hooks from [`pretty-vide-utils`] and
-[`pretty-react-hooks`] for Fusion 0.3, including a bevy of Fusion specific
-utils.
-
-<img src="./assets/death-battle.png"/>
+Utilities and hooks from [`pretty-vide-utils`] and [`pretty-react-hooks`] for
+[Fusion 0.3](https://elttob.uk/Fusion/0.3/), along with specific Fusion
+utilities.
 
 ## Prerelease
 
@@ -41,7 +48,7 @@ utils.
 ### Misc
 
 - [ ] Darklua setup & build system
-- [ ] TypeScript support (waiting for `@rbxts/fusion@0.3`. may defer to using `@znotfireman/fusion`)
+- [ ] TypeScript support (waiting for `@rbxts/fusion@0.3`, may defer to using `@znotfireman/fusion`)
 - [ ] Memoize utility for some utilities e.g. `usePx` really should be cached
 
 [Fusion Eventuals]: https://github.com/dphfox/Fusion/issues/4
