@@ -9,3 +9,9 @@ roblox.toml
 globalTypes.d.lua
 **/sourcemap.json
 dist/
+
+# Ignore generated documentation
+# Generate new documentation via `lune run generate-docs`
+mkdocs.yaml
+docs/*
+!docs/assets

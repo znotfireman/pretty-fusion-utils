@@ -1,0 +1,28 @@
+[config]
+  name = "useEvent"
+  brief = """\
+  Connects to an event-like object. The connection is automatically \
+  disconnected when the scope is cleaned up.\
+  """
+
+[[config.args]]
+  name = "scope"
+  type = "Fusion.Scope"
+  description = "The scope to store cleanup tasks."
+
+[[config.args]]
+  name = "event"
+  type = "EventLike"
+  description = """\
+  An event-like object to connect. Can be a RBXScriptSignal, or an object
+  with a `Connect` or `connect` method.
+  """
+
+[[config.args]]
+  name = "listener"
+  type = "(...any) -> ()"
+  description = "An event listener to be connected."
+
+[config.returns]
+  type = "() -> ()"
+  description = "A function to disconnect the event listener."

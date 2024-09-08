@@ -1,0 +1,20 @@
+[config]
+  name = "useMouse"
+  brief = """\
+  Returns a state object with the mouse position. Updates when the mouse \
+  position changes.\
+  """
+
+[[config.args]]
+  name = "scope"
+  type = "Fusion.Scope"
+  description = "The scope to store cleanup tasks."
+
+[[config.args]]
+  name = "observer"
+  type = "(mouse: Vector2) -> ()?"
+  description = "Optional observer tracking the mouse position."
+
+[config.returns]
+  type = "StateObject<Vector2>"
+  description = "A state object with the mouse position."

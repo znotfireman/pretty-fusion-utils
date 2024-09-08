@@ -1,0 +1,20 @@
+[config]
+  name = "useTagged"
+  brief = """\
+  Returns a state object with every instance of a given tag. Updates when new \
+  instances get tagged or old instances get untagged.\
+  """
+
+[[config.args]]
+  name = "scope"
+  type = "Fusion.Scope"
+  description = "The scope to store cleanup tasks."
+
+[[config.args]]
+  name = "tag"
+  type = "string"
+  description = "The CollectionService tag to track."
+
+[config.returns]
+  type = "StateObject<{ Instance }>"
+  description = "A state object with every instance of the given tag."

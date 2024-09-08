@@ -1,0 +1,30 @@
+[config]
+  name = "usePx"
+  brief = """\
+  Returns a state object with the current `px` unit based on the current \
+  viewport size.\
+  """
+
+[[config.args]]
+  name = "scope"
+  type = "Fusion.Scope"
+  description = "The scope to store cleanup tasks."
+
+[[config.args]]
+  name = "baseResolution"
+  type = "Vector2?"
+  description = "TThe base resolution to scale from, defaults to a Macbook Air's resolution."
+
+[[config.args]]
+  name = "minimumScale"
+  type = "number?"
+  description = "The smallest scale, defaults to 50%."
+
+[[config.args]]
+  name = "dominantAxis"
+  type = "number?"
+  description = "The axis to scale for, defaults to 1:1."
+
+[config.returns]
+  type = "Px"
+  description = "A `px` unit that scales with the viewport size.."

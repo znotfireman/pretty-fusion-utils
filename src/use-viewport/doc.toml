@@ -1,0 +1,15 @@
+[config]
+  name = "useViewport"
+  brief = """\
+  Returns the current viewport size. Updates when the current camera changes \
+  or when the viewport size is changed.\
+  """
+
+[[config.args]]
+  name = "scope"
+  type = "Fusion.Scope"
+  description = "The scope to store cleanup tasks."
+
+[config.returns]
+  type = "StateObject<Vector2>"
+  description = "A state object with the viewport size."

@@ -1,0 +1,15 @@
+[config]
+  name = "useCamera"
+  brief = """\
+  Returns a state object with the current camera. Updates when the current \
+  camera changes.\
+  """
+
+[[config.args]]
+  name = "scope"
+  type = "Fusion.Scope"
+  description = "The scope to store cleanup tasks."
+
+[config.returns]
+  type = "StateObject<Camera>"
+  description = "A state object with the current camera."
