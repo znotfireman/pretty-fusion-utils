@@ -55,3 +55,7 @@ utilities.
 [Fusion Eventuals]: https://github.com/dphfox/Fusion/issues/4
 [`pretty-vide-utils`]: https://github.com/PepeElToro41/pretty-vide-utils
 [`pretty-react-hooks`]: https://github.com/littensy/pretty-react-hooks
+
+## License
+
+`pretty-fusion-utils` is avalible under MIT or Apache 2.0 terms.
