@@ -12,6 +12,7 @@ local function useEffect<Scope>(
 )
   -- FUTURE: This seems BAD. Maybe wait for a built-in?
   -- TODO: async support
+  -- FIXME: computed lazily evaluates, use observers
   scope:Computed(function(use, scope)
     callback(use, scope)
     return {}
