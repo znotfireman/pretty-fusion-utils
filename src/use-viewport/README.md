@@ -10,3 +10,18 @@ function useViewport(
 ```
 
 Returns the current viewport size. Updates when the current camera changes or when the viewport size is changed.
+
+---
+
+## Arguments
+
+### scope `: Fusion.Scope`
+
+The scope to store cleanup tasks.
+
+---
+
+### Returns `: StateObject<Vector2>`
+
+A state object with the viewport size.
+

@@ -10,3 +10,18 @@ function useCamera(
 ```
 
 Returns a state object with the current camera. Updates when the current camera changes.
+
+---
+
+## Arguments
+
+### scope `: Fusion.Scope`
+
+The scope to store cleanup tasks.
+
+---
+
+### Returns `: StateObject<Camera>`
+
+A state object with the current camera.
+

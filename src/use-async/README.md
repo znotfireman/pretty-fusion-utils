@@ -16,3 +16,30 @@ function useAsync<Scope, Result>(
 ```
 
 Returns a state object with an value from an asynchronous processor. The processor is given a Use callback that adds dependencies, a Become callback alter the current eventual value, and an inner scope to add cleanup tasks to.
+
+---
+
+## Arguments
+
+### scope `: Scope & Fusion.Scope`
+
+The scope to store cleanup tasks.
+
+### fallback `: Result`
+
+The fallback value to display while the processor runs.
+
+### processor `: (
+  use: Types.Use,
+  become: Become,
+  scope: Scope
+) -> Result`
+
+The processor of the eventual value. It receives a Use callback, a Become callback, and an inner scope.
+
+---
+
+### Returns `: StateObject<Result>`
+
+A state object with the asynchronous value.
+

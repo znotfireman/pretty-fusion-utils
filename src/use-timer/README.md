@@ -11,3 +11,22 @@ function useTimer(
 ```
 
 Creates a timer that can be used to track a value over time.
+
+---
+
+## Arguments
+
+### scope `: Fusion.Scope`
+
+The scope to store cleanup tasks.
+
+### initial `: number?`
+
+The initial value of the timer.
+
+---
+
+### Returns `: Timer`
+
+A timer object.
+

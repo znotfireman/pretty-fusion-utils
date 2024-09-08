@@ -11,3 +11,22 @@ function useMouse(
 ```
 
 Returns a state object with the mouse position. Updates when the mouse position changes.
+
+---
+
+## Arguments
+
+### scope `: Fusion.Scope`
+
+The scope to store cleanup tasks.
+
+### observer `: (mouse: Vector2) -> ()?`
+
+Optional observer tracking the mouse position.
+
+---
+
+### Returns `: StateObject<Vector2>`
+
+A state object with the mouse position.
+

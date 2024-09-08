@@ -46,6 +46,7 @@ local function generateDocs()
     print("Processing", util.config.name)
 
     local code = StringBuilder():append("function", util.config.name)
+    local codeDocumentation = StringBuilder()
     do
       if util.config.variadics then
         code:append(`<{table.concat(util.config.variadics, ", ")}>`)
@@ -53,15 +54,31 @@ local function generateDocs()
       code:appendLine("("):indent()
 
       if util.config.args then
+        codeDocumentation:appendLine():appendLine("---"):appendLine():appendLine("## Arguments")
+
         local args = {}
         for _, arg in util.config.args do
           table.insert(args, `{arg.name}: {arg.type}`)
+          codeDocumentation
+            :appendLine()
+            -- TODO: fix multilines...
+            :appendLine("###", arg.name, `\`: {arg.type}\``)
+            :appendLine()
+            :appendLine(arg.description)
         end
         code:appendLine(table.concat(args, ",\n"))
       end
       code:unIndent():append("):")
       if util.config.returns then
         code:append("", util.config.returns.type)
+
+        codeDocumentation
+          :appendLine()
+          :appendLine("---")
+          :appendLine()
+          :appendLine("### Returns `:", util.config.returns.type .. "`")
+          :appendLine()
+          :appendLine(util.config.returns.description)
       end
     end
 
@@ -103,6 +120,7 @@ local function generateDocs()
         :appendLine("```")
         :appendLine()
         :appendLine(util.config.brief)
+        :appendLine(codeDocumentation:build())
         :build()
     )
   end

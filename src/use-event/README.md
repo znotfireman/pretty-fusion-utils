@@ -12,3 +12,28 @@ function useEvent(
 ```
 
 Connects to an event-like object. The connection is automatically disconnected when the scope is cleaned up.
+
+---
+
+## Arguments
+
+### scope `: Fusion.Scope`
+
+The scope to store cleanup tasks.
+
+### event `: EventLike`
+
+An event-like object to connect. Can be a RBXScriptSignal, or an object
+  with a `Connect` or `connect` method.
+  
+
+### listener `: (...any) -> ()`
+
+An event listener to be connected.
+
+---
+
+### Returns `: () -> ()`
+
+A function to disconnect the event listener.
+
