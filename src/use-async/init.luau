@@ -16,6 +16,7 @@ type Become = <T>(value: T) -> T
 
 -- FUTURE: This util is to be obsolete once Fusion issue #4 is implemented:
 -- https://github.com/dphfox/Fusion/issues/4
+-- FIXME: should restore old dependencies on error
 local function useAsync<Scope, Result>(
   outerScope: Scope & Types.FusionScope,
   fallback: Result,
