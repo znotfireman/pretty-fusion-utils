@@ -5,9 +5,9 @@
 
 ```Luau
 function useEvent(
-  scope = Fusion.Scope,
-  event = EventLike,
-  listener = (...any) -> ()
+  scope: Fusion.Scope,
+  event: EventLike,
+  listener: (...any) -> ()
 ): () -> ()
 ```
 

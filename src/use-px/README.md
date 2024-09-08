@@ -5,10 +5,10 @@
 
 ```Luau
 function usePx(
-  scope = Fusion.Scope,
-  baseResolution = Vector2?,
-  minimumScale = number?,
-  dominantAxis = number?
+  scope: Fusion.Scope,
+  baseResolution: Vector2?,
+  minimumScale: number?,
+  dominantAxis: number?
 ): Px
 ```
 

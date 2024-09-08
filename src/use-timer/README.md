@@ -5,8 +5,8 @@
 
 ```Luau
 function useTimer(
-  scope = Fusion.Scope,
-  initial = number?
+  scope: Fusion.Scope,
+  initial: number?
 ): Timer
 ```
 

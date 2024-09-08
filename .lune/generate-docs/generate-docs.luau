@@ -55,7 +55,7 @@ local function generateDocs()
       if util.config.args then
         local args = {}
         for _, arg in util.config.args do
-          table.insert(args, `{arg.name} = {arg.type}`)
+          table.insert(args, `{arg.name}: {arg.type}`)
         end
         code:appendLine(table.concat(args, ",\n"))
       end

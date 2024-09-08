@@ -5,8 +5,8 @@
 
 ```Luau
 function useMouse(
-  scope = Fusion.Scope,
-  observer = (mouse: Vector2) -> ()?
+  scope: Fusion.Scope,
+  observer: (mouse: Vector2) -> ()?
 ): StateObject<Vector2>
 ```
 

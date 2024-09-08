@@ -5,8 +5,8 @@
 
 ```Luau
 function useTagged(
-  scope = Fusion.Scope,
-  tag = string
+  scope: Fusion.Scope,
+  tag: string
 ): StateObject<{ Instance }>
 ```
 

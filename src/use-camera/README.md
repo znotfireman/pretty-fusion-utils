@@ -5,7 +5,7 @@
 
 ```Luau
 function useCamera(
-  scope = Fusion.Scope
+  scope: Fusion.Scope
 ): StateObject<Camera>
 ```
 

@@ -5,8 +5,8 @@
 
 ```Luau
 function useEffect<Scope>(
-  scope = Scope & Fusion.Scope,
-  callback = (Types.Use, Scope & Types.FusionScope) -> ()
+  scope: Scope & Fusion.Scope,
+  callback: (Types.Use, Scope & Types.FusionScope) -> ()
 ):
 ```
 

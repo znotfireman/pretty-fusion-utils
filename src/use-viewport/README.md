@@ -5,7 +5,7 @@
 
 ```Luau
 function useViewport(
-  scope = Fusion.Scope
+  scope: Fusion.Scope
 ): StateObject<Vector2>
 ```
 

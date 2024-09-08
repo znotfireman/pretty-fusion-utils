@@ -5,9 +5,9 @@
 
 ```Luau
 function useAsync<Scope, Result>(
-  scope = Scope & Fusion.Scope,
-  fallback = Result,
-  processor = (
+  scope: Scope & Fusion.Scope,
+  fallback: Result,
+  processor: (
     use: Types.Use,
     become: Become,
     scope: Scope
