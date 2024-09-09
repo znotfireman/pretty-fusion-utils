@@ -5,6 +5,7 @@ return table.freeze {
   useEvent = require("src/use-event"),
   useMouse = require("src/use-mouse"),
   useTagged = require("src/use-tagged"),
+  useTasks = require("src/use-tasks"),
   useTimer = require("src/use-timer"),
   useViewport = require("src/use-viewport"),
 }
