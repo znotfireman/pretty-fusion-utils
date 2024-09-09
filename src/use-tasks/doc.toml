@@ -1,0 +1,22 @@
+[config]
+  name = "useEffect"
+  brief = """\
+  Add clean up tasks to the scope. Returns the clean up tasks, allowing it to \
+  be used in declarations.\
+  """
+
+  variadics = ["Tasks..."]
+
+[[config.args]]
+  name = "scope"
+  type = "Fusion.Scope"
+  description = "The scope to store cleanup tasks."
+
+[[config.args]]
+  name = "..."
+  type = "Tasks..."
+  description = "The tasks to be added."
+
+[config.returns]
+  type = "Tasks..."
+  description = "The tasks that has been added."

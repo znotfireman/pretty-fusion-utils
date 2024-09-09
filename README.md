@@ -41,10 +41,11 @@ along with specific Fusion utilities.
 
 ### Fusion
 
+- [ ] `useCoroutine`
+- [ ] `useTasks`
+- [ ] `useThread`
 - [X] `useAsync` (analogous to [Fusion Eventuals])
 - [X] `useEffect` (somewhat broken, see `src/use-effect/init.luau`)
-- [ ] `useCoroutine`
-- [ ] `useThread`
 
 ### Misc
 
