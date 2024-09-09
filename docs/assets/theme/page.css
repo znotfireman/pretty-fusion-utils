@@ -298,3 +298,7 @@
 #fusiondoc-home {
   opacity: 0;
 }
+
+label.md-nav__title:first-child {
+  display: none !important;
+}

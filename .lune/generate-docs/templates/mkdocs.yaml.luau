@@ -1,9 +1,9 @@
 -- selene: allow(mixed_table)
 return {
-  site_name = "pretty-fusion-hooks",
-  site_url = "https://znotfireman.github.com/pretty-fusion-hooks",
-  repo_name = "znotfireman/pretty-fusion-hooks",
-  repo_url = "https://github.com/znotfireman/pretty-fusion-hooks",
+  site_name = "pretty fusion hooks",
+  site_url = "https://znotfireman.github.com/pretty-fusion-utils",
+  repo_name = "znotfireman/pretty-fusion-utils",
+  repo_url = "https://github.com/znotfireman/pretty-fusion-utils",
 
   extra = {
     version = {

@@ -7,11 +7,7 @@
 function useAsync<Scope, Result>(
   scope: Scope & Fusion.Scope,
   fallback: Result,
-  processor: (
-    use: Types.Use,
-    become: Become,
-    scope: Scope
-  ) -> Result
+  processor: (use: Fusion.Use, become: Become, scope: Scope) -> Result
 ): StateObject<Result>
 ```
 
@@ -29,11 +25,7 @@ The scope to store cleanup tasks.
 
 The fallback value to display while the processor runs.
 
-### processor `: (
-  use: Types.Use,
-  become: Become,
-  scope: Scope
-) -> Result`
+### processor `: (use: Fusion.Use, become: Become, scope: Scope) -> Result`
 
 The processor of the eventual value. It receives a Use callback, a Become callback, and an inner scope.
 
