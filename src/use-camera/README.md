@@ -21,7 +21,7 @@ The scope to store cleanup tasks.
 
 ---
 
-### Returns `: StateObject<Camera>`
+## Returns `: StateObject<Camera>`
 
 A state object with the current camera.
 

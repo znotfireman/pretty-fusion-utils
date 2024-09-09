@@ -26,7 +26,7 @@ The initial value of the timer.
 
 ---
 
-### Returns `: Timer`
+## Returns `: Timer`
 
 A timer object.
 

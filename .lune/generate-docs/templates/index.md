@@ -14,15 +14,6 @@
 
 <section class="pfu-home-main" markdown>
 
-<img
-  src="./assets/logo-light.svg#only-light"
-  width="150px"
-  alt="Flower bouquet with Fusion accent colors"
-/><img
-  src="./assets/logo-dark.svg#only-dark"
-  width="150px"
-  alt="Flower bouquet with Fusion accent colors"/>
-
 <h1 class="pfu-home-header">
 pretty fusion utils
 </h1>

@@ -15,7 +15,7 @@
   padding-bottom: var(--distance-to-top-of-page);
   margin-left: auto;
   margin-right: auto;
-  transform: translateX(-2.5rem);
+  transform: translateX(-3.25rem);
 
   display: flex;
   flex-direction: column;
@@ -31,16 +31,39 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  text-wrap: balance;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 1em;
 }
 
 h1.pfu-home-header {
-  font-size: 3.5em;
-  margin: 0;
+  font-size: clamp(1rem, 10vw, 5rem);
+  margin-bottom: 0;
+  line-height: 1em;
+  white-space: normal;
+}
+
+h1.pfu-home-header::before {
+  content: "";
+  display: block;
+  width: 2.5em;
+  height: 2.5em;
+  transform: translateX(100%);
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+[data-md-color-scheme="fusiondoc-light"] h1.pfu-home-header::before {
+  background-image: url("../logo-light.svg");
+}
+
+[data-md-color-scheme="fusiondoc-dark"] h1.pfu-home-header::before {
+  background-image: url("../logo-dark.svg");
 }
 
 .pfu-home-brief {

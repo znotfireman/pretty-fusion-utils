@@ -31,7 +31,7 @@ The processor of the eventual value. It receives a Use callback, a Become callba
 
 ---
 
-### Returns `: StateObject<Result>`
+## Returns `: StateObject<Result>`
 
 A state object with the asynchronous value.
 

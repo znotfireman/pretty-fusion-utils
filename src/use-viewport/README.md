@@ -21,7 +21,7 @@ The scope to store cleanup tasks.
 
 ---
 
-### Returns `: StateObject<Vector2>`
+## Returns `: StateObject<Vector2>`
 
 A state object with the viewport size.
 

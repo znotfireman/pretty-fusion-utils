@@ -36,7 +36,7 @@ The axis to scale for, defaults to 1:1.
 
 ---
 
-### Returns `: Px`
+## Returns `: Px`
 
 A `px` unit that scales with the viewport size..
 

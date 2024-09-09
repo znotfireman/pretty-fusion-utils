@@ -30,7 +30,7 @@ local function generateDocs()
   table.sort(srcFiles)
   for _, dir in fs.readDir(PATH_SRC) do
     local dirPath, configPath = path(PATH_SRC, dir), path(PATH_SRC, dir, "doc.toml")
-    if not fs.isDir(dirPath) or not fs.isFile(path(dirPath, "doc.toml")) then
+    if not fs.isDir(dirPath) or not fs.isFile(configPath) then
       continue
     end
 
@@ -69,16 +69,29 @@ local function generateDocs()
         code:appendLine(table.concat(args, ",\n"))
       end
       code:unIndent():append("):")
+
       if util.config.returns then
-        code:append("", util.config.returns.type)
+        code:append(" "):append(util.config.returns.type)
 
         codeDocumentation
           :appendLine()
           :appendLine("---")
           :appendLine()
-          :appendLine("### Returns `:", util.config.returns.type .. "`")
+          :appendLine("## Returns `:", util.config.returns.type .. "`")
           :appendLine()
           :appendLine(util.config.returns.description)
+      end
+
+      if util.config.example then
+        codeDocumentation
+          :appendLine()
+          :appendLine("---")
+          :appendLine()
+          :appendLine("## Example")
+          :appendLine()
+          :appendLine("```Luau")
+          :appendLine(util.config.example)
+          :appendLine("```")
       end
     end
 

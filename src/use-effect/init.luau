@@ -10,13 +10,7 @@ local function useEffect<Scope>(
   scope: Scope & Types.FusionScope,
   callback: (Types.Use, Scope & Types.FusionScope) -> ()
 )
-  -- FUTURE: This seems BAD. Maybe wait for a built-in?
-  -- TODO: async support
-  -- FIXME: computed lazily evaluates, use observers
-  scope:Computed(function(use, scope)
-    callback(use, scope)
-    return {}
-  end)
+  error("TODO not implemented")
 end
 
 return useEffect

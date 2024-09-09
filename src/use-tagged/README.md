@@ -26,7 +26,7 @@ The CollectionService tag to track.
 
 ---
 
-### Returns `: StateObject<{ Instance }>`
+## Returns `: StateObject<{ Instance }>`
 
 A state object with every instance of the given tag.
 

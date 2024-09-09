@@ -33,7 +33,7 @@ An event listener to be connected.
 
 ---
 
-### Returns `: () -> ()`
+## Returns `: () -> ()`
 
 A function to disconnect the event listener.
 

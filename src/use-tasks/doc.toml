@@ -1,11 +1,30 @@
 [config]
-  name = "useEffect"
+  name = "useTasks"
   brief = """\
   Add clean up tasks to the scope. Returns the clean up tasks, allowing it to \
   be used in declarations.\
   """
 
   variadics = ["Tasks..."]
+  example = '''
+local Fusion = require(ReplicatedStorage.Packages.Fusion)
+local fusionUtils = require(ReplicatedStorage.Packages.fusionUtils)
+
+local peek = Fusion.peek
+local scope = Fusion:scoped(fusionUtils)
+
+local timeElapsed = scope:Value(0)
+local connection = scope:useTasks(
+  RunService.PostSimulation:Connect(function(dt)
+    timeElapsed:set(peek(timeElapsed) + dt)
+  end)
+)
+
+task.wait(5)
+connection:Disconnect()
+print(`Took around {peek(timeElapsed)} seconds`)
+
+'''
 
 [[config.args]]
   name = "scope"

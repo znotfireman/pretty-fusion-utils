@@ -26,7 +26,7 @@ Optional observer tracking the mouse position.
 
 ---
 
-### Returns `: StateObject<Vector2>`
+## Returns `: StateObject<Vector2>`
 
 A state object with the mouse position.
 
