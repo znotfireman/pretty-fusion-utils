@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://znotfireman.github.com/pretty-fusion-hooks/0.1/</loc>
+         <loc>https://znotfireman.github.com/pretty-fusion-utils/0.1/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://znotfireman.github.com/pretty-fusion-hooks/0.1/use-async/</loc>
+         <loc>https://znotfireman.github.com/pretty-fusion-utils/0.1/use-async/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://znotfireman.github.com/pretty-fusion-hooks/0.1/use-camera/</loc>
+         <loc>https://znotfireman.github.com/pretty-fusion-utils/0.1/use-camera/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://znotfireman.github.com/pretty-fusion-hooks/0.1/use-effect/</loc>
+         <loc>https://znotfireman.github.com/pretty-fusion-utils/0.1/use-effect/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://znotfireman.github.com/pretty-fusion-hooks/0.1/use-event/</loc>
+         <loc>https://znotfireman.github.com/pretty-fusion-utils/0.1/use-event/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://znotfireman.github.com/pretty-fusion-hooks/0.1/use-mouse/</loc>
+         <loc>https://znotfireman.github.com/pretty-fusion-utils/0.1/use-mouse/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://znotfireman.github.com/pretty-fusion-hooks/0.1/use-px/</loc>
+         <loc>https://znotfireman.github.com/pretty-fusion-utils/0.1/use-px/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://znotfireman.github.com/pretty-fusion-hooks/0.1/use-tagged/</loc>
+         <loc>https://znotfireman.github.com/pretty-fusion-utils/0.1/use-tagged/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://znotfireman.github.com/pretty-fusion-hooks/0.1/use-timer/</loc>
+         <loc>https://znotfireman.github.com/pretty-fusion-utils/0.1/use-timer/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://znotfireman.github.com/pretty-fusion-hooks/0.1/use-viewport/</loc>
+         <loc>https://znotfireman.github.com/pretty-fusion-utils/0.1/use-viewport/</loc>
          <lastmod>2024-09-09</lastmod>
          <changefreq>daily</changefreq>
     </url>

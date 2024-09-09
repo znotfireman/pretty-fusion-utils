@@ -9,21 +9,13 @@
   }
 }
 
-/* .md-content__inner {
-  padding-top: 0;
-}
-
-.md-main__inner {
-  margin-top: 0;
-} */
-
 .pfu-home-hero {
   position: relative;
   min-height: calc(100vh - 5rem - var(--distance-to-top-of-page));
   padding-bottom: var(--distance-to-top-of-page);
-  font-size: 1.2em;
   margin-left: auto;
   margin-right: auto;
+  transform: translateX(-2.5rem);
 
   display: flex;
   flex-direction: column;
@@ -38,6 +30,7 @@
   font-size: 1.2em;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 
   display: flex;
   flex-direction: column;
@@ -46,7 +39,7 @@
 }
 
 h1.pfu-home-header {
-  font-size: 4em;
+  font-size: 3.5em;
   margin: 0;
 }
 
@@ -55,36 +48,43 @@ h1.pfu-home-header {
 }
 
 .pfu-home-list {
-  align-items: center;
-  display: flex !important;
-  flex-direction: column;
-  left: 50%;
-  margin: 0;
-  margin: auto;
-  max-width: 75rem;
-  overflow-x: hidden;
-  padding: 3em;
   position: relative;
-  transform: translateX(-50%);
-  view-timeline-axis: block;
-  view-timeline-name: --list-scroll;
+  display: block;
   width: 100vw;
+
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+
+  view-timeline-name: --list-scroll !important;
+  view-timeline-axis: block !important;
 }
 
 .pfu-home-list > ul {
+  position: relative;
+
   box-sizing: border-box;
   display: flex !important;
   flex-direction: row;
+  width: auto;
+  gap: 1em;
+
+  list-style: none;
   font-size: 3em;
-  font-weight: bold;
-  gap: 0;
+  font-weight: 600;
   line-height: 100%;
   list-style: none;
+  letter-spacing: -0.02em;
+  text-wrap: nowrap;
+
+  gap: 0;
   margin: 0;
   padding: 0;
-  position: relative;
-  text-wrap: nowrap;
-  width: auto;
 }
 
 .pfu-home-list > ul > li:nth-child(odd) {
@@ -95,26 +95,14 @@ h1.pfu-home-header {
   opacity: 0.2;
 }
 
-label.md-nav__title:first-child {
-  display: none !important;
-}
-
-/* .pfu-home-list::after {
-  content: "";
-  position: absolute;
-  display: block;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    var(--md-default-bg-color) 0%,
-    transparent 10%,
-    transparent 90%,
-    var(--md-default-bg-color) 100%
-  );
-} */
-
 .pfu-home-list > ul a {
   color: var(--md-default-fg-color);
+}
+
+.pfu-home-list > ul {
+  animation: list-scroll linear both;
+  animation-timeline: --list-scroll;
+  animation-range: cover;
 }
 
 @supports (animation-timeline: --list-scroll) {
