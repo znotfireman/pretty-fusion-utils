@@ -1,17 +1,17 @@
+<h1>
 <img
   src="./assets/logo-light.svg#gh-light-mode-only"
-  width="100px"
+  height="100px"
   alt="Flower bouquet with Fusion accent colors"
 /><img
   src="./assets/logo-dark.svg#gh-dark-mode-only"
-  width="100px"
+  height="100px"
   alt="Flower bouquet with Fusion accent colors"/>
+</h1>
 
-# pretty-fusion-utils
-
-Utilities and hooks from [`pretty-vide-utils`] and [`pretty-react-hooks`] for
-[Fusion 0.3](https://elttob.uk/Fusion/0.3/), along with specific Fusion
-utilities.
+An opinionated collection of modern [Fusion 0.3](https://elttob.uk/Fusion/0.3/)
+utilities. Sourced from [`pretty-vide-utils`] and [`pretty-react-hooks`] for,
+along with specific Fusion utilities.
 
 ## Prerelease
 
