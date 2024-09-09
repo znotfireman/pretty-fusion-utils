@@ -15,3 +15,6 @@ dist/
 mkdocs.yaml
 docs/*
 !docs/assets
+
+# Ignore mike site files
+site
