@@ -1,36 +1,174 @@
 .md-content {
-	max-width: none;
-	--distance-to-top-of-page: 4.8rem;
+  max-width: none;
+  --distance-to-top-of-page: 4.8rem;
 }
 
 @media screen and (max-width: 76.25rem) {
-	.md-content {
-		--distance-to-top-of-page: 2.4rem;
-	}
+  .md-content {
+    --distance-to-top-of-page: 2.4rem;
+  }
 }
 
-.md-content__inner {
-	padding-top: 0;
+/* .md-content__inner {
+  padding-top: 0;
 }
 
 .md-main__inner {
-	margin-top: 0;
+  margin-top: 0;
+} */
+
+.pfu-home-hero {
+  position: relative;
+  min-height: calc(100vh - 5rem - var(--distance-to-top-of-page));
+  padding-bottom: var(--distance-to-top-of-page);
+  font-size: 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#fusiondoc-home-main {
-	position: relative;
-	min-height: calc(100vh - 5rem - var(--distance-to-top-of-page));
-	padding-bottom: var(--distance-to-top-of-page);
-	font-size: 1.2em;
-	margin-left: auto;
-	margin-right: auto;
+.pfu-home-main {
+  position: relative;
+  min-height: calc(100vh - 5rem - var(--distance-to-top-of-page));
+  padding-bottom: var(--distance-to-top-of-page);
+  font-size: 1.2em;
+  margin-left: auto;
+  margin-right: auto;
 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+h1.pfu-home-header {
+  font-size: 4em;
+  margin: 0;
+}
+
+.pfu-home-brief {
+  font-size: 1.5em;
+}
+
+.pfu-home-list {
+  align-items: center;
+  display: flex !important;
+  flex-direction: column;
+  left: 50%;
+  margin: 0;
+  margin: auto;
+  max-width: 75rem;
+  overflow-x: hidden;
+  padding: 3em;
+  position: relative;
+  transform: translateX(-50%);
+  view-timeline-axis: block;
+  view-timeline-name: --list-scroll;
+  width: 100vw;
+}
+
+.pfu-home-list > ul {
+  box-sizing: border-box;
+  display: flex !important;
+  flex-direction: row;
+  font-size: 3em;
+  font-weight: bold;
+  gap: 0;
+  line-height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-wrap: nowrap;
+  width: auto;
+}
+
+.pfu-home-list > ul > li:nth-child(odd) {
+  opacity: 0.4;
+}
+
+.pfu-home-list > ul > li:nth-child(even) {
+  opacity: 0.2;
+}
+
+label.md-nav__title:first-child {
+  display: none !important;
+}
+
+/* .pfu-home-list::after {
+  content: "";
+  position: absolute;
+  display: block;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    var(--md-default-bg-color) 0%,
+    transparent 10%,
+    transparent 90%,
+    var(--md-default-bg-color) 100%
+  );
+} */
+
+.pfu-home-list > ul a {
+  color: var(--md-default-fg-color);
+}
+
+@supports (animation-timeline: --list-scroll) {
+  @media (prefers-reduced-motion: no-preference) {
+    .pfu-home-list > ul {
+      animation: list-scroll linear both;
+      animation-timeline: --list-scroll;
+      animation-range: cover;
+    }
+  }
+}
+
+@keyframes list-scroll {
+  0% {
+    translate: calc(50% - min(100vw, 75rem) / 2) 0%;
+  }
+  100% {
+    translate: calc(-50% + min(100vw, 75rem) / 2) 0%;
+  }
+}
+
+.pfu-home-utils {
+  gap: 1em !important;
+}
+
+.pfu-home-utils > section {
+  background-color: var(--md-default-bg-color--light);
+  padding: 2em;
+  border-radius: 0.5em;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.pfu-home-utils > section a {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-clamp: 4;
+  box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--md-default-fg-color) !important;
+}
+
+.pfu-home-utils > section * {
+  margin: 0;
+}
+
+.pfu-home-utils > section:hover {
+  background-color: var(--md-default-bg-color--lighter);
+  transform: scale(1.025);
+}
+
+/*
 #fusiondoc-home-main::before {
 	content: "";
 	position: absolute;
@@ -76,7 +214,7 @@
 	#fusiondoc-home-main::before {
 		filter: blur(2rem);
 		opacity: 0.5;
-	}	
+	}
 }
 
 #fusiondoc-home-main-inner > h1 {
@@ -243,4 +381,4 @@
 		box-shadow: 0 1rem 1rem var(--fusiondoc-bg-1) !important;
 		background-color: var(--fusiondoc-bg-1);
 	}
-}
+} */

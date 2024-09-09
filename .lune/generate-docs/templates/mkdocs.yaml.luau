@@ -27,7 +27,7 @@ return {
       },
       {
         media = "(prefers-color-scheme: light)",
-        scheme = "fusiondoc-dark",
+        scheme = "fusiondoc-light",
         toggle = {
           icon = "octicons/moon-24",
           title = "Switch to dark theme",
@@ -59,8 +59,6 @@ return {
     "assets/theme/page.css",
     "assets/theme/admonition.css",
     "assets/theme/404.css",
-    "assets/theme/api-reference.css",
-    "assets/theme/dev-tools.css",
   },
 
   extra_javascript = {
@@ -74,6 +72,7 @@ return {
     "attr_list",
     "meta",
     "md_in_html",
+    "tables",
     "pymdownx.superfences",
     "pymdownx.betterem",
     ["pymdownx.tabbed"] = {

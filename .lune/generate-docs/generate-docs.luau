@@ -84,7 +84,11 @@ local function generateDocs()
 
     table.insert(
       index % 2 == 0 and firstList or secondList,
-      StringBuilder("<li>"):append(util.config.name):append("</li>"):build()
+      StringBuilder("<li> <a ")
+        :append(`href="{util.dir}">`)
+        :append(util.config.name)
+        :append("</a></li>")
+        :build()
     )
 
     table.insert(
@@ -104,7 +108,12 @@ local function generateDocs()
       :appendLine()
       :appendLine("#", util.config.name)
       :appendLine()
+      :appendLine("```Luau")
+      :appendLine(code:build())
+      :appendLine("```")
+      :appendLine()
       :appendLine(util.config.brief)
+      :appendLine(codeDocumentation:build())
       :build()
 
     fs.writeFile(
