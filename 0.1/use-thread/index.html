@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://znotfireman.github.com/pretty-fusion-utils/0.1/use-async/">
+        <link rel="canonical" href="https://znotfireman.github.com/pretty-fusion-utils/0.1/use-thread/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../use-tasks/">
       
       
-        <link rel="next" href="../use-camera/">
+        <link rel="next" href="../use-timer/">
       
       
       <link rel="icon" href="../assets/logo-dark.svg">
@@ -22,7 +22,7 @@
     
     
       
-        <title>useAsync - pretty fusion hooks</title>
+        <title>useThread - pretty fusion hooks</title>
       
     
     
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#useasync" class="md-skip">
+        <a href="#usethread" class="md-skip">
           Skip to content
         </a>
       
@@ -156,7 +156,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              useAsync
+              useThread
             
           </span>
         </div>
@@ -384,30 +384,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    useAsync
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../use-async/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -416,77 +396,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#arguments" class="md-nav__link">
-    <span class="md-ellipsis">
-      Arguments
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Arguments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scope-scope-fusionscope" class="md-nav__link">
-    <span class="md-ellipsis">
-      scope : Scope &amp; Fusion.Scope
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fallback-result" class="md-nav__link">
-    <span class="md-ellipsis">
-      fallback : Result
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#processor-use-fusionuse-become-become-scope-scope-result" class="md-nav__link">
-    <span class="md-ellipsis">
-      processor : (use: Fusion.Use, become: Become, scope: Scope) -&gt; Result
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#returns-stateobjectresult" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returns : StateObject&lt;Result&gt;
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -685,10 +594,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../use-thread/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    useThread
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -697,6 +626,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-fusionscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Fusion.Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume-thread-args-" class="md-nav__link">
+    <span class="md-ellipsis">
+      resume : thread | (Args...) -&gt; ()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#args" class="md-nav__link">
+    <span class="md-ellipsis">
+      ... : Args...
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-thread" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns : thread
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -788,27 +788,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scope-scope-fusionscope" class="md-nav__link">
+  <a href="#scope-fusionscope" class="md-nav__link">
     <span class="md-ellipsis">
-      scope : Scope &amp; Fusion.Scope
+      scope : Fusion.Scope
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#fallback-result" class="md-nav__link">
+  <a href="#resume-thread-args-" class="md-nav__link">
     <span class="md-ellipsis">
-      fallback : Result
+      resume : thread | (Args...) -&gt; ()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#processor-use-fusionuse-become-become-scope-scope-result" class="md-nav__link">
+  <a href="#args" class="md-nav__link">
     <span class="md-ellipsis">
-      processor : (use: Fusion.Use, become: Become, scope: Scope) -&gt; Result
+      ... : Args...
     </span>
   </a>
   
@@ -820,9 +820,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns-stateobjectresult" class="md-nav__link">
+  <a href="#returns-thread" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns : StateObject&lt;Result&gt;
+      Returns : thread
     </span>
   </a>
   
@@ -854,25 +854,25 @@
 <!-- This file was autogenerated. It is not intended for manual editing. -->
 <!-- Run `lune run generate-docs` to generate a fresh index file. -->
 
-<h1 id="useasync">useAsync</h1>
-<div class="highlight"><pre><span></span><code><span class="kr">function</span><span class="w"> </span><span class="nf">useAsync</span><span class="p">&lt;</span><span class="nc">Scope</span><span class="p">,</span><span class="w"> </span><span class="nc">Result</span><span class="p">&gt;(</span>
-<span class="w">  </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Scope</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">,</span>
-<span class="w">  </span><span class="nv">fallback</span><span class="p">:</span><span class="w"> </span><span class="nc">Result</span><span class="p">,</span>
-<span class="w">  </span><span class="nv">processor</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="nc">use</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Use</span><span class="p">,</span><span class="w"> </span><span class="nc">become</span><span class="p">:</span><span class="w"> </span><span class="nc">Become</span><span class="p">,</span><span class="w"> </span><span class="nc">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Scope</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nc">Result</span>
-<span class="p">):</span><span class="w"> </span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">Result</span><span class="p">&gt;</span>
+<h1 id="usethread">useThread</h1>
+<div class="highlight"><pre><span></span><code><span class="kr">function</span><span class="w"> </span><span class="nf">useThread</span><span class="p">&lt;</span><span class="nc">Args</span><span class="p">...&gt;(</span>
+<span class="w">  </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">,</span>
+<span class="w">  </span><span class="nv">resume</span><span class="p">:</span><span class="w"> </span><span class="nc">thread</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">(</span><span class="nc">Args</span><span class="p">...)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="p">(),</span>
+<span class="w">  </span><span class="p">...:</span><span class="w"> </span><span class="nc">Args</span><span class="p">.</span><span class="err">..</span>
+<span class="err">):</span><span class="w"> </span><span class="nc">thread</span>
 </code></pre></div>
-<p>Returns a state object with an value from an asynchronous processor. The processor is given a Use callback that adds dependencies, a Become callback alter the current eventual value, and an inner scope to add cleanup tasks to.</p>
+<p>Spawns a new thread that is cancelled once the scope is cleaned up.</p>
 <hr />
 <h2 id="arguments">Arguments</h2>
-<h3 id="scope-scope-fusionscope">scope <code>: Scope &amp; Fusion.Scope</code></h3>
-<p>The scope to store cleanup tasks.</p>
-<h3 id="fallback-result">fallback <code>: Result</code></h3>
-<p>The fallback value to display while the processor runs.</p>
-<h3 id="processor-use-fusionuse-become-become-scope-scope-result">processor <code>: (use: Fusion.Use, become: Become, scope: Scope) -&gt; Result</code></h3>
-<p>The processor of the eventual value. It receives a Use callback, a Become callback, and an inner scope.</p>
+<h3 id="scope-fusionscope">scope <code>: Fusion.Scope</code></h3>
+<p>The scope to store clean up tasks.</p>
+<h3 id="resume-thread-args-">resume <code>: thread | (Args...) -&gt; ()</code></h3>
+<p>The thread to resume, or a function to spawn.</p>
+<h3 id="args">... <code>: Args...</code></h3>
+<p>The arguments to spawn the thread with.</p>
 <hr />
-<h2 id="returns-stateobjectresult">Returns <code>: StateObject&lt;Result&gt;</code></h2>
-<p>A state object with the asynchronous value.</p>
+<h2 id="returns-thread">Returns <code>: thread</code></h2>
+<p>A thread that is cancelled once the scope is cleaned up.</p>
 
 <!-- Source file information -->
 
@@ -906,9 +906,9 @@
 		
 		  
 		  <a
-			href=".."
+			href="../use-tasks/"
 			class="md-footer__link md-footer__link--prev"
-			aria-label="Previous: Index"
+			aria-label="Previous: useTasks"
 			rel="prev"
 		  >
 			<div class="md-footer__button md-icon">
@@ -919,7 +919,7 @@
 				<span class="md-footer__direction">
 				  Previous
 				</span>
-				Index
+				useTasks
 			  </div>
 			</div>
 		  </a>
@@ -929,9 +929,9 @@
 		
 		  
 		  <a
-			href="../use-camera/"
+			href="../use-timer/"
 			class="md-footer__link md-footer__link--next"
-			aria-label="Next: useCamera"
+			aria-label="Next: useTimer"
 			rel="next"
 		  >
 			<div class="md-footer__title">
@@ -939,7 +939,7 @@
 				<span class="md-footer__direction">
 				  Next
 				</span>
-				useCamera
+				useTimer
 			  </div>
 			</div>
 			<div class="md-footer__button md-icon">

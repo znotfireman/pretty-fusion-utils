@@ -333,6 +333,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -409,6 +413,27 @@
   
   <span class="md-ellipsis">
     useCamera
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="use-coroutine/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    useCoroutine
   </span>
   
 
@@ -572,6 +597,27 @@
   
   
     <li class="md-nav__item">
+      <a href="use-thread/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    useThread
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="use-timer/" class="md-nav__link">
         
   
@@ -661,6 +707,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#usecoroutine" class="md-nav__link">
+    <span class="md-ellipsis">
+      useCoroutine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#useeffect" class="md-nav__link">
     <span class="md-ellipsis">
       useEffect
@@ -718,6 +773,15 @@
   <a href="#usetasks" class="md-nav__link">
     <span class="md-ellipsis">
       useTasks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usethread" class="md-nav__link">
+    <span class="md-ellipsis">
+      useThread
     </span>
   </a>
   
@@ -784,19 +848,21 @@ Fusion 0.3</a> utilities.
 </code></pre></div>
 <div class="pfu-home-list">
 <ul class="pfu-home-list">
-<li> <a href="use-effect">useEffect</a></li>
+<li> <a href="use-async">useAsync</a></li>
 <li> <a href="use-event">useEvent</a></li>
 <li> <a href="use-px">usePx</a></li>
-<li> <a href="use-tasks">useTasks</a></li>
+<li> <a href="use-thread">useThread</a></li>
+<li> <a href="use-timer">useTimer</a></li>
 <li> <a href="use-viewport">useViewport</a></li>
 </ul>
 <ul class="pfu-home-list" style="animation-direction: reverse;">
-<li> <a href="use-async">useAsync</a></li>
 <li> <a href="use-camera">useCamera</a></li>
+<li> <a href="use-coroutine">useCoroutine</a></li>
+<li> <a href="use-effect">useEffect</a></li>
 <li> <a href="use-mouse">useMouse</a></li>
 <li> <a href="use-previous">usePrevious</a></li>
 <li> <a href="use-tagged">useTagged</a></li>
-<li> <a href="use-timer">useTimer</a></li>
+<li> <a href="use-tasks">useTasks</a></li>
 </ul>
 </div>
 </section>
@@ -812,6 +878,12 @@ Returns a state object with an value from an asynchronous processor. The process
 <a href="./use-camera/">
 <h2 id="usecamera"> useCamera </h2>
 Returns a state object with the current camera. Updates when the current camera changes.
+</a>
+</section>
+<section>
+<a href="./use-coroutine/">
+<h2 id="usecoroutine"> useCoroutine </h2>
+Spawns a new coroutine that is closed once the scope is cleaned up.
 </a>
 </section>
 <section>
@@ -854,6 +926,12 @@ Returns a state object with every instance of a given tag. Updates when new inst
 <a href="./use-tasks/">
 <h2 id="usetasks"> useTasks </h2>
 Add clean up tasks to the scope. Returns the clean up tasks, allowing it to be used in declarations.
+</a>
+</section>
+<section>
+<a href="./use-thread/">
+<h2 id="usethread"> useThread </h2>
+Spawns a new thread that is cancelled once the scope is cleaned up.
 </a>
 </section>
 <section>
