@@ -9,8 +9,9 @@
   alt="Flower bouquet with Fusion accent colors"/>
 </h1>
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/znotfireman/pretty-fusion-utils/ci.yaml?style=flat-square&label=CI)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/znotfireman/pretty-fusion-utils/docs.yaml?style=flat-square&label=Documentation)
+![Licensed under Apache 2.0 OR MIT](https://img.shields.io/badge/license-Apache_2.0_OR_MIT-blue?style=flat-square)
+![CI Workflow Status](https://img.shields.io/github/actions/workflow/status/znotfireman/pretty-fusion-utils/ci.yaml?style=flat-square&label=ci)
+![Documentation Workflow Status](https://img.shields.io/github/actions/workflow/status/znotfireman/pretty-fusion-utils/docs.yaml?style=flat-square&label=documentation)
 
 An opinionated collection of modern [Fusion 0.3](https://elttob.uk/Fusion/0.3/)
 utilities. Sourced from [`pretty-vide-utils`] and [`pretty-react-hooks`] with
