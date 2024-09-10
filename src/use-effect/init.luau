@@ -6,6 +6,7 @@ local Types = require("src/types")
   @param A callback with a Use callback for tracking side effects and an inner
   scope to track cleanup tasks. This callback may not yield.
 ]=]
+-- selene: allow(unused_variable)
 local function useEffect<Scope>(
   scope: Scope & Types.FusionScope,
   callback: (Types.Use, Scope & Types.FusionScope) -> ()
