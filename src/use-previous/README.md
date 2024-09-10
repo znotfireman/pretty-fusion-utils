@@ -65,7 +65,7 @@ local function App(scope: Fusion.Scope<typeof(Fusion) & typeof(fusionUtils)>)
                 Size = UDim2.fromScale(1, 0.25),
             },
             scope:New "TextButton" {
-                Text = "Random color",
+                Text = "Next",
                 Size = UDim2.fromScale(1, 0.25),
                 Position = UDim2.fromScale(0, 0.25),
 

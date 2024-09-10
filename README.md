@@ -45,9 +45,9 @@ specific Fusion utilities.
 
 ### Fusion
 
-- [ ] `useCoroutine`
-- [ ] `useTasks`
-- [ ] `useThread`
+- [X] `useCoroutine`
+- [X] `useTasks`
+- [X] `useThread`
 - [X] `useAsync` (analogous to [Fusion Eventuals])
 - [X] `useEffect` (somewhat broken, see `src/use-effect/init.luau`)
 
