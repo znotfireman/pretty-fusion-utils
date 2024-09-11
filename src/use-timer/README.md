@@ -28,3 +28,4 @@ Creates a timer that can be used to track a value over time.
 | Type     | Description                  |
 | -------- | ---------------------------- |
 | `#!luau Timer` | A timer object. |
+

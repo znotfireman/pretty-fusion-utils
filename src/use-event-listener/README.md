@@ -32,3 +32,4 @@ Connects to an event-like object. The connection is automatically disconnected w
 | Type     | Description                  |
 | -------- | ---------------------------- |
 | `#!luau () -> ()` | A function to disconnect the event listener. |
+

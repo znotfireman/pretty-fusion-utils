@@ -28,3 +28,4 @@ Returns a state object with every instance of a given tag. Updates when new inst
 | Type     | Description                  |
 | -------- | ---------------------------- |
 | `#!luau StateObject<{ Instance }>` | A state object with every instance of the given tag. |
+

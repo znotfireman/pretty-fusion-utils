@@ -30,3 +30,4 @@ Spawns a new thread that is cancelled once the scope is cleaned up.
 | Type     | Description                  |
 | -------- | ---------------------------- |
 | `#!luau thread` | A thread that is cancelled once the scope is cleaned up. |
+
