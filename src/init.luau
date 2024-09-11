@@ -17,4 +17,3 @@ return table.freeze {
   useThread = require("src/use-thread"),
   useTasks = require("src/use-tasks"),
 }
-

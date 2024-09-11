@@ -250,10 +250,7 @@ local function regenerate()
       :build()
   )
 
-  fs.writeFile(
-    path(PATH_SRC, "init.luau"),
-    initFile:unIndent():appendLine("}"):appendLine():build()
-  )
+  fs.writeFile(path(PATH_SRC, "init.luau"), initFile:unIndent():appendLine("}"):build())
 end
 
 return regenerate
