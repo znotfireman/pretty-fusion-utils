@@ -5,6 +5,7 @@ local mkdocs = require("./templates/mkdocs.yaml")
 local path = require("../utils/path")
 local process = require("@lune/process")
 local serde = require("@lune/serde")
+local stringer = require("../utils/stringer")
 
 local PATH_DOCS = path(process.cwd, "docs")
 local PATH_SRC = path(process.cwd, "src")
@@ -26,6 +27,8 @@ end
   Regenerates MkDocs documentation, moonwave-esque documentation comments,
   README files for all utilities, and the init.luau export table. Each utility
   has a doc.toml file that configures how it is displayed.
+
+  I may or may not need a psychological evaluation.
 ]=]
 local function regenerate()
   reset(PATH_DOCS)
@@ -83,7 +86,7 @@ local function regenerate()
           codeDocumentation
             :append("|", arg.name, "|", `\`#!luau {arg.type}\``, "|", arg.description, "|")
             :appendLine()
-          docComment:appendLine("@param", arg.name, arg.description)
+          docComment:appendLine("@param", arg.name, stringer.cleanNewlines(arg.description))
         end
         code:appendLine(table.concat(args, ",\n"))
       end
@@ -91,7 +94,7 @@ local function regenerate()
 
       if util.config.returns then
         code:append(": "):append(util.config.returns.type)
-        docComment:appendLine("@return", util.config.returns.description)
+        docComment:appendLine("@return", stringer.cleanNewlines(util.config.returns.description))
 
         codeDocumentation
           :appendLine()

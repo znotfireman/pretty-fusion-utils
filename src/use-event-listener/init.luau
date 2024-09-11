@@ -50,9 +50,7 @@ end
 --[=[
   Connects to an event-like object. The connection is automatically disconnected when the scope is cleaned up.
   @param scope The scope to store cleanup tasks.
-  @param event An event-like object to connect. Can be a RBXScriptSignal, or an object
-    with a `Connect` or `connect` method.
-    
+  @param event An event-like object to connect. Can be a RBXScriptSignal, or an object   with a `Connect` or `connect` method.   
   @param listener An event listener to be connected.
   @return A function to disconnect the event listener.
 ]=]
