@@ -28,7 +28,7 @@ specific Fusion utilities.
 - [ ] `useDeferEffect` (unlikely as Fusion has no concept of effects)
 - [ ] `useDeferSource` (as `useDeferValue`)
 - [X] `useEventListener`
-- [ ] `useInterval`
+- [X] `useInterval`
 - [ ] `useLifetime` (unlikely, just `useTimer` starting at zero)
 - [ ] `useMotion` (unlikely, Fusion already has Tween and Spring objects)
 - [X] `useMouse`

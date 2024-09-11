@@ -1,0 +1,29 @@
+[config]
+  name = "useInterval"
+  brief = """\
+  Sets an interval that runs the callback function every `delay` seconds. If \
+  `delay` is `undefined`, the interval is cleared. If the delay changes, the \
+  the interval is cleared. If the delay changes, the interval is reset.\
+  """
+
+  variadics = ["S"]
+
+[[config.args]]
+  name = "scope"
+  type = "Scope<S & typeof(Fusion)>"
+  description = "The scope to store cleanup tasks."
+
+[[config.args]]
+  name = "delay"
+  type = "UsedAs<number?>"
+  description = "The delay, in seconds per each interval."
+
+[[config.args]]
+  name = "callback"
+  type = "(Scope<S>) -> ()"
+  description = "The callback to run at an interval. Receives an inner scope that is cleaned up per each interval."
+
+[[config.args]]
+  name = "immediate"
+  type = "boolean?"
+  description = "Whether to spawn the callback immediately."
