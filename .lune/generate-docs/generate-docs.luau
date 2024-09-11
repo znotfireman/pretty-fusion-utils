@@ -10,10 +10,6 @@ local PATH_DOCS = path(process.cwd, "docs")
 local PATH_SRC = path(process.cwd, "src")
 local TEMPLATE_INDEX = path(process.cwd, ".lune", "generate-docs", "templates", "index.md")
 
-local function regexEscape(str: string)
-  return str:gsub("[%(%)%.%%%+%-%*%?%[%^%$%]]", "%%%1")
-end
-
 local function reset(dir: string)
   if not fs.isDir(dir) then
     fs.writeDir(dir)
