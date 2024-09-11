@@ -2,6 +2,8 @@ export type Config = {
   config: {
     name: string,
     brief: string,
+    useful_for: string?,
+
     example: string?,
 
     variadics: { string }?,

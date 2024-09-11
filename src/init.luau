@@ -2,7 +2,7 @@ return table.freeze {
   useAsync = require("src/use-async"),
   useCamera = require("src/use-camera"),
   useEffect = require("src/use-effect"),
-  useEvent = require("src/use-event"),
+  useEventListener = require("src/use-event-listener"),
   useMouse = require("src/use-mouse"),
   usePrevious = require("src/use-previous"),
   useTagged = require("src/use-tagged"),

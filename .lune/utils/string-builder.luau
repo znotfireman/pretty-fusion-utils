@@ -31,6 +31,11 @@ local function StringBuilder(initial: string?)
     return self:append(line .. "\n")
   end
 
+  function self:appendStringBuilder(build)
+    self:append(build:build())
+    return self
+  end
+
   function self:build()
     return buffer.tostring(stringBuffer)
   end
