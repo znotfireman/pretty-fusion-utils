@@ -11,7 +11,7 @@ globalTypes.d.lua
 dist/
 
 # Ignore generated documentation
-# Generate new documentation via `lune run generate-docs`
+# Generate new documentation via `lune run regenerate`
 mkdocs.yaml
 docs/*
 !docs/assets
