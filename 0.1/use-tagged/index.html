@@ -607,30 +607,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Arguments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scope-fusionscope" class="md-nav__link">
-    <span class="md-ellipsis">
-      scope : Fusion.Scope
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tag-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      tag : string
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -775,30 +751,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Arguments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scope-fusionscope" class="md-nav__link">
-    <span class="md-ellipsis">
-      scope : Fusion.Scope
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tag-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      tag : string
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -845,13 +797,43 @@
 <p>Returns a state object with every instance of a given tag. Updates when new instances get tagged or old instances get untagged.</p>
 <hr />
 <h2 id="arguments">Arguments</h2>
-<h3 id="scope-fusionscope">scope <code>: Fusion.Scope</code></h3>
-<p>The scope to store cleanup tasks.</p>
-<h3 id="tag-string">tag <code>: string</code></h3>
-<p>The CollectionService tag to track.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scope</td>
+<td><code class="highlight"><span class="nv">Fusion</span><span class="p">.</span><span class="nv">Scope</span></code></td>
+<td>The scope to store cleanup tasks.</td>
+</tr>
+<tr>
+<td>tag</td>
+<td><code class="highlight"><span class="nb">string</span></code></td>
+<td>The CollectionService tag to track.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="returns-stateobject-instance">Returns <code>: StateObject&lt;{ Instance }&gt;</code></h2>
-<p>A state object with every instance of the given tag.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="nv">StateObject</span><span class="o">&lt;</span><span class="p">{</span><span class="w"> </span><span class="nv">Instance</span><span class="w"> </span><span class="p">}</span><span class="o">&gt;</span></code></td>
+<td>A state object with every instance of the given tag.</td>
+</tr>
+</tbody>
+</table>
 
 <!-- Source file information -->
 
@@ -873,15 +855,14 @@
       
         <!-- Footer -->
 <footer class="md-footer">
-
-	<!-- Link to previous and/or next page -->
-	
-	  <nav
-		class="md-footer__inner md-grid"
-		aria-label="footer.title"
-	  >
-
-		<!-- Link to previous page -->
+  <!-- Link to previous and/or next page -->
+  
+  <nav
+    class="md-footer__inner md-grid"
+    aria-label="footer.title"
+  >
+    <!--
+		Link to previous page
 		
 		  
 		  <a
@@ -904,7 +885,7 @@
 		  </a>
 		
 
-		<!-- Link to next page -->
+		Link to next page
 		
 		  
 		  <a
@@ -926,13 +907,13 @@
 			</div>
 		  </a>
 		
-	  </nav>
-	
+		--></nav>
+  
 
-	<!-- Further information -->
-	<div class="md-footer-meta md-typeset">
-	  <div class="md-footer-meta__inner md-grid">
-		<div class="md-copyright">
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
   
   
     Made with
@@ -942,11 +923,11 @@
   
 </div>
 
-		<!-- Social links -->
-		
-	  </div>
-	</div>
-  </footer>
+      <!-- Social links -->
+      
+    </div>
+  </div>
+</footer>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">

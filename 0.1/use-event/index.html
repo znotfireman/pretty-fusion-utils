@@ -523,39 +523,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Arguments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scope-fusionscope" class="md-nav__link">
-    <span class="md-ellipsis">
-      scope : Fusion.Scope
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#event-eventlike" class="md-nav__link">
-    <span class="md-ellipsis">
-      event : EventLike
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#listener-any-" class="md-nav__link">
-    <span class="md-ellipsis">
-      listener : (...any) -&gt; ()
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -784,39 +751,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Arguments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scope-fusionscope" class="md-nav__link">
-    <span class="md-ellipsis">
-      scope : Fusion.Scope
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#event-eventlike" class="md-nav__link">
-    <span class="md-ellipsis">
-      event : EventLike
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#listener-any-" class="md-nav__link">
-    <span class="md-ellipsis">
-      listener : (...any) -&gt; ()
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -864,16 +798,49 @@
 <p>Connects to an event-like object. The connection is automatically disconnected when the scope is cleaned up.</p>
 <hr />
 <h2 id="arguments">Arguments</h2>
-<h3 id="scope-fusionscope">scope <code>: Fusion.Scope</code></h3>
-<p>The scope to store cleanup tasks.</p>
-<h3 id="event-eventlike">event <code>: EventLike</code></h3>
-<p>An event-like object to connect. Can be a RBXScriptSignal, or an object
-  with a <code>Connect</code> or <code>connect</code> method.</p>
-<h3 id="listener-any-">listener <code>: (...any) -&gt; ()</code></h3>
-<p>An event listener to be connected.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scope</td>
+<td><code class="highlight"><span class="nv">Fusion</span><span class="p">.</span><span class="nv">Scope</span></code></td>
+<td>The scope to store cleanup tasks.</td>
+</tr>
+<tr>
+<td>event</td>
+<td><code class="highlight"><span class="nv">EventLike</span></code></td>
+<td>An event-like object to connect. Can be a RBXScriptSignal, or an object</td>
+</tr>
+<tr>
+<td>with a <code>Connect</code> or <code>connect</code> method.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>| listener | <code class="highlight"><span class="p">(...</span><span class="nv">any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">()</span></code> | An event listener to be connected.</p>
 <hr />
 <h2 id="returns-">Returns <code>: () -&gt; ()</code></h2>
-<p>A function to disconnect the event listener.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">()</span></code></td>
+<td>A function to disconnect the event listener.</td>
+</tr>
+</tbody>
+</table>
 
 <!-- Source file information -->
 
@@ -895,15 +862,14 @@
       
         <!-- Footer -->
 <footer class="md-footer">
-
-	<!-- Link to previous and/or next page -->
-	
-	  <nav
-		class="md-footer__inner md-grid"
-		aria-label="footer.title"
-	  >
-
-		<!-- Link to previous page -->
+  <!-- Link to previous and/or next page -->
+  
+  <nav
+    class="md-footer__inner md-grid"
+    aria-label="footer.title"
+  >
+    <!--
+		Link to previous page
 		
 		  
 		  <a
@@ -926,7 +892,7 @@
 		  </a>
 		
 
-		<!-- Link to next page -->
+		Link to next page
 		
 		  
 		  <a
@@ -948,13 +914,13 @@
 			</div>
 		  </a>
 		
-	  </nav>
-	
+		--></nav>
+  
 
-	<!-- Further information -->
-	<div class="md-footer-meta md-typeset">
-	  <div class="md-footer-meta__inner md-grid">
-		<div class="md-copyright">
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
   
   
     Made with
@@ -964,11 +930,11 @@
   
 </div>
 
-		<!-- Social links -->
-		
-	  </div>
-	</div>
-  </footer>
+      <!-- Social links -->
+      
+    </div>
+  </div>
+</footer>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">

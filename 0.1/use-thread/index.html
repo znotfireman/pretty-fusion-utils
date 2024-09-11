@@ -649,39 +649,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Arguments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scope-fusionscope" class="md-nav__link">
-    <span class="md-ellipsis">
-      scope : Fusion.Scope
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resume-thread-args-" class="md-nav__link">
-    <span class="md-ellipsis">
-      resume : thread | (Args...) -&gt; ()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#args" class="md-nav__link">
-    <span class="md-ellipsis">
-      ... : Args...
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -784,39 +751,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Arguments">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scope-fusionscope" class="md-nav__link">
-    <span class="md-ellipsis">
-      scope : Fusion.Scope
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resume-thread-args-" class="md-nav__link">
-    <span class="md-ellipsis">
-      resume : thread | (Args...) -&gt; ()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#args" class="md-nav__link">
-    <span class="md-ellipsis">
-      ... : Args...
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -864,15 +798,48 @@
 <p>Spawns a new thread that is cancelled once the scope is cleaned up.</p>
 <hr />
 <h2 id="arguments">Arguments</h2>
-<h3 id="scope-fusionscope">scope <code>: Fusion.Scope</code></h3>
-<p>The scope to store clean up tasks.</p>
-<h3 id="resume-thread-args-">resume <code>: thread | (Args...) -&gt; ()</code></h3>
-<p>The thread to resume, or a function to spawn.</p>
-<h3 id="args">... <code>: Args...</code></h3>
-<p>The arguments to spawn the thread with.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scope</td>
+<td><code class="highlight"><span class="nv">Fusion</span><span class="p">.</span><span class="nv">Scope</span></code></td>
+<td>The scope to store clean up tasks.</td>
+</tr>
+<tr>
+<td>resume</td>
+<td><code class="highlight"><span class="nv">thread</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="p">(</span><span class="nv">Args</span><span class="p">...)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">()</span></code></td>
+<td>The thread to resume, or a function to spawn.</td>
+</tr>
+<tr>
+<td>...</td>
+<td><code class="highlight"><span class="nv">Args</span><span class="p">...</span></code></td>
+<td>The arguments to spawn the thread with.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="returns-thread">Returns <code>: thread</code></h2>
-<p>A thread that is cancelled once the scope is cleaned up.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="highlight"><span class="nv">thread</span></code></td>
+<td>A thread that is cancelled once the scope is cleaned up.</td>
+</tr>
+</tbody>
+</table>
 
 <!-- Source file information -->
 
@@ -894,15 +861,14 @@
       
         <!-- Footer -->
 <footer class="md-footer">
-
-	<!-- Link to previous and/or next page -->
-	
-	  <nav
-		class="md-footer__inner md-grid"
-		aria-label="footer.title"
-	  >
-
-		<!-- Link to previous page -->
+  <!-- Link to previous and/or next page -->
+  
+  <nav
+    class="md-footer__inner md-grid"
+    aria-label="footer.title"
+  >
+    <!--
+		Link to previous page
 		
 		  
 		  <a
@@ -925,7 +891,7 @@
 		  </a>
 		
 
-		<!-- Link to next page -->
+		Link to next page
 		
 		  
 		  <a
@@ -947,13 +913,13 @@
 			</div>
 		  </a>
 		
-	  </nav>
-	
+		--></nav>
+  
 
-	<!-- Further information -->
-	<div class="md-footer-meta md-typeset">
-	  <div class="md-footer-meta__inner md-grid">
-		<div class="md-copyright">
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
   
   
     Made with
@@ -963,11 +929,11 @@
   
 </div>
 
-		<!-- Social links -->
-		
-	  </div>
-	</div>
-  </footer>
+      <!-- Social links -->
+      
+    </div>
+  </div>
+</footer>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">

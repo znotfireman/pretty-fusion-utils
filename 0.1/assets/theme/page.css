@@ -302,3 +302,51 @@
 label.md-nav__title:first-child {
   display: none !important;
 }
+
+.pfu-utils-grid {
+  gap: 1em !important;
+}
+
+.pfu-utils-grid > section {
+  background-color: var(--md-default-bg-color--light);
+  padding: 2em;
+  border-radius: 0.5em;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.pfu-utils-grid > section a {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-clamp: 4;
+  box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--md-default-fg-color) !important;
+}
+
+.pfu-utils-grid > section * {
+  margin: 0;
+}
+
+.pfu-utils-grid > section:hover {
+  background-color: var(--md-default-bg-color--lighter);
+  transform: scale(1.025);
+}
+
+div.md-typeset__table {
+  background-color: red;
+  display: table !important;
+  /* border: 0.05rem solid var(--fusiondoc-stroke); */
+  width: 100% !important;
+}
+
+* {
+  background-color: red !important;
+}
+
+.md-header--shadow {
+  box-shadow: 0 0 0.2rem var(--md-default-bg-color),
+    0 0.2rem 0.4rem var(--md-default-bg-color) !important;
+}
