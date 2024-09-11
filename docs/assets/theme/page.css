@@ -309,9 +309,10 @@ label.md-nav__title:first-child {
 
 .pfu-utils-grid > section {
   background-color: var(--md-default-bg-color--light);
+  border: 0.05em solid var(--md-default-bg-color--lighter);
   padding: 2em;
   border-radius: 0.5em;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, border 0.2s ease;
 }
 
 .pfu-utils-grid > section a {
@@ -332,6 +333,7 @@ label.md-nav__title:first-child {
 
 .pfu-utils-grid > section:hover {
   background-color: var(--md-default-bg-color--lighter);
+  border: 0.05em solid var(--md-default-fg-color);
   transform: scale(1.025);
 }
 
