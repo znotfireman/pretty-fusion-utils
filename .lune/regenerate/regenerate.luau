@@ -56,6 +56,10 @@ local function regenerate()
     :appendLine("return table.freeze {")
     :indent()
 
+  table.sort(utils, function(first, second)
+    return first.dir < second.dir
+  end)
+
   local firstList, secondList, indexUtils, pages = {}, {}, {}, {}
   for index, util in utils do
     print("Processing", util.config.name)
