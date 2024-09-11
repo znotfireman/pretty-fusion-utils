@@ -9,7 +9,7 @@ function useInterval<S>(
   delay: UsedAs<number?>,
   callback: (Scope<S>) -> (),
   immediate: boolean?
-):
+)
 ```
 
 Sets an interval that runs the callback function every `delay` seconds. If `delay` is `undefined`, the interval is cleared. If the delay changes, the the interval is cleared. If the delay changes, the interval is reset.

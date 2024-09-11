@@ -7,7 +7,7 @@
 function useEffect<Scope>(
   scope: Scope & Fusion.Scope,
   callback: (Fusion.Use, Scope) -> ()
-):
+)
 ```
 
 Perform side effects with state objects.

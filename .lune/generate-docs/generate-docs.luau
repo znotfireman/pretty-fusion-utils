@@ -72,10 +72,10 @@ local function generateDocs()
         end
         code:appendLine(table.concat(args, ",\n"))
       end
-      code:unIndent():append("):")
+      code:unIndent():append(")")
 
       if util.config.returns then
-        code:append(" "):append(util.config.returns.type)
+        code:append(": "):append(util.config.returns.type)
 
         codeDocumentation
           :appendLine()
