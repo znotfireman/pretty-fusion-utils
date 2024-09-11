@@ -17,21 +17,17 @@ Spawns a new thread that is cancelled once the scope is cleaned up.
 
 ## Arguments
 
-### scope `: Fusion.Scope`
-
-The scope to store clean up tasks.
-
-### resume `: thread | (Args...) -> ()`
-
-The thread to resume, or a function to spawn.
-
-### ... `: Args...`
-
-The arguments to spawn the thread with.
+| Name     | Type     | Description          |
+| -------- | -------- | -------------------- |
+| scope | `#!luau Fusion.Scope` | The scope to store clean up tasks.
+| resume | `#!luau thread | (Args...) -> ()` | The thread to resume, or a function to spawn.
+| ... | `#!luau Args...` | The arguments to spawn the thread with.
 
 ---
 
 ## Returns `: thread`
 
-A thread that is cancelled once the scope is cleaned up.
+| Type     | Description                  |
+| -------- | ---------------------------- |
+| `#!luau thread` | A thread that is cancelled once the scope is cleaned up. |
 

@@ -16,19 +16,18 @@ Add clean up tasks to the scope. Returns the clean up tasks, allowing it to be u
 
 ## Arguments
 
-### scope `: Fusion.Scope`
-
-The scope to store cleanup tasks.
-
-### ... `: Tasks...`
-
-The tasks to be added.
+| Name     | Type     | Description          |
+| -------- | -------- | -------------------- |
+| scope | `#!luau Fusion.Scope` | The scope to store cleanup tasks.
+| ... | `#!luau Tasks...` | The tasks to be added.
 
 ---
 
 ## Returns `: Tasks...`
 
-The tasks that has been added.
+| Type     | Description                  |
+| -------- | ---------------------------- |
+| `#!luau Tasks...` | The tasks that has been added. |
 
 ---
 

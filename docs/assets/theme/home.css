@@ -147,38 +147,6 @@ h1.pfu-home-header::before {
   }
 }
 
-.pfu-home-utils {
-  gap: 1em !important;
-}
-
-.pfu-home-utils > section {
-  background-color: var(--md-default-bg-color--light);
-  padding: 2em;
-  border-radius: 0.5em;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.pfu-home-utils > section a {
-  display: block;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  line-clamp: 4;
-  box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: var(--md-default-fg-color) !important;
-}
-
-.pfu-home-utils > section * {
-  margin: 0;
-}
-
-.pfu-home-utils > section:hover {
-  background-color: var(--md-default-bg-color--lighter);
-  transform: scale(1.025);
-}
-
 /*
 #fusiondoc-home-main::before {
 	content: "";

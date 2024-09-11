@@ -17,23 +17,19 @@ Returns a state object with the previous value of an observable state object. In
 
 ## Arguments
 
-### scope `: Scope`
-
-The scope to store cleanup tasks.
-
-### state `: StateObject<T>`
-
-The state object to observe for changes.
-
-### predicate `: ((T, T) -> boolean)?`
-
-The predicate function to assert if the value is newer. Defaults to Fusion's similarity rules.
+| Name     | Type     | Description          |
+| -------- | -------- | -------------------- |
+| scope | `#!luau Scope` | The scope to store cleanup tasks.
+| state | `#!luau StateObject<T>` | The state object to observe for changes.
+| predicate | `#!luau ((T, T) -> boolean)?` | The predicate function to assert if the value is newer. Defaults to Fusion's similarity rules.
 
 ---
 
 ## Returns `: StateObject<T?>`
 
-A state object with the previous value of the state object.
+| Type     | Description                  |
+| -------- | ---------------------------- |
+| `#!luau StateObject<T?>` | A state object with the previous value of the state object. |
 
 ---
 

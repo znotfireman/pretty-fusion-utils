@@ -1,6 +1,7 @@
 type StringBuilder = {
   append: (self: StringBuilder, ...string) -> StringBuilder,
   appendLine: (self: StringBuilder, ...string) -> StringBuilder,
+  appendStringBuilder: (self: StringBuilder, build: StringBuilder) -> StringBuilder,
   indent: (self: StringBuilder) -> StringBuilder,
   unIndent: (self: StringBuilder) -> StringBuilder,
   build: (self: StringBuilder) -> string,

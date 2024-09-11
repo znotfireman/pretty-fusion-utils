@@ -43,7 +43,7 @@ $utils-list-2
 
 </section>
 
-<section class="grid pfu-home-utils" markdown>
+<section class="grid pfu-utils-grid" markdown>
 
 $utils-grid
 

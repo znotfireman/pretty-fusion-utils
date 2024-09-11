@@ -17,23 +17,19 @@ Connects to an event-like object. The connection is automatically disconnected w
 
 ## Arguments
 
-### scope `: Fusion.Scope`
-
-The scope to store cleanup tasks.
-
-### event `: EventLike`
-
-An event-like object to connect. Can be a RBXScriptSignal, or an object
+| Name     | Type     | Description          |
+| -------- | -------- | -------------------- |
+| scope | `#!luau Fusion.Scope` | The scope to store cleanup tasks.
+| event | `#!luau EventLike` | An event-like object to connect. Can be a RBXScriptSignal, or an object
   with a `Connect` or `connect` method.
   
-
-### listener `: (...any) -> ()`
-
-An event listener to be connected.
+| listener | `#!luau (...any) -> ()` | An event listener to be connected.
 
 ---
 
 ## Returns `: () -> ()`
 
-A function to disconnect the event listener.
+| Type     | Description                  |
+| -------- | ---------------------------- |
+| `#!luau () -> ()` | A function to disconnect the event listener. |
 

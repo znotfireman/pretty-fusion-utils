@@ -16,17 +16,16 @@ Creates a timer that can be used to track a value over time.
 
 ## Arguments
 
-### scope `: Fusion.Scope`
-
-The scope to store cleanup tasks.
-
-### initial `: number?`
-
-The initial value of the timer.
+| Name     | Type     | Description          |
+| -------- | -------- | -------------------- |
+| scope | `#!luau Fusion.Scope` | The scope to store cleanup tasks.
+| initial | `#!luau number?` | The initial value of the timer.
 
 ---
 
 ## Returns `: Timer`
 
-A timer object.
+| Type     | Description                  |
+| -------- | ---------------------------- |
+| `#!luau Timer` | A timer object. |
 

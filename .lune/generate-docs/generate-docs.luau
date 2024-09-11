@@ -54,17 +54,21 @@ local function generateDocs()
       code:appendLine("("):indent()
 
       if util.config.args then
-        codeDocumentation:appendLine():appendLine("---"):appendLine():appendLine("## Arguments")
+        codeDocumentation
+          :appendLine()
+          :appendLine("---")
+          :appendLine()
+          :appendLine("## Arguments")
+          :appendLine()
+          :appendLine("| Name     | Type     | Description          |")
+          :appendLine("| -------- | -------- | -------------------- |")
 
         local args = {}
         for _, arg in util.config.args do
           table.insert(args, `{arg.name}: {arg.type}`)
           codeDocumentation
+            :append("|", arg.name, "|", `\`#!luau {arg.type}\``, "|", arg.description)
             :appendLine()
-            -- TODO: fix multilines...
-            :appendLine("###", arg.name, `\`: {arg.type}\``)
-            :appendLine()
-            :appendLine(arg.description)
         end
         code:appendLine(table.concat(args, ",\n"))
       end
@@ -79,7 +83,15 @@ local function generateDocs()
           :appendLine()
           :appendLine("## Returns `:", util.config.returns.type .. "`")
           :appendLine()
-          :appendLine(util.config.returns.description)
+          :appendLine("| Type     | Description                  |")
+          :appendLine("| -------- | ---------------------------- |")
+          :appendLine(
+            "|",
+            `\`#!luau {util.config.returns.type}\``,
+            "|",
+            util.config.returns.description,
+            "|"
+          )
       end
 
       if util.config.example then
@@ -156,6 +168,18 @@ local function generateDocs()
 
   for util, content in pages do
     fs.writeFile(path(PATH_DOCS, `{util.dir}.md`), content)
+    -- fs.writeFile(
+    --   path(PATH_DOCS, `{util.dir}.md`),
+    --   StringBuilder(fs.readFile(path(PATH_DOCS, `{util.dir}.md`)))
+    --     :appendLine("---")
+    --     :appendLine()
+    --     :appendLine("## More Utils")
+    --     :appendLine()
+    --     :appendLine('<section class="grid pfu-utils-grid" markdown>')
+    --     :appendLine(table.concat(indexUtils, "\n\n"))
+    --     :appendLine("</section>")
+    --     :build()
+    -- )
     table.insert(nav, {
       [util.config.name] = `{util.dir}.md`,
     })

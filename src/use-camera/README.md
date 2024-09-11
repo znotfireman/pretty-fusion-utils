@@ -15,13 +15,15 @@ Returns a state object with the current camera. Updates when the current camera 
 
 ## Arguments
 
-### scope `: Fusion.Scope`
-
-The scope to store cleanup tasks.
+| Name     | Type     | Description          |
+| -------- | -------- | -------------------- |
+| scope | `#!luau Fusion.Scope` | The scope to store cleanup tasks.
 
 ---
 
 ## Returns `: StateObject<Camera>`
 
-A state object with the current camera.
+| Type     | Description                  |
+| -------- | ---------------------------- |
+| `#!luau StateObject<Camera>` | A state object with the current camera. |
 
