@@ -7,9 +7,9 @@ local useEventListener = require("src/use-event-listener")
 local onCameraChanged = Workspace:GetPropertyChangedSignal("CurrentCamera")
 
 --[=[
-  Returns a state object with the current camera. Updates when the current
-  camera changes.
-  @return A state object with the camera instance.
+  Returns a state object with the current camera. Updates when the current camera changes.
+  @param scope The scope to store cleanup tasks.
+  @return A state object with the current camera.
 ]=]
 local function useCamera(scope: Types.Scope<Types.Fusion>)
   local camera = scope:Value(Workspace.CurrentCamera)

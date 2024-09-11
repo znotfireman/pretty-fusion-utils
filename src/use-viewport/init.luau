@@ -3,8 +3,8 @@ local lockValue = require("src/utils/lock-value")
 local useCamera = require("src/use-camera")
 
 --[=[
-  Returns the current viewport size. Updates when the current camera changes or
-  when the viewport size is changed.
+  Returns the current viewport size. Updates when the current camera changes or when the viewport size is changed.
+  @param scope The scope to store cleanup tasks.
   @return A state object with the viewport size.
 ]=]
 local function useViewport(

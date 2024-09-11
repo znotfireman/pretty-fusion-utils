@@ -5,10 +5,8 @@ local lockValue = require("src/utils/lock-value")
 type Become = <T>(value: T) -> T
 
 --[=[
-  Returns a state object with an value from an asynchronous processor. The
-  processor is given a Use callback that adds dependencies, a Become callback to
-  alter the current eventual value, and an inner scope to add cleanup tasks to.
-  @param outerScope The scope to use for destruction tasks.
+  Returns a state object with an value from an asynchronous processor. The processor is given a Use callback that adds dependencies, a Become callback alter the current eventual value, and an inner scope to add cleanup tasks to.
+  @param scope The scope to store cleanup tasks.
   @param fallback The fallback value to display while the processor runs.
   @param processor The processor of the eventual value. It receives a Use callback, a Become callback, and an inner scope.
   @return A state object with the asynchronous value.

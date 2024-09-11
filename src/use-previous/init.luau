@@ -15,8 +15,7 @@ local function isSimilar(a: unknown, b: unknown): boolean
 end
 
 --[=[
-  Returns a state object with the previous value of an observable state object.
-  Initially outputs `nil`.
+  Returns a state object with the previous value of an observable state object. Initially outputs `nil`.
   @param scope The scope to store cleanup tasks.
   @param state The state object to observe for changes.
   @param predicate The predicate function to assert if the value is newer. Defaults to Fusion's similarity rules.

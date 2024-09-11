@@ -16,12 +16,12 @@ type Px = typeof(setmetatable(
 local MACBOOK_AIR_RESOLUTION = Vector2.new(1280, 832)
 
 --[=[
-  Returns a state object with the current `px` unit based on the current
-  viewport size.
-  @param baseResolution The base resolution to scale from, defaults to a Macbook Air's resolution
-  @param minimumScale The smallest scale, defaults to 50%
-  @param dominantAxis The axis to scale for, defaults to 1:1
-  @return A `px` unit that scales with the viewport size.
+  Returns a state object with the current `px` unit based on the current viewport size.
+  @param scope The scope to store cleanup tasks.
+  @param baseResolution TThe base resolution to scale from, defaults to a Macbook Air's resolution.
+  @param minimumScale The smallest scale, defaults to 50%.
+  @param dominantAxis The axis to scale for, defaults to 1:1.
+  @return A `px` unit that scales with the viewport size..
 ]=]
 local function usePx(
   scope: Types.FusionScope,

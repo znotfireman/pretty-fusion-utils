@@ -10,6 +10,10 @@ local PATH_DOCS = path(process.cwd, "docs")
 local PATH_SRC = path(process.cwd, "src")
 local TEMPLATE_INDEX = path(process.cwd, ".lune", "generate-docs", "templates", "index.md")
 
+local function regexEscape(str: string)
+  return str:gsub("[%(%)%.%%%+%-%*%?%[%^%$%]]", "%%%1")
+end
+
 local function reset(dir: string)
   if not fs.isDir(dir) then
     fs.writeDir(dir)
@@ -47,6 +51,8 @@ local function generateDocs()
 
     local code = StringBuilder():append("function", util.config.name)
     local codeDocumentation = StringBuilder()
+    local docComment = StringBuilder("--[=["):appendLine():indent():appendLine(util.config.brief)
+
     do
       if util.config.variadics then
         code:append(`<{table.concat(util.config.variadics, ", ")}>`)
@@ -69,6 +75,7 @@ local function generateDocs()
           codeDocumentation
             :append("|", arg.name, "|", `\`#!luau {arg.type}\``, "|", arg.description, "|")
             :appendLine()
+          docComment:appendLine("@param", arg.name, arg.description)
         end
         code:appendLine(table.concat(args, ",\n"))
       end
@@ -76,6 +83,7 @@ local function generateDocs()
 
       if util.config.returns then
         code:append(": "):append(util.config.returns.type)
+        docComment:appendLine("@return", util.config.returns.description)
 
         codeDocumentation
           :appendLine()
@@ -164,6 +172,12 @@ local function generateDocs()
         :appendLine(codeDocumentation:build())
         :build()
     )
+
+    local srcFilepath = path(PATH_SRC, util.dir, "init.luau")
+    local srcFile = fs.readFile(srcFilepath)
+    fs.writeFile(srcFilepath, (srcFile:gsub("%-%-%[=%[.*]=]", function()
+      return docComment:unIndent():append("]=]"):build()
+    end)))
   end
 
   table.sort(firstList)

@@ -4,9 +4,8 @@ local function doNothing() end
 
 --[=[
   Perform side effects with state objects.
-  @deprecated Not recommended as Fusion has no concept of side effects.
-  @param A callback with a Use callback for tracking side effects and an inner
-  scope to track cleanup tasks. This callback may not yield.
+  @param scope The scope to store cleanup tasks.
+  @param callback A callback with a Use callback for tracking side effects and an inner scope scope to track cleanup tasks. This callback may not yield..
 ]=]
 local function useEffect<Scope>(scope: Scope & Types.FusionScope, callback: (Types.Use, Scope) -> ())
   -- Top ten silliest fusion hacks of all time

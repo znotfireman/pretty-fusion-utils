@@ -5,10 +5,8 @@ local useEventListener = require("src/use-event-listener")
 local useThread = require("src/use-thread")
 
 --[=[
-  Sets an interval that runs the callback function every `delay` seconds. If
-  `delay` is `undefined`, the interval is cleared. If the delay changes, the
-* interval is reset.
-  @param scope The scope to store clean up tasks.
+  Sets an interval that runs the callback function every `delay` seconds. If `delay` is `undefined`, the interval is cleared. If the delay changes, the the interval is cleared. If the delay changes, the interval is reset.
+  @param scope The scope to store cleanup tasks.
   @param delay The delay, in seconds per each interval.
   @param callback The callback to run at an interval. Receives an inner scope that is cleaned up per each interval.
   @param immediate Whether to spawn the callback immediately.

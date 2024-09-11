@@ -48,12 +48,13 @@ local function bindDisconnect(connection: ConnectionLike)
 end
 
 --[=[
-  Subscribes to an event-like object. The subscription is automatically
-  disconnected when the scope cleans up.
-
-  @param event The event-like object to subscribe to.
-  @param listener The listener to subscribe with.
-  @return The connection object.
+  Connects to an event-like object. The connection is automatically disconnected when the scope is cleaned up.
+  @param scope The scope to store cleanup tasks.
+  @param event An event-like object to connect. Can be a RBXScriptSignal, or an object
+    with a `Connect` or `connect` method.
+    
+  @param listener An event listener to be connected.
+  @return A function to disconnect the event listener.
 ]=]
 local function useEventListener(
   scope: Types.Scope<Types.Fusion>,

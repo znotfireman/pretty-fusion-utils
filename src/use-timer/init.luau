@@ -11,7 +11,8 @@ type Timer = Types.Value<number> & {
 
 --[=[
   Creates a timer that can be used to track a value over time.
-  @param initialValue The initial value of the timer.
+  @param scope The scope to store cleanup tasks.
+  @param initial The initial value of the timer.
   @return A timer object.
 ]=]
 local function useTimer(scope: Types.Scope<Types.Fusion>, initial: number?): Timer

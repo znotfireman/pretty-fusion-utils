@@ -4,8 +4,8 @@ local Types = require("src/types")
 local lockValue = require("src/utils/lock-value")
 
 --[=[
-  Returns a state object with the mouse position. Updates when the mouse
-  position changes.
+  Returns a state object with the mouse position. Updates when the mouse position changes.
+  @param scope The scope to store cleanup tasks.
   @param observer Optional observer tracking the mouse position.
   @return A state object with the mouse position.
 ]=]

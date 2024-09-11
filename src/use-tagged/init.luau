@@ -5,8 +5,8 @@ local lockValue = require("src/utils/lock-value")
 local useEventListener = require("src/use-event-listener")
 
 --[=[
-  Returns a state object with every instance of a given tag. Updates when new
-  instances get tagged or old instances get untagged.
+  Returns a state object with every instance of a given tag. Updates when new instances get tagged or old instances get untagged.
+  @param scope The scope to store cleanup tasks.
   @param tag The CollectionService tag to track.
   @return A state object with every instance of the given tag.
 ]=]
