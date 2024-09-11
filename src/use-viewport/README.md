@@ -10,7 +10,7 @@ function useViewport(
 ```
 
 Returns the current viewport size. Updates when the current camera changes or when the viewport size is changed.
-Useful for skibiding
+
 ---
 
 ## Arguments
