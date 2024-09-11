@@ -18,12 +18,12 @@ Returns a state object with the mouse position. Updates when the mouse position 
 
 | Name     | Type     | Description          |
 | -------- | -------- | -------------------- |
-| scope | `#!luau Fusion.Scope` | The scope to store cleanup tasks.
-| observer | `#!luau (mouse: Vector2) -> ()?` | Optional observer tracking the mouse position.
+| scope | `#!luau Fusion.Scope` | The scope to store cleanup tasks. |
+| observer | `#!luau (mouse: Vector2) -> ()?` | Optional observer tracking the mouse position. |
 
 ---
 
-## Returns `: StateObject<Vector2>`
+## Returns
 
 | Type     | Description                  |
 | -------- | ---------------------------- |

@@ -1,5 +1,5 @@
 [config]
-  name = "useEvent"
+  name = "useEventListener"
   brief = """\
   Connects to an event-like object. The connection is automatically \
   disconnected when the scope is cleaned up.\

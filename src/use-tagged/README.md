@@ -18,12 +18,12 @@ Returns a state object with every instance of a given tag. Updates when new inst
 
 | Name     | Type     | Description          |
 | -------- | -------- | -------------------- |
-| scope | `#!luau Fusion.Scope` | The scope to store cleanup tasks.
-| tag | `#!luau string` | The CollectionService tag to track.
+| scope | `#!luau Fusion.Scope` | The scope to store cleanup tasks. |
+| tag | `#!luau string` | The CollectionService tag to track. |
 
 ---
 
-## Returns `: StateObject<{ Instance }>`
+## Returns
 
 | Type     | Description                  |
 | -------- | ---------------------------- |

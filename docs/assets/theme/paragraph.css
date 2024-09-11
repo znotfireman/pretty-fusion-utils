@@ -173,6 +173,6 @@ h6 > .twemoji:first-child {
   letter-spacing: 0.02em;
 }
 
-div.md-typeset__table {
+.md-typeset table:not([class]) {
   border: 0.05rem solid var(--fusiondoc-stroke);
 }

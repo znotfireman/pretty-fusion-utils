@@ -10,18 +10,18 @@ function useViewport(
 ```
 
 Returns the current viewport size. Updates when the current camera changes or when the viewport size is changed.
-
+Useful for skibiding
 ---
 
 ## Arguments
 
 | Name     | Type     | Description          |
 | -------- | -------- | -------------------- |
-| scope | `#!luau Fusion.Scope` | The scope to store cleanup tasks.
+| scope | `#!luau Fusion.Scope` | The scope to store cleanup tasks. |
 
 ---
 
-## Returns `: StateObject<Vector2>`
+## Returns
 
 | Type     | Description                  |
 | -------- | ---------------------------- |
