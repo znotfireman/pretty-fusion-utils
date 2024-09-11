@@ -14,8 +14,8 @@
   name = "event"
   type = "EventLike"
   description = """\
-  An event-like object to connect. Can be a RBXScriptSignal, or an object
-  with a `Connect` or `connect` method.
+  An event-like object to connect. Can be a RBXScriptSignal, or an object \
+  with a `Connect` or `connect` method.\
   """
 
 [[config.args]]
