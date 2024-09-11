@@ -335,16 +335,12 @@ label.md-nav__title:first-child {
   transform: scale(1.025);
 }
 
-div.md-typeset__table {
-  background-color: red;
+/* div.md-typeset__table {
   display: table !important;
-  /* border: 0.05rem solid var(--fusiondoc-stroke); */
-  width: 100% !important;
-}
-
-* {
-  background-color: red !important;
-}
+  margin: 0 1em;
+  width: calc(100% - 2em) !important;
+  padding: 0;
+} */
 
 .md-header--shadow {
   box-shadow: 0 0 0.2rem var(--md-default-bg-color),
