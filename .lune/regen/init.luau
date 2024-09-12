@@ -1,1 +1,1 @@
-require("./regenerate").regenerate()
+require("./regenerator").regenerate()
