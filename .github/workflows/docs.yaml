@@ -29,7 +29,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate documentation
-        run: lune run regenerate
+        run: lune run regen
 
       - uses: actions/setup-python@v5
         with:

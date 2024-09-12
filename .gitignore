@@ -33,7 +33,7 @@ dist/
 
 
 # Ignore generated documentation
-# Generate new documentation via `lune run regenerate`
+# Generate new documentation via `lune run regen`
 mkdocs.yaml
 docs/*
 !docs/assets
