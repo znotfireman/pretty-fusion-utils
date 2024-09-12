@@ -30,4 +30,3 @@ Spawns a new coroutine that is closed once the scope is cleaned up.
 | Type     | Description                  |
 | -------- | ---------------------------- |
 | `#!luau thread` | A thread that is closed once the scope is cleaned up. |
-

@@ -26,4 +26,3 @@ Returns the current viewport size. Updates when the current camera changes or wh
 | Type     | Description                  |
 | -------- | ---------------------------- |
 | `#!luau StateObject<Vector2>` | A state object with the viewport size. |
-

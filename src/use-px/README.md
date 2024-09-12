@@ -32,4 +32,3 @@ Returns a state object with the current `px` unit based on the current viewport 
 | Type     | Description                  |
 | -------- | ---------------------------- |
 | `#!luau Px` | A `px` unit that scales with the viewport size.. |
-

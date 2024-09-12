@@ -26,4 +26,3 @@ Returns a state object with the current camera. Updates when the current camera 
 | Type     | Description                  |
 | -------- | ---------------------------- |
 | `#!luau StateObject<Camera>` | A state object with the current camera. |
-

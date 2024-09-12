@@ -30,4 +30,3 @@ Returns a state object with an value from an asynchronous processor. The process
 | Type     | Description                  |
 | -------- | ---------------------------- |
 | `#!luau StateObject<Result>` | A state object with the asynchronous value. |
-

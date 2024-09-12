@@ -28,4 +28,3 @@ Returns a state object with the mouse position. Updates when the mouse position 
 | Type     | Description                  |
 | -------- | ---------------------------- |
 | `#!luau StateObject<Vector2>` | A state object with the mouse position. |
-
