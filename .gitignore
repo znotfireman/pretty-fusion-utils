@@ -1,20 +1,43 @@
-/*.rbxlx.lock
-/*.rbxl.lock
-**/.DS_Store
-Packages/
+# Ignore Roblox files
+*.rbxlx
+*.rbxmx
+*.rbxm
+*.rbxl
 **/*.rbx[lm]*
+
+# Ignore lock files
+*.lock
+
+# Ignore selene auto-generated config
+roblox.toml
+
+# Ignore OS styling
 .DS_Store
+**/.DS_Store
+desktop.ini
+
+# Ignore packages
+Packages/
+node_modules/
+
+# Ignore selene auto-generated config
 roblox.yml
 roblox.toml
 globalTypes.d.lua
+
+# Ignore sourcemap
 **/sourcemap.json
+
+# Ignore distributed files
 dist/
+
 
 # Ignore generated documentation
 # Generate new documentation via `lune run regenerate`
 mkdocs.yaml
 docs/*
 !docs/assets
+!docs/README.md
 
-# Ignore mike site files
-site
+# Ignore site folder
+/site/
