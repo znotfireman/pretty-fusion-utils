@@ -47,7 +47,7 @@ local Regenerator = {}
 function Regenerator.initFile()
   print("Regenerating init.luau exports")
   local initFile = StringBuilder()
-    :appendLine("-- This file was generated and is not intended for manual editing.")
+    :appendLine("-- This file was @generated and is not intended for manual editing.")
     :appendLine("-- Run `lune run regen` to generate a fresh init file.")
     :appendLine()
     :appendLine("return table.freeze {")
@@ -82,7 +82,7 @@ function Regenerator.mkdocsConfig()
   fs.writeFile(
     path(process.cwd, "mkdocs.yaml"),
     StringBuilder()
-      :appendLine("# This file was generated and is not intended for manual editing.")
+      :appendLine("# This file was @generated and is not intended for manual editing.")
       :appendLine("# Run `lune run regen` to generate a fresh configuration file.")
       :appendLine()
       :appendLine("# Edit the configuration at `.lune/regenerate/templates/mkdocs.yaml.luau`")
@@ -198,7 +198,7 @@ function Regenerator.regenerate()
     end
 
     local content = StringBuilder()
-      :appendLine("<!-- This file was generated and is not intended for manual editing. -->")
+      :appendLine("<!-- This file was @generated and is not intended for manual editing. -->")
       :appendLine("<!-- Run `lune run regen` to generate a fresh README. -->")
       :appendLine()
       :appendLine("#", util.config.name)

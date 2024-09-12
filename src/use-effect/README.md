@@ -1,4 +1,4 @@
-<!-- This file was generated and is not intended for manual editing. -->
+<!-- This file was @generated and is not intended for manual editing. -->
 <!-- Run `lune run regen` to generate a fresh README. -->
 
 # useEffect
