@@ -6,17 +6,22 @@
   "lsp": {
     "luau-lsp": {
       "settings": {
+        "ext": {
+          "prefer_worktree_binary": true,
+          "fflags": {
+            "enable_by_default": false,
+            "sync": true
+          },
+          "roblox": {
+            "enabled": true
+          }
+        },
         "luau-lsp": {
-          "ext": {
-            "roblox": {
-              "enabled": true
-            },
-            "require": {
-              "mode": "relativeToFile",
-              "directoryAliases": {
-                "@lune/": "~/.lune/.typedefs/0.8.8/",
-                "lib": "lib"
-              }
+          "require": {
+            "mode": "relativeToFile",
+            "directoryAliases": {
+              "@lune/": "~/.lune/.typedefs/0.8.8/",
+              "lib": "lib"
             }
           }
         }

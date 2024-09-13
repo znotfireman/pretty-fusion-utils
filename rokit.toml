@@ -5,6 +5,7 @@
 
 [tools]
   darklua = "seaofvoices/darklua@0.13.1"
+  luau-lsp = "johnnyMorganz/luau-lsp@1.32.4"
   lune = "lune-org/lune@0.8.8"
   pesde = "daimond113/pesde@0.4.7"
   rojo = "rojo-rbx/rojo@7.4.4"
