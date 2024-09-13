@@ -1,10 +1,10 @@
 <h1>
 <img
-  lib="./assets/logo-light.svg#gh-light-mode-only"
+  src="./assets/logo-light.svg#gh-light-mode-only"
   height="100px"
   alt="Flower bouquet with Fusion accent colors"
 /><img
-  lib="./assets/logo-dark.svg#gh-dark-mode-only"
+  src="./assets/logo-dark.svg#gh-dark-mode-only"
   height="100px"
   alt="Flower bouquet with Fusion accent colors"/>
 </h1>
