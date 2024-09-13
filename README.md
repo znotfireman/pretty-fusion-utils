@@ -1,10 +1,10 @@
 <h1>
 <img
-  src="./assets/logo-light.svg#gh-light-mode-only"
+  lib="./assets/logo-light.svg#gh-light-mode-only"
   height="100px"
   alt="Flower bouquet with Fusion accent colors"
 /><img
-  src="./assets/logo-dark.svg#gh-dark-mode-only"
+  lib="./assets/logo-dark.svg#gh-dark-mode-only"
   height="100px"
   alt="Flower bouquet with Fusion accent colors"/>
 </h1>
@@ -49,11 +49,11 @@ specific Fusion utilities.
 - [X] `useTasks`
 - [X] `useThread`
 - [X] `useAsync` (analogous to [Fusion Eventuals])
-- [X] `useEffect` (somewhat broken, see `src/use-effect/init.luau`)
+- [X] `useEffect` (somewhat broken, see `lib/use-effect/init.luau`)
 
 ### Misc
 
-- [ ] Darklua setup & build system
+- [X] Darklua setup & build system
 - [ ] TypeScript support (waiting for `@rbxts/fusion@0.3`, may defer to using `@znotfireman/fusion`)
 - [ ] Memoize utility for some utilities e.g. `usePx` really should be cached
 

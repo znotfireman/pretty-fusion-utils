@@ -1,6 +1,6 @@
 {
   "name": "pretty-fusion-utils",
   "tree": {
-    "$path": "src"
+    "$path": "lib"
   }
 }

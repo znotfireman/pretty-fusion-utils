@@ -8,7 +8,7 @@ local serde = require("@lune/serde")
 local stringer = require("../utils/stringer")
 
 local PATH_DOCS = path(process.cwd, "docs")
-local PATH_SRC = path(process.cwd, "src")
+local PATH_LIB = path(process.cwd, "lib")
 local TEMPLATE_INDEX = path(process.cwd, ".lune", "regen", "templates", "index.md")
 
 local function reset(dir: string)
@@ -25,8 +25,8 @@ end
 
 local utils = {}
 
-for _, dir in fs.readDir(PATH_SRC) do
-  local dirPath, configPath = path(PATH_SRC, dir), path(PATH_SRC, dir, "doc.toml")
+for _, dir in fs.readDir(PATH_LIB) do
+  local dirPath, configPath = path(PATH_LIB, dir), path(PATH_LIB, dir, "doc.toml")
   if not fs.isDir(dirPath) or not fs.isFile(configPath) then
     continue
   end
@@ -55,10 +55,10 @@ function Regenerator.initFile()
 
   for _, util in utils do
     print("Exporting", util.config.name)
-    initFile:appendLine(util.config.name, "=", `require("src/{util.dir}"),`)
+    initFile:appendLine(util.config.name, "=", `require("lib/{util.dir}"),`)
   end
 
-  fs.writeFile(path(PATH_SRC, "init.luau"), initFile:unIndent():appendLine("}"):build())
+  fs.writeFile(path(PATH_LIB, "init.luau"), initFile:unIndent():appendLine("}"):build())
 end
 
 function Regenerator.mkdocsConfig()
@@ -212,11 +212,11 @@ function Regenerator.regenerate()
       :append(codeDocumentation:build())
 
     pages[util] = content:build()
-    fs.writeFile(path(PATH_SRC, util.dir, "README.md"), content:build())
+    fs.writeFile(path(PATH_LIB, util.dir, "README.md"), content:build())
 
-    local srcFilepath = path(PATH_SRC, util.dir, "init.luau")
-    local srcFile = fs.readFile(srcFilepath)
-    fs.writeFile(srcFilepath, (srcFile:gsub("%-%-%[=%[.*]=]", function()
+    local libFilepath = path(PATH_LIB, util.dir, "init.luau")
+    local libFile = fs.readFile(libFilepath)
+    fs.writeFile(libFilepath, (libFile:gsub("%-%-%[=%[.*]=]", function()
       return docComment:append("]=]"):unIndent():build()
     end)))
   end
