@@ -1,4 +1,4 @@
-local Fusion = require("lib/types/fusion")
+local Fusion = require("types/fusion")
 
 local function doNothing() end
 

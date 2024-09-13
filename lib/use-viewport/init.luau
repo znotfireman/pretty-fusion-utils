@@ -1,6 +1,6 @@
-local Fusion = require("lib/types/fusion")
-local lockValue = require("lib/utils/lock-value")
-local useCamera = require("lib/use-camera")
+local Fusion = require("types/fusion")
+local lockValue = require("utils/lock-value")
+local useCamera = require("use-camera")
 
 --[=[
   Returns the current viewport size. Updates when the current camera changes or when the viewport size is changed.

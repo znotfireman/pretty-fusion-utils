@@ -9,7 +9,8 @@ local stringer = require("../utils/stringer")
 
 local PATH_DOCS = path(process.cwd, "docs")
 local PATH_LIB = path(process.cwd, "lib")
-local TEMPLATE_INDEX = path(process.cwd, ".lune", "regen", "templates", "index.md")
+local PATH_TEMPLATES = path(process.cwd, ".lune", "regen", "templates")
+local TEMPLATE_INDEX = path(PATH_TEMPLATES, "index.md")
 
 local function reset(dir: string)
   if not fs.isDir(dir) then
@@ -55,7 +56,7 @@ function Regenerator.initFile()
 
   for _, util in utils do
     print("Exporting", util.config.name)
-    initFile:appendLine(util.config.name, "=", `require("lib/{util.dir}"),`)
+    initFile:appendLine(util.config.name, "=", `require("{util.dir}"),`)
   end
 
   fs.writeFile(path(PATH_LIB, "init.luau"), initFile:unIndent():appendLine("}"):build())
@@ -90,6 +91,77 @@ function Regenerator.mkdocsConfig()
       :appendLine(serde.encode("yaml", newMkdocs))
       :build()
   )
+end
+
+function Regenerator.aliases()
+  local vscodeSettings = table.clone(require("./templates/vscode"))
+  local zedSettings = table.clone(require("./templates/zed"))
+  local darkluaConfig = table.clone(require("./templates/darklua"))
+  local darkluaDevConfig = table.clone(require("./templates/darklua-dev"))
+
+  local aliases = {}
+  aliases["@lune/"] = "~/.lune/.typedefs/0.8.8/"
+
+  for _, dir in fs.readDir(PATH_LIB) do
+    if not fs.isDir(path(PATH_LIB, dir)) then
+      continue
+    end
+    aliases[dir] = path("lib", dir)
+  end
+
+  type ConvertRequire = {
+    current: {
+      name: "path",
+      sources: { [string]: string },
+    },
+    rule: "convert_require",
+    target: {
+      indexing_style: "property",
+      name: "roblox",
+      rojo_sourcemap: "./sourcemap.json",
+    },
+  }
+
+  for _, rule in darkluaConfig.rules do
+    if typeof(rule) == "table" and rule.rule == "convert_require" then
+      local convertRequire = rule :: ConvertRequire
+      convertRequire.current.sources = aliases
+    end
+  end
+
+  for _, rule in darkluaDevConfig.rules do
+    if typeof(rule) == "table" and rule.rule == "convert_require" then
+      local convertRequire = rule :: ConvertRequire
+      convertRequire.current.sources = aliases
+    end
+  end
+
+  vscodeSettings["luau-lsp.require.directoryAliases"] = aliases
+  zedSettings.lsp["luau-lsp"].settings["luau-lsp"].require.directoryAliases = aliases
+
+  fs.writeFile(
+    path(process.cwd, ".vscode", "settings.json"),
+    StringBuilder()
+      :appendLine("// This file was @generated and is not intended for manual editing.")
+      :appendLine("// Run `lune run regen` to generate fresh workspace settings.")
+      :appendLine()
+      :appendLine(serde.encode("json", vscodeSettings, true))
+      :build()
+  )
+
+  fs.writeFile(
+    path(process.cwd, ".zed", "settings.json"),
+    StringBuilder()
+      :appendLine("// This file was @generated and is not intended for manual editing.")
+      :appendLine("// Run `lune run regen` to generate fresh workspace settings.")
+      :appendLine()
+      :appendLine(serde.encode("json", zedSettings, true))
+      :build()
+  )
+
+  -- FUTURE: darklua cant handle comments yet
+  fs.writeFile(path(process.cwd, ".darklua.json"), serde.encode("json", darkluaConfig, true))
+  fs.writeFile(path(process.cwd, ".darklua-dev.json"), serde.encode("json", darkluaDevConfig, true))
 end
 
 --[=[
@@ -237,6 +309,8 @@ function Regenerator.regenerate()
   index = index:gsub("%$utils%-list%-1", table.concat(firstList, "\n\n"))
   index = index:gsub("%$utils%-list%-2", table.concat(secondList, "\n\n"))
   fs.writeFile(path(PATH_DOCS, "index.md"), index)
+
+  Regenerator.aliases()
 end
 
 return Regenerator

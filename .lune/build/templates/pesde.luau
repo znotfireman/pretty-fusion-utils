@@ -1,7 +1,7 @@
 return {
   name = "znotfireman/pretty_fusion_utils",
   description = "An opinionated collection of modern Fusion 0.3 utilities.",
-  version = (nil :: any) :: string,
+  version = (nil : any) :: string,
   license = "MIT",
   authors = { "znotfireman <znotfireman+hello@gmail.com>" },
   realm = "shared",

@@ -1,5 +1,5 @@
-local Fusion = require("lib/types/fusion")
-local lockValue = require("lib/utils/lock-value")
+local Fusion = require("types/fusion")
+local lockValue = require("utils/lock-value")
 
 local function isSimilar(a: unknown, b: unknown): boolean
   local typeA = typeof(a)

@@ -1,5 +1,5 @@
-local Fusion = require("lib/types/fusion")
-local useViewport = require("lib/use-viewport")
+local Fusion = require("types/fusion")
+local useViewport = require("use-viewport")
 
 type Px = typeof(setmetatable(
   {} :: {

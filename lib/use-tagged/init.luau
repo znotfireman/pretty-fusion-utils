@@ -1,8 +1,8 @@
 local CollectionService = game:GetService("CollectionService")
 
-local Fusion = require("lib/types/fusion")
-local lockValue = require("lib/utils/lock-value")
-local useEventListener = require("lib/use-event-listener")
+local Fusion = require("types/fusion")
+local lockValue = require("utils/lock-value")
+local useEventListener = require("use-event-listener")
 
 --[=[
   Returns a state object with every instance of a given tag. Updates when new instances get tagged or old instances get untagged.

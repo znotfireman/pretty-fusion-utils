@@ -1,39 +1,55 @@
-// Folder-specific settings
+// This file was @generated and is not intended for manual editing.
+// Run `lune run regen` to generate fresh workspace settings.
 
-// For a full list of overridable settings, and general information on folder-specific settings,
-// see the documentation: https://zed.dev/docs/configuring-zed#settings-files
 {
+  "languages": {
+    "Luau": {
+      "formatter": {
+        "external": {
+          "arguments": [
+            "-"
+          ],
+          "command": "stylua"
+        }
+      }
+    }
+  },
   "lsp": {
     "luau-lsp": {
       "settings": {
         "ext": {
-          "prefer_worktree_binary": true,
           "fflags": {
             "enable_by_default": false,
             "sync": true
           },
+          "prefer_worktree_binary": true,
           "roblox": {
             "enabled": true
           }
         },
         "luau-lsp": {
           "require": {
-            "mode": "relativeToFile",
             "directoryAliases": {
               "@lune/": "~/.lune/.typedefs/0.8.8/",
-              "lib": "lib"
-            }
+              "types": "lib/types",
+              "use-async": "lib/use-async",
+              "use-camera": "lib/use-camera",
+              "use-cleanup": "lib/use-cleanup",
+              "use-coroutine": "lib/use-coroutine",
+              "use-effect": "lib/use-effect",
+              "use-event-listener": "lib/use-event-listener",
+              "use-interval": "lib/use-interval",
+              "use-mouse": "lib/use-mouse",
+              "use-previous": "lib/use-previous",
+              "use-px": "lib/use-px",
+              "use-tagged": "lib/use-tagged",
+              "use-thread": "lib/use-thread",
+              "use-timer": "lib/use-timer",
+              "use-viewport": "lib/use-viewport",
+              "utils": "lib/utils"
+            },
+            "mode": "relativeToFile"
           }
-        }
-      }
-    }
-  },
-  "languages": {
-    "Luau": {
-      "formatter": {
-        "external": {
-          "command": "stylua",
-          "arguments": ["-"]
         }
       }
     }

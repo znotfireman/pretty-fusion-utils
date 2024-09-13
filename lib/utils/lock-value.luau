@@ -1,4 +1,4 @@
-local Fusion = require("lib/types/fusion")
+local Fusion = require("types/fusion")
 
 --[=[
   Widens the type of a value object so setting it returns a type error.

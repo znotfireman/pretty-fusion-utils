@@ -1,7 +1,7 @@
 local UserInputService = game:GetService("UserInputService")
 
-local Fusion = require("lib/types/fusion")
-local lockValue = require("lib/utils/lock-value")
+local Fusion = require("types/fusion")
+local lockValue = require("utils/lock-value")
 
 --[=[
   Returns a state object with the mouse position. Updates when the mouse position changes.

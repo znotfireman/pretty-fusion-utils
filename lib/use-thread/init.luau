@@ -1,4 +1,4 @@
-local Fusion = require("lib/types/fusion")
+local Fusion = require("types/fusion")
 
 --[=[
   Spawns a new thread that is cancelled once the scope is cleaned up.

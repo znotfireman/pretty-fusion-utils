@@ -1,8 +1,8 @@
 local RunService = game:GetService("RunService")
 
-local Fusion = require("lib/types/fusion")
-local useEventListener = require("lib/use-event-listener")
-local useThread = require("lib/use-thread")
+local Fusion = require("types/fusion")
+local useEventListener = require("use-event-listener")
+local useThread = require("use-thread")
 
 --[=[
   Sets an interval that runs the callback function every `delay` seconds. If `delay` is `undefined`, the interval is cleared. If the delay changes, the the interval is cleared. If the delay changes, the interval is reset.

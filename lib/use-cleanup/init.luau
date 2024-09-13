@@ -1,4 +1,4 @@
-local Fusion = require("lib/types/fusion")
+local Fusion = require("types/fusion")
 
 --[=[
   Add clean up tasks to the scope. Returns the clean up tasks, allowing it to be used in declarations.

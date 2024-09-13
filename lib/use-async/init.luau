@@ -1,6 +1,6 @@
-local Fusion = require("lib/types/fusion")
-local castToState = require("lib/utils/cast-to-state")
-local lockValue = require("lib/utils/lock-value")
+local Fusion = require("types/fusion")
+local castToState = require("utils/cast-to-state")
+local lockValue = require("utils/lock-value")
 
 type Become = <T>(value: T) -> T
 

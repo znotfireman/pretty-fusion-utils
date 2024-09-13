@@ -1,4 +1,4 @@
-local Fusion = require("lib/types/fusion")
+local Fusion = require("types/fusion")
 
 --[=[
   Spawns a new coroutine that is closed once the scope is cleaned up.

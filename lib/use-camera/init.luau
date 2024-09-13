@@ -1,8 +1,8 @@
 local Workspace = game:GetService("Workspace")
 
-local Fusion = require("lib/types/fusion")
-local lockValue = require("lib/utils/lock-value")
-local useEventListener = require("lib/use-event-listener")
+local Fusion = require("types/fusion")
+local lockValue = require("utils/lock-value")
+local useEventListener = require("use-event-listener")
 
 local onCameraChanged = Workspace:GetPropertyChangedSignal("CurrentCamera")
 

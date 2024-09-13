@@ -1,4 +1,4 @@
-local Fusion = require("lib/types/fusion")
+local Fusion = require("types/fusion")
 
 --[=[
   Only returns the value if it can be assumed to be a state object.

@@ -1,7 +1,7 @@
 local RunService = game:GetService("RunService")
 
-local Fusion = require("lib/types/fusion")
-local useEventListener = require("lib/use-event-listener")
+local Fusion = require("types/fusion")
+local useEventListener = require("use-event-listener")
 
 type Timer = Fusion.Value<number> & {
   start: (self: Timer) -> (),
