@@ -6,11 +6,11 @@ local Fusion = require("lib/types/fusion")
   @param ... The tasks to be added.
   @return The tasks that has been added.
 ]=]
-local function useTasks<Tasks...>(scope: Fusion.FusionScope, ...: Tasks...): Tasks...
+local function useCleanup<Tasks...>(scope: Fusion.FusionScope, ...: Tasks...): Tasks...
   for index = 1, select("#", ...) do
     table.insert(scope, select(index, ...))
   end
   return ...
 end
 
-return useTasks
+return useCleanup

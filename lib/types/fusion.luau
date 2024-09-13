@@ -6,7 +6,6 @@ export type Error = {
   context: string?,
 }
 
--- Types that can be expressed as vectors of numbers, and so can be animated.
 export type Animatable =
   number
   | CFrame
@@ -27,22 +26,18 @@ export type Animatable =
   | Vector3
   | Vector3int16
 
--- A task which can be accepted for cleanup.
 export type Task =
   Instance
   | RBXScriptConnection
   | () -> () | { destroy: (unknown) -> () } | { Destroy: (unknown) -> () } | { Task }
 
--- A scope of tasks to clean up.
 export type Scope<Constructors> = { Task } & Constructors
 
--- An object which uses a scope to dictate how long it lives.
 export type ScopedObject = {
   scope: Scope<unknown>?,
   oldestTask: unknown,
 }
 
--- Script-readable version information.
 export type Version = {
   major: number,
   minor: number,
@@ -60,7 +55,6 @@ type ContextualIsMethods = {
   during: <R, A...>(ContextualIsMethods, (A...) -> R, A...) -> R,
 }
 
--- A graph object which can have dependencies and dependencies.
 export type GraphObject = ScopedObject & {
   createdAt: number,
   dependencySet: { [GraphObject]: unknown },
@@ -71,29 +65,24 @@ export type GraphObject = ScopedObject & {
   _evaluate: (GraphObject) -> boolean,
 }
 
--- An object which stores a piece of reactive state.
 export type StateObject<T> = GraphObject & {
   type: "State",
   kind: string,
   _EXTREMELY_DANGEROUS_usedAsValue: T,
 }
 
--- Passing values of this type to `Use` returns `T`.
 export type UsedAs<T> = StateObject<T> | T
 
--- Function signature for use callbacks.
 export type Use = <T>(target: UsedAs<T>) -> T
 
--- A state object whose value can be set at any time by the user.
 export type Value<T, S = T> = StateObject<T> & {
   kind: "State",
   timeliness: "lazy",
   set: (Value<T, S>, newValue: S, force: boolean?) -> S,
-  ____phantom_setType: (never) -> S, -- phantom data so this contains S
+  ____phantom_setType: (never) -> S,
 }
 export type ValueConstructor = <T>(scope: Scope<unknown>, initialValue: T) -> Value<T, any>
 
--- A state object whose value is derived from other objects using a callback.
 export type Computed<T> = StateObject<T> & {
   kind: "Computed",
   timeliness: "lazy",
@@ -103,7 +92,6 @@ export type ComputedConstructor = <T, S>(
   callback: (Use, S) -> T
 ) -> Computed<T>
 
--- A state object which maps over keys and/or values in another table.
 export type For<KO, VO> = StateObject<{ [KO]: VO }> & {
   kind: "For",
 }
@@ -112,18 +100,19 @@ export type ForPairsConstructor = <KI, KO, VI, VO, S>(
   inputTable: UsedAs<{ [KI]: VI }>,
   processor: (Use, S, key: KI, value: VI) -> (KO, VO)
 ) -> For<KO, VO>
+
 export type ForKeysConstructor = <KI, KO, V, S>(
   scope: S & Scope<unknown>,
   inputTable: UsedAs<{ [KI]: V }>,
   processor: (Use, S, key: KI) -> KO
 ) -> For<KO, V>
+
 export type ForValuesConstructor = <K, VI, VO, S>(
   scope: S & Scope<unknown>,
   inputTable: UsedAs<{ [K]: VI }>,
   processor: (Use, S, value: VI) -> VO
 ) -> For<K, VO>
 
--- An object which can listen for updates on another state object.
 export type Observer = GraphObject & {
   type: "Observer",
   timeliness: "eager",
@@ -132,7 +121,6 @@ export type Observer = GraphObject & {
 }
 export type ObserverConstructor = (scope: Scope<unknown>, watching: unknown) -> Observer
 
--- A state object which follows another state object using tweens.
 export type Tween<T> = StateObject<T> & {
   kind: "Tween",
 }
@@ -142,13 +130,13 @@ export type TweenConstructor = <T>(
   tweenInfo: UsedAs<TweenInfo>?
 ) -> Tween<T>
 
--- A state object which follows another state object using spring simulation.
 export type Spring<T> = StateObject<T> & {
   kind: "Spring",
   setPosition: (Spring<T>, newPosition: T) -> (),
   setVelocity: (Spring<T>, newVelocity: T) -> (),
   addVelocity: (Spring<T>, deltaVelocity: T) -> (),
 }
+
 export type SpringConstructor = <T>(
   scope: Scope<unknown>,
   goalState: UsedAs<T>,
@@ -156,7 +144,6 @@ export type SpringConstructor = <T>(
   damping: UsedAs<number>?
 ) -> Spring<T>
 
--- Denotes children instances in an instance or component's property table.
 export type SpecialKey = {
   type: "SpecialKey",
   kind: string,
@@ -169,10 +156,8 @@ export type SpecialKey = {
   ) -> (),
 }
 
--- A collection of instances that may be parented to another instance.
 export type Child = Instance | StateObject<Child> | { [unknown]: Child }
 
--- A table that defines an instance's properties, handlers and children.
 export type PropertyTable = { [string | SpecialKey]: unknown }
 
 export type NewConstructor = (
@@ -184,9 +169,6 @@ export type HydrateConstructor = (
   scope: Scope<unknown>,
   target: Instance
 ) -> (propertyTable: PropertyTable) -> Instance
-
--- Is there a sane way to write out this type?
--- ... I sure hope so.
 
 -- stylua: ignore
 export type DeriveScopeConstructor = (<S>(Scope<S>) -> Scope<S>)

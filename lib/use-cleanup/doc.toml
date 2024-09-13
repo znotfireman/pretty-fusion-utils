@@ -1,5 +1,5 @@
 [config]
-  name = "useTasks"
+  name = "useCleanup"
   brief = """\
   Add clean up tasks to the scope. Returns the clean up tasks, allowing it to \
   be used in declarations.\

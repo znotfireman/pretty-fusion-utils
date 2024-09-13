@@ -4,6 +4,7 @@
 return table.freeze {
   useAsync = require("lib/use-async"),
   useCamera = require("lib/use-camera"),
+  useCleanup = require("lib/use-cleanup"),
   useCoroutine = require("lib/use-coroutine"),
   useEffect = require("lib/use-effect"),
   useEventListener = require("lib/use-event-listener"),
@@ -12,7 +13,6 @@ return table.freeze {
   usePrevious = require("lib/use-previous"),
   usePx = require("lib/use-px"),
   useTagged = require("lib/use-tagged"),
-  useTasks = require("lib/use-tasks"),
   useThread = require("lib/use-thread"),
   useTimer = require("lib/use-timer"),
   useViewport = require("lib/use-viewport"),
