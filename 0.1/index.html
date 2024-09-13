@@ -431,6 +431,27 @@
   
   
     <li class="md-nav__item">
+      <a href="use-cleanup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    useCleanup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="use-coroutine/" class="md-nav__link">
         
   
@@ -599,27 +620,6 @@
   
   
     <li class="md-nav__item">
-      <a href="use-tasks/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    useTasks
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="use-thread/" class="md-nav__link">
         
   
@@ -730,6 +730,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#usecleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      useCleanup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usecoroutine" class="md-nav__link">
     <span class="md-ellipsis">
       useCoroutine
@@ -796,15 +805,6 @@
   <a href="#usetagged" class="md-nav__link">
     <span class="md-ellipsis">
       useTagged
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usetasks" class="md-nav__link">
-    <span class="md-ellipsis">
-      useTasks
     </span>
   </a>
   
@@ -881,20 +881,20 @@ Fusion 0.3</a> utilities.
 <div class="pfu-home-list">
 <ul class="pfu-home-list">
 <li> <a href="use-camera">useCamera</a></li>
-<li> <a href="use-effect">useEffect</a></li>
-<li> <a href="use-interval">useInterval</a></li>
-<li> <a href="use-previous">usePrevious</a></li>
-<li> <a href="use-tagged">useTagged</a></li>
+<li> <a href="use-coroutine">useCoroutine</a></li>
+<li> <a href="use-event-listener">useEventListener</a></li>
+<li> <a href="use-mouse">useMouse</a></li>
+<li> <a href="use-px">usePx</a></li>
 <li> <a href="use-thread">useThread</a></li>
 <li> <a href="use-viewport">useViewport</a></li>
 </ul>
 <ul class="pfu-home-list" style="animation-direction: reverse;">
 <li> <a href="use-async">useAsync</a></li>
-<li> <a href="use-coroutine">useCoroutine</a></li>
-<li> <a href="use-event-listener">useEventListener</a></li>
-<li> <a href="use-mouse">useMouse</a></li>
-<li> <a href="use-px">usePx</a></li>
-<li> <a href="use-tasks">useTasks</a></li>
+<li> <a href="use-cleanup">useCleanup</a></li>
+<li> <a href="use-effect">useEffect</a></li>
+<li> <a href="use-interval">useInterval</a></li>
+<li> <a href="use-previous">usePrevious</a></li>
+<li> <a href="use-tagged">useTagged</a></li>
 <li> <a href="use-timer">useTimer</a></li>
 </ul>
 </div>
@@ -911,6 +911,12 @@ Returns a state object with an value from an asynchronous processor. The process
 <a href="./use-camera/">
 <h2 id="usecamera"> useCamera </h2>
 Returns a state object with the current camera. Updates when the current camera changes.
+</a>
+</section>
+<section>
+<a href="./use-cleanup/">
+<h2 id="usecleanup"> useCleanup </h2>
+Add clean up tasks to the scope. Returns the clean up tasks, allowing it to be used in declarations.
 </a>
 </section>
 <section>
@@ -959,12 +965,6 @@ Returns a state object with the current `px` unit based on the current viewport 
 <a href="./use-tagged/">
 <h2 id="usetagged"> useTagged </h2>
 Returns a state object with every instance of a given tag. Updates when new instances get tagged or old instances get untagged.
-</a>
-</section>
-<section>
-<a href="./use-tasks/">
-<h2 id="usetasks"> useTasks </h2>
-Add clean up tasks to the scope. Returns the clean up tasks, allowing it to be used in declarations.
 </a>
 </section>
 <section>
