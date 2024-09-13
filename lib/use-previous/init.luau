@@ -1,4 +1,4 @@
-local Types = require("lib/types")
+local Fusion = require("lib/types/fusion")
 local lockValue = require("lib/utils/lock-value")
 
 local function isSimilar(a: unknown, b: unknown): boolean
@@ -22,10 +22,10 @@ end
   @return A state object with the previous value of the state object.
 ]=]
 local function usePrevious<T>(
-  scope: Types.FusionScope,
-  state: Types.StateObject<T>,
+  scope: Fusion.FusionScope,
+  state: Fusion.StateObject<T>,
   predicate: ((T, T) -> boolean)?
-): Types.StateObject<T?>
+): Fusion.StateObject<T?>
   local peek = scope.peek
 
   local previous = scope:Value(nil :: any)

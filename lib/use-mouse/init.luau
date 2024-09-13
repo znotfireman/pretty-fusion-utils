@@ -1,6 +1,6 @@
 local UserInputService = game:GetService("UserInputService")
 
-local Types = require("lib/types")
+local Fusion = require("lib/types/fusion")
 local lockValue = require("lib/utils/lock-value")
 
 --[=[
@@ -10,9 +10,9 @@ local lockValue = require("lib/utils/lock-value")
   @return A state object with the mouse position.
 ]=]
 local function useMouse(
-  scope: Types.Scope<Types.Fusion>,
+  scope: Fusion.Scope<Fusion.Fusion>,
   observer: (mouse: Vector2) -> ()?
-): Types.StateObject<Vector2>
+): Fusion.StateObject<Vector2>
   local peek = scope.peek
   local mouse = scope:Value(UserInputService:GetMouseLocation())
 

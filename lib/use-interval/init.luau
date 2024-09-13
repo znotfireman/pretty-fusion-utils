@@ -1,6 +1,6 @@
 local RunService = game:GetService("RunService")
 
-local Types = require("lib/types")
+local Fusion = require("lib/types/fusion")
 local useEventListener = require("lib/use-event-listener")
 local useThread = require("lib/use-thread")
 
@@ -12,9 +12,9 @@ local useThread = require("lib/use-thread")
   @param immediate Whether to spawn the callback immediately.
 ]=]
 local function useInterval<S>(
-  scope: Types.Scope<S & Types.Fusion>,
-  delay: Types.UsedAs<number?>,
-  callback: (Types.Scope<S>) -> (),
+  scope: Fusion.Scope<S & Fusion.Fusion>,
+  delay: Fusion.UsedAs<number?>,
+  callback: (Fusion.Scope<S>) -> (),
   immediate: boolean?
 )
   local scope = scope:innerScope()

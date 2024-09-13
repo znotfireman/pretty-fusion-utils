@@ -1,6 +1,6 @@
 local Workspace = game:GetService("Workspace")
 
-local Types = require("lib/types")
+local Fusion = require("lib/types/fusion")
 local lockValue = require("lib/utils/lock-value")
 local useEventListener = require("lib/use-event-listener")
 
@@ -11,7 +11,7 @@ local onCameraChanged = Workspace:GetPropertyChangedSignal("CurrentCamera")
   @param scope The scope to store cleanup tasks.
   @return A state object with the current camera.
 ]=]
-local function useCamera(scope: Types.Scope<Types.Fusion>)
+local function useCamera(scope: Fusion.Scope<Fusion.Fusion>)
   local camera = scope:Value(Workspace.CurrentCamera)
 
   useEventListener(scope, onCameraChanged, function()

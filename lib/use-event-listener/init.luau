@@ -1,4 +1,4 @@
-local Types = require("lib/types")
+local Fusion = require("lib/types/fusion")
 
 type EventLike =
   RBXScriptConnection
@@ -55,7 +55,7 @@ end
   @return A function to disconnect the event listener.
 ]=]
 local function useEventListener(
-  scope: Types.Scope<Types.Fusion>,
+  scope: Fusion.Scope<Fusion.Fusion>,
   event: EventLike,
   listener: (...any) -> ()
 )

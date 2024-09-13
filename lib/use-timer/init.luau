@@ -1,9 +1,9 @@
 local RunService = game:GetService("RunService")
 
-local Types = require("lib/types")
+local Fusion = require("lib/types/fusion")
 local useEventListener = require("lib/use-event-listener")
 
-type Timer = Types.Value<number> & {
+type Timer = Fusion.Value<number> & {
   start: (self: Timer) -> (),
   stop: (self: Timer) -> (),
   reset: (self: Timer) -> (),
@@ -15,7 +15,7 @@ type Timer = Types.Value<number> & {
   @param initial The initial value of the timer.
   @return A timer object.
 ]=]
-local function useTimer(scope: Types.Scope<Types.Fusion>, initial: number?): Timer
+local function useTimer(scope: Fusion.Scope<Fusion.Fusion>, initial: number?): Timer
   local timer = scope:Value(initial or 0)
   local running = true
 

@@ -1,4 +1,4 @@
-local Types = require("lib/types")
+local Fusion = require("lib/types/fusion")
 local lockValue = require("lib/utils/lock-value")
 local useCamera = require("lib/use-camera")
 
@@ -8,9 +8,9 @@ local useCamera = require("lib/use-camera")
   @return A state object with the viewport size.
 ]=]
 local function useViewport(
-  outerScope: Types.Scope<Types.Fusion>,
+  outerScope: Fusion.Scope<Fusion.Fusion>,
   observer: (viewport: Vector2) -> ()?
-): Types.StateObject<Vector2>
+): Fusion.StateObject<Vector2>
   local scope = outerScope:innerScope()
 
   local camera = useCamera(scope)

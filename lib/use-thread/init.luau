@@ -1,4 +1,4 @@
-local Types = require("lib/types")
+local Fusion = require("lib/types/fusion")
 
 --[=[
   Spawns a new thread that is cancelled once the scope is cleaned up.
@@ -8,7 +8,7 @@ local Types = require("lib/types")
   @return A thread that is cancelled once the scope is cleaned up.
 ]=]
 local function useThread<Args...>(
-  scope: Types.Scope<{}>,
+  scope: Fusion.Scope<{}>,
   resume: thread | (Args...) -> (),
   ...: Args...
 ): thread

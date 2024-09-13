@@ -1,4 +1,4 @@
-local Types = require("lib/types")
+local Fusion = require("lib/types/fusion")
 local castToState = require("lib/utils/cast-to-state")
 local lockValue = require("lib/utils/lock-value")
 
@@ -16,19 +16,19 @@ type Become = <T>(value: T) -> T
 -- https://github.com/dphfox/Fusion/issues/4
 -- FIXME: should restore old dependencies on error
 local function useAsync<Scope, Result>(
-  outerScope: Scope & Types.FusionScope,
+  outerScope: Scope & Fusion.FusionScope,
   fallback: Result,
   processor: (
-    use: Types.Use,
+    use: Fusion.Use,
     become: Become,
     scope: Scope
   ) -> Result
-): Types.StateObject<Result>
+): Fusion.StateObject<Result>
   local scope = outerScope:scoped()
   local peek = scope.peek
 
   local eventual = scope:Value(fallback)
-  local observers: { [Types.StateObject<any>]: () -> () } = {}
+  local observers: { [Fusion.StateObject<any>]: () -> () } = {}
   local innerScope: typeof(outerScope)? = nil
 
   local function become<T>(value: T): T
@@ -53,11 +53,11 @@ local function useAsync<Scope, Result>(
   -- behavior through some... devious ways.
   local function process()
     clear()
-    local function use<T>(target: Types.UsedAs<T>): T
+    local function use<T>(target: Fusion.UsedAs<T>): T
       if not castToState(target) then
         return target :: any
       end
-      local stateObject = target :: Types.StateObject<T>
+      local stateObject = target :: Fusion.StateObject<T>
       observers[stateObject] = scope:Observer(stateObject):onChange(function()
         task.spawn(process)
       end)

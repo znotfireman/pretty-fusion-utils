@@ -1,15 +1,15 @@
-local Types = require("lib/types")
+local Fusion = require("lib/types/fusion")
 local useViewport = require("lib/use-viewport")
 
 type Px = typeof(setmetatable(
   {} :: {
-    even: (value: number) -> Types.StateObject<number>,
-    scale: (value: number) -> Types.StateObject<number>,
-    floor: (value: number) -> Types.StateObject<number>,
-    ceil: (value: number) -> Types.StateObject<number>,
+    even: (value: number) -> Fusion.StateObject<number>,
+    scale: (value: number) -> Fusion.StateObject<number>,
+    floor: (value: number) -> Fusion.StateObject<number>,
+    ceil: (value: number) -> Fusion.StateObject<number>,
   },
   {} :: {
-    __call: (self: Px, value: number) -> Types.StateObject<number>,
+    __call: (self: Px, value: number) -> Fusion.StateObject<number>,
   }
 ))
 
@@ -24,7 +24,7 @@ local MACBOOK_AIR_RESOLUTION = Vector2.new(1280, 832)
   @return A `px` unit that scales with the viewport size..
 ]=]
 local function usePx(
-  scope: Types.FusionScope,
+  scope: Fusion.FusionScope,
   baseResolution: Vector2?,
   minimumScale: number?,
   dominantAxis: number?

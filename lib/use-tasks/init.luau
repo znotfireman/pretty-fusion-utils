@@ -1,4 +1,4 @@
-local Types = require("lib/types")
+local Fusion = require("lib/types/fusion")
 
 --[=[
   Add clean up tasks to the scope. Returns the clean up tasks, allowing it to be used in declarations.
@@ -6,7 +6,7 @@ local Types = require("lib/types")
   @param ... The tasks to be added.
   @return The tasks that has been added.
 ]=]
-local function useTasks<Tasks...>(scope: Types.FusionScope, ...: Tasks...): Tasks...
+local function useTasks<Tasks...>(scope: Fusion.FusionScope, ...: Tasks...): Tasks...
   for index = 1, select("#", ...) do
     table.insert(scope, select(index, ...))
   end

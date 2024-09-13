@@ -1,6 +1,6 @@
 local CollectionService = game:GetService("CollectionService")
 
-local Types = require("lib/types")
+local Fusion = require("lib/types/fusion")
 local lockValue = require("lib/utils/lock-value")
 local useEventListener = require("lib/use-event-listener")
 
@@ -10,7 +10,7 @@ local useEventListener = require("lib/use-event-listener")
   @param tag The CollectionService tag to track.
   @return A state object with every instance of the given tag.
 ]=]
-local function useTagged(scope: Types.FusionScope, tag: string): Types.StateObject<{ Instance }>
+local function useTagged(scope: Fusion.FusionScope, tag: string): Fusion.StateObject<{ Instance }>
   local peek = scope.peek
   local instances = scope:Value(CollectionService:GetTagged(tag))
 
