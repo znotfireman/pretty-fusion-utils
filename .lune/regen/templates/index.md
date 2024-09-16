@@ -14,26 +14,37 @@
 
 <section class="pfu-home-main" markdown>
 
-<h1 class="pfu-home-header">
-pretty fusion utils
+<section class="pfu-home-header" markdown>
+
+<h1>
+Spread the joy of Fusion
 </h1>
 
-<p class="pfu-home-brief">
-An opinionated collection of modern <a href="https://elttob.uk/Fusion/0.3/">
-Fusion 0.3</a> utilities.
+<p>
+<code>pretty-fusion-utils</code> is an opinionated collection of useful
+<a href="https://elttob.uk/Fusion/0.3/">Fusion 0.3</a> utilities, borrowed from
+<a href="https://github.com/PepeElToro41/pretty-vide-utils/">Vide</a> and
+<a href="https://github.com/littensy/pretty-react-hooks/">React hooks</a>.
 </p>
 
-```TOML
-fusionUtils = "znotfireman@pretty-fusion-utils@0.1.0"
-```
+<nav>
+
+<a href="./getting-started">Getting Started</a>
+
+</nav>
+
+</section>
+
 
 <div class="pfu-home-list">
 
 <ul class="pfu-home-list" markdown>
 $utils-list-1
+$utils-list-1
 </ul>
 
 <ul class="pfu-home-list" style="animation-direction: reverse;" markdown>
+$utils-list-2
 $utils-list-2
 </ul>
 

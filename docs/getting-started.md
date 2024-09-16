@@ -100,6 +100,12 @@ local function Button(
 )
 ```
 
+---
+
+## Navigation
+
+Using the sidebar to the left, you can browse all of the utilities by name.
+
 [Fusion 0.3]: https://elttob.uk/Fusion/0.3/
 [Fusion documentation]: https://elttob.uk/Fusion/0.3/tutorials/
 [Roblox creator documentation]: https://create.roblox.com/docs/

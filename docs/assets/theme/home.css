@@ -27,20 +27,64 @@
   position: relative;
   min-height: calc(100vh - 5rem - var(--distance-to-top-of-page));
   padding-bottom: var(--distance-to-top-of-page);
-  font-size: 1.2em;
+  /* font-size: 1.25em; */
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   text-wrap: balance;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   padding: 1em;
 }
 
-h1.pfu-home-header {
+@media screen and (max-width: 700px) {
+  .pfu-home-main {
+    align-items: center;
+    text-align: center;
+  }
+
+  .pfu-home-header nav {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.pfu-home-header nav>a {
+  display: flex;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--fusiondoc-fg-1);
+  color: var(--fusiondoc-bg-1);
+  font-weight: 600;
+  font-size: 0.75rem;
+  transition: color 0s;
+  border-radius: 0.25rem;
+  transition: background-color 125ms;
+}
+
+.pfu-home-header nav {
+  display: flex;
+  gap: 0.5em;
+}
+
+.pfu-home-header {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 1em;
+
+  font-size: 1.25em;
+  max-width: 40ch;
+  /* text-align: center; */
+  margin: 2em;
+}
+
+.pfu-home-header * {
+  margin: 0 !important;
+}
+
+/* h1.pfu-home-header {
   font-size: clamp(1rem, 10vw, 5rem);
   margin-bottom: 0;
   line-height: 1em;
@@ -64,7 +108,7 @@ h1.pfu-home-header::before {
 
 [data-md-color-scheme="fusiondoc-dark"] h1.pfu-home-header::before {
   background-image: url("../logo-dark.svg");
-}
+} */
 
 .pfu-home-brief {
   font-size: 1.5em;
@@ -83,12 +127,19 @@ h1.pfu-home-header::before {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-
-  view-timeline-name: --list-scroll !important;
-  view-timeline-axis: block !important;
 }
 
-.pfu-home-list > ul {
+@keyframes scroll {
+  0% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+.pfu-home-list>ul {
   position: relative;
 
   box-sizing: border-box;
@@ -108,29 +159,32 @@ h1.pfu-home-header::before {
   gap: 0;
   margin: 0;
   padding: 0;
+
+  animation: scroll 200s linear infinite;
 }
 
-.pfu-home-list > ul > li:nth-child(odd) {
+.pfu-home-list>ul>li:nth-child(odd) {
   opacity: 0.4;
 }
 
-.pfu-home-list > ul > li:nth-child(even) {
+.pfu-home-list>ul>li:nth-child(even) {
   opacity: 0.2;
 }
 
-.pfu-home-list > ul a {
+.pfu-home-list>ul a {
   color: var(--md-default-fg-color);
 }
 
-.pfu-home-list > ul {
+/*
+.pfu-home-list>ul {
   animation: list-scroll linear both;
   animation-timeline: --list-scroll;
   animation-range: cover;
-}
+} */
 
-@supports (animation-timeline: --list-scroll) {
+/* @supports (animation-timeline: --list-scroll) {
   @media (prefers-reduced-motion: no-preference) {
-    .pfu-home-list > ul {
+    .pfu-home-list>ul {
       animation: list-scroll linear both;
       animation-timeline: --list-scroll;
       animation-range: cover;
@@ -140,12 +194,13 @@ h1.pfu-home-header::before {
 
 @keyframes list-scroll {
   0% {
-    translate: calc(50% - min(100vw, 75rem) / 2) 0%;
+    translate: -50%;
   }
+
   100% {
-    translate: calc(-50% + min(100vw, 75rem) / 2) 0%;
+    translate: 50%;
   }
-}
+} */
 
 /*
 #fusiondoc-home-main::before {
