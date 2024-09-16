@@ -2,7 +2,7 @@
 return {
   generator = {
     name = "dense",
-    column_span = 9999999999,
+    column_span = 999999999,
   },
   -- bundle = {
   --   modules_identifier = "__BUNDLE",

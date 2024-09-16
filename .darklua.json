@@ -1,6 +1,6 @@
 {
   "generator": {
-    "column_span": 9999999999.0,
+    "column_span": 999999999,
     "name": "dense"
   },
   "rules": [
