@@ -1,21 +1,24 @@
 local Fusion = require("types/fusion")
 
 type EventLike =
-  RBXScriptConnection
+  RBXScriptSignal
   | { Connect: (self: unknown, callback: () -> ()) -> unknown }
   | { connect: (self: unknown, callback: () -> ()) -> unknown }
   | { subscribe: (self: unknown, callback: () -> ()) -> unknown }
 
 type ConnectionLike =
-  { Disconnect: (self: unknown) -> () }
+  RBXScriptConnection
+  | { Disconnect: (self: unknown) -> () }
   | { disconnect: (self: unknown) -> () }
   | () -> ()
 
 local function connect(event: EventLike, callback: () -> ())
   if typeof(event) == "RBXScriptSignal" then
     -- https://devforum.roblox.com/t/deferred-engine-events/2276564/99
-    local connection = event:Connect(function(...)
-      if event.Connected then
+    local event = event :: RBXScriptSignal
+    local connection
+    connection = event:Connect(function(...)
+      if connection.Connected then
         callback(...)
       end
     end)

@@ -1,4 +1,5 @@
 std = "selene-std"
+exclude = ["dist/**"]
 
 [config]
   global_usage = { ignore_pattern = "^__" }
