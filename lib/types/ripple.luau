@@ -82,4 +82,30 @@ export type MotionGoal =
   | Color3
   | CFrame
 
+export type Config = {
+  spring: {
+    default: SpringOptions,
+    gentle: SpringOptions,
+    wobbly: SpringOptions,
+    stiff: SpringOptions,
+    slow: SpringOptions,
+    molasses: SpringOptions,
+  },
+  linear: {
+    default: LinearOptions,
+  },
+  tween: {
+    default: TweenOptions,
+  },
+}
+
+export type Ripple = {
+  createMotion: <T>(initialValue: T, options: MotionOptions?) -> Motion<T>,
+  config: Config,
+  immediate: MotionSolver,
+  linear: MotionSolver,
+  spring: MotionSolver,
+  tween: MotionSolver,
+}
+
 return nil

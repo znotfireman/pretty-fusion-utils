@@ -9,6 +9,7 @@ return table.freeze {
   useEffect = require("use-effect"),
   useEventListener = require("use-event-listener"),
   useInterval = require("use-interval"),
+  useMotion = require("use-motion"),
   useMouse = require("use-mouse"),
   usePrevious = require("use-previous"),
   usePx = require("use-px"),

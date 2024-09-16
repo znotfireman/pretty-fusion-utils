@@ -1,0 +1,24 @@
+[config]
+  name = "useMotion"
+  brief = """\
+  Returns a state object following a Ripple Motion along with the Motion
+  itself.\
+  """
+
+  variadics = ["T"]
+
+[[config.args]]
+  name = "scope"
+  type = "Fusion.Scope"
+  description = "The scope to store cleanup tasks."
+
+[[config.args]]
+  name = "initialValue"
+  type = "T & Ripple.MotionGoal"
+  description = "The initial value of the motor."
+
+[config.returns]
+  type = "(Fusion.StateObject<T>, Ripple.Motion<T>)"
+  description = """\
+  A state object following a Ripple Motion along with the Motion itself.\
+  """

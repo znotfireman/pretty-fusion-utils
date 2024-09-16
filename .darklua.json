@@ -1,6 +1,6 @@
 {
   "generator": {
-    "column_span": 9999999999,
+    "column_span": 9999999999.0,
     "name": "dense"
   },
   "rules": [
@@ -17,6 +17,7 @@
           "use-effect": "lib/use-effect",
           "use-event-listener": "lib/use-event-listener",
           "use-interval": "lib/use-interval",
+          "use-motion": "lib/use-motion",
           "use-mouse": "lib/use-mouse",
           "use-previous": "lib/use-previous",
           "use-px": "lib/use-px",
