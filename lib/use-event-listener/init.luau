@@ -41,6 +41,12 @@ end
 local function bindDisconnect(connection: ConnectionLike)
   if typeof(connection) == "function" then
     return connection
+  elseif typeof(connection) == "RBXScriptConnection" then
+    return function()
+      if connection.Connected then
+        connection:Disconnect()
+      end
+    end
   end
 
   assert(typeof(connection) == "table", "[pretty-fusion-utils] Connection-like should be an object")
