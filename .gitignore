@@ -35,9 +35,9 @@ dist/
 # Ignore generated documentation
 # Generate new documentation via `lune run regen`
 mkdocs.yaml
-docs/*
-!docs/assets
-!docs/README.md
+doc.build
+docs/index.md
+docs/use-*
 
 # Ignore site folder
 /site/

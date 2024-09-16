@@ -1,6 +1,3 @@
---!strict
--- (c) Prvd 'M Wrong, dual-licensed under MIT or Apache 2.0 terms.
-
 local Builder = require("./builder")
 local stdio = require("@lune/stdio")
 

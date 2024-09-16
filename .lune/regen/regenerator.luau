@@ -10,15 +10,21 @@ local stringer = require("../utils/stringer")
 local PATH_DOCS = path(process.cwd, "docs")
 local PATH_LIB = path(process.cwd, "lib")
 local PATH_TEMPLATES = path(process.cwd, ".lune", "regen", "templates")
+local PATH_DOC_BUILD = path(process.cwd, "doc.build")
 local TEMPLATE_INDEX = path(PATH_TEMPLATES, "index.md")
 
-local function reset(dir: string)
-  if not fs.isDir(dir) then
-    fs.writeDir(dir)
-  else
-    for _, file in fs.readDir(dir) do
-      if fs.isFile(path(dir, file)) then
-        fs.removeFile(path(dir, file))
+type DocBuild = {
+  build: {
+    generated_files: { string },
+  },
+}
+
+local function reset()
+  if fs.isFile(PATH_DOC_BUILD) then
+    local docBuild: DocBuild = serde.decode("toml", fs.readFile(PATH_DOC_BUILD))
+    for _, file in docBuild.build.generated_files do
+      if fs.isFile(file) then
+        fs.removeFile(file)
       end
     end
   end
@@ -45,6 +51,30 @@ end)
 
 local Regenerator = {}
 
+function Regenerator.buildMeta()
+  local generatedFiles = {}
+  table.insert(generatedFiles, path(PATH_DOCS, "index.md"))
+
+  for _, util in utils do
+    table.insert(generatedFiles, path(PATH_DOCS, `{util.dir}.md`))
+  end
+
+  fs.writeFile(
+    PATH_DOC_BUILD,
+    StringBuilder()
+      :appendLine("# This file was @generated and is not intended for manual editing.")
+      :appendLine("# It is used to store metadata between documentation builds.")
+      :appendLine("# Run `lune run regen` to generate fresh documentation files.")
+      :appendLine()
+      :appendLine(serde.encode("toml", {
+        build = {
+          generated_files = generatedFiles,
+        },
+      }, true))
+      :build()
+  )
+end
+
 function Regenerator.initFile()
   print("Regenerating init.luau exports")
   local initFile = StringBuilder()
@@ -64,19 +94,26 @@ end
 
 function Regenerator.mkdocsConfig()
   print("Regenerating mkdocs.yaml navigation")
-  local newMkdocs, nav: any = table.clone(mkdocs), {}
-  table.insert(nav, "index.md")
+  local newMkdocs, apiReference: any = table.clone(mkdocs), {}
 
   for _, util in utils do
     print("Adding navigation item", util.config.name)
-    table.insert(nav, {
+    table.insert(apiReference, {
       [util.config.name] = `{util.dir}.md`,
     })
   end
 
   newMkdocs.nav = {
     {
-      Home = nav,
+      About = {
+        "index.md" :: any,
+        {
+          ["Getting Started"] = "getting-started.md",
+        },
+      },
+    },
+    {
+      Reference = apiReference,
     },
   }
 
@@ -172,7 +209,8 @@ end
   I may or may not need a psychological evaluation.
 ]=]
 function Regenerator.regenerate()
-  reset(PATH_DOCS)
+  assert(fs.isDir(PATH_DOCS), "Missing `docs` folder, download a copy from the repository")
+  reset()
 
   local firstList, secondList, indexUtils, pages = {}, {}, {}, {}
   for index, util in utils do
@@ -311,6 +349,7 @@ function Regenerator.regenerate()
   fs.writeFile(path(PATH_DOCS, "index.md"), index)
 
   Regenerator.aliases()
+  Regenerator.buildMeta()
 end
 
 return Regenerator
