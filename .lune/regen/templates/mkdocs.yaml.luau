@@ -15,7 +15,7 @@ return {
     name = "material",
     custom_dir = "docs/assets/overrides",
     logo = "assets/logo",
-    favicon = "assets/logo-dark.svg",
+    favicon = "assets/logo.svg",
     palette = {
       {
         media = "(prefers-color-scheme: dark)",

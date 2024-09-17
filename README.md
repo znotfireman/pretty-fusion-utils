@@ -1,13 +1,9 @@
 <h1>
 <img
-  src="./assets/logo-light.svg#gh-light-mode-only"
+  src="./assets/logo.svg"
   height="100px"
-  alt="Flower bouquet with Fusion accent colors"
-/><img
-  src="./assets/logo-dark.svg#gh-dark-mode-only"
-  height="100px"
-  alt="Flower bouquet with Fusion accent colors"/>
-</h1>
+  alt="Flower"
+/>
 
 ![Licensed under Apache 2.0 OR MIT](https://img.shields.io/badge/license-Apache_2.0_OR_MIT-blue?style=flat-square)
 ![CI Workflow Status](https://img.shields.io/github/actions/workflow/status/znotfireman/pretty-fusion-utils/ci.yaml?style=flat-square&label=ci)
