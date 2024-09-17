@@ -767,12 +767,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-fusionscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Fusion.Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume-thread-args-" class="md-nav__link">
+    <span class="md-ellipsis">
+      resume : thread | (Args...) -&gt; ()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#args" class="md-nav__link">
+    <span class="md-ellipsis">
+      ... : Args...
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+  <a href="#returns-thread" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Returns : thread
     </span>
   </a>
   
@@ -869,12 +902,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-fusionscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Fusion.Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume-thread-args-" class="md-nav__link">
+    <span class="md-ellipsis">
+      resume : thread | (Args...) -&gt; ()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#args" class="md-nav__link">
+    <span class="md-ellipsis">
+      ... : Args...
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+  <a href="#returns-thread" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Returns : thread
     </span>
   </a>
   
@@ -916,48 +982,15 @@
 <p>Spawns a new thread that is cancelled once the scope is cleaned up.</p>
 <hr />
 <h2 id="arguments">Arguments</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>scope</td>
-<td><code class="highlight"><span class="nv">Fusion</span><span class="p">.</span><span class="nv">Scope</span></code></td>
-<td>The scope to store clean up tasks.</td>
-</tr>
-<tr>
-<td>resume</td>
-<td><code class="highlight"><span class="nv">thread</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="p">(</span><span class="nv">Args</span><span class="p">...)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">()</span></code></td>
-<td>The thread to resume, or a function to spawn.</td>
-</tr>
-<tr>
-<td>...</td>
-<td><code class="highlight"><span class="nv">Args</span><span class="p">...</span></code></td>
-<td>The arguments to spawn the thread with.</td>
-</tr>
-</tbody>
-</table>
+<h3 id="scope-fusionscope">scope <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span></code></h3>
+<p>The scope to store clean up tasks.</p>
+<h3 id="resume-thread-args-">resume <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">thread</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">(</span><span class="nc">Args</span><span class="p">...)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="p">()</span></code></h3>
+<p>The thread to resume, or a function to spawn.</p>
+<h3 id="args">... <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Args</span><span class="p">.</span><span class="err">..</span></code></h3>
+<p>The arguments to spawn the thread with.</p>
 <hr />
-<h2 id="returns">Returns</h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code class="highlight"><span class="nv">thread</span></code></td>
-<td>A thread that is cancelled once the scope is cleaned up.</td>
-</tr>
-</tbody>
-</table>
+<h2 id="returns-thread">Returns <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">thread</span></code></h2>
+<p>A thread that is cancelled once the scope is cleaned up.</p>
 
 <!-- Source file information -->
 

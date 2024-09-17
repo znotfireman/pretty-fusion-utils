@@ -599,6 +599,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-scope-fusionscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Scope &amp; Fusion.Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callback-fusionuse-scope-" class="md-nav__link">
+    <span class="md-ellipsis">
+      callback : (Fusion.Use, Scope) -&gt; ()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -860,6 +884,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-scope-fusionscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Scope &amp; Fusion.Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callback-fusionuse-scope-" class="md-nav__link">
+    <span class="md-ellipsis">
+      callback : (Fusion.Use, Scope) -&gt; ()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -897,27 +945,10 @@
 <p>Perform side effects with state objects.</p>
 <hr />
 <h2 id="arguments">Arguments</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>scope</td>
-<td><code class="highlight"><span class="nv">Scope</span><span class="w"> </span><span class="err">&amp;</span><span class="w"> </span><span class="nv">Fusion</span><span class="p">.</span><span class="nv">Scope</span></code></td>
-<td>The scope to store cleanup tasks.</td>
-</tr>
-<tr>
-<td>callback</td>
-<td><code class="highlight"><span class="p">(</span><span class="nv">Fusion</span><span class="p">.</span><span class="nv">Use</span><span class="p">,</span><span class="w"> </span><span class="nv">Scope</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">()</span></code></td>
-<td>A callback with a Use callback for tracking side effects and an inner scope scope to track cleanup tasks. This callback may not yield..</td>
-</tr>
-</tbody>
-</table>
+<h3 id="scope-scope-fusionscope">scope <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Scope</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span></code></h3>
+<p>The scope to store cleanup tasks.</p>
+<h3 id="callback-fusionuse-scope-">callback <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Use</span><span class="p">,</span><span class="w"> </span><span class="nc">Scope</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="p">()</span></code></h3>
+<p>A callback with a Use callback for tracking side effects and an inner scope scope to track cleanup tasks. This callback may not yield..</p>
 
 <!-- Source file information -->
 

@@ -641,6 +641,48 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-scopes-typeoffusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Scope&lt;S &amp; typeof(Fusion)&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delay-usedasnumber" class="md-nav__link">
+    <span class="md-ellipsis">
+      delay : UsedAs&lt;number?&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callback-scopes-" class="md-nav__link">
+    <span class="md-ellipsis">
+      callback : (Scope&lt;S&gt;) -&gt; ()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#immediate-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      immediate : boolean?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -860,6 +902,48 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-scopes-typeoffusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Scope&lt;S &amp; typeof(Fusion)&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delay-usedasnumber" class="md-nav__link">
+    <span class="md-ellipsis">
+      delay : UsedAs&lt;number?&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callback-scopes-" class="md-nav__link">
+    <span class="md-ellipsis">
+      callback : (Scope&lt;S&gt;) -&gt; ()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#immediate-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      immediate : boolean?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -899,37 +983,14 @@
 <p>Sets an interval that runs the callback function every <code>delay</code> seconds. If <code>delay</code> is <code>undefined</code>, the interval is cleared. If the delay changes, the the interval is cleared. If the delay changes, the interval is reset.</p>
 <hr />
 <h2 id="arguments">Arguments</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>scope</td>
-<td><code class="highlight"><span class="nv">Scope</span><span class="o">&lt;</span><span class="nv">S</span><span class="w"> </span><span class="err">&amp;</span><span class="w"> </span><span class="nf">typeof</span><span class="p">(</span><span class="nv">Fusion</span><span class="p">)</span><span class="o">&gt;</span></code></td>
-<td>The scope to store cleanup tasks.</td>
-</tr>
-<tr>
-<td>delay</td>
-<td><code class="highlight"><span class="nv">UsedAs</span><span class="o">&lt;</span><span class="nv">number</span><span class="err">?</span><span class="o">&gt;</span></code></td>
-<td>The delay, in seconds per each interval.</td>
-</tr>
-<tr>
-<td>callback</td>
-<td><code class="highlight"><span class="p">(</span><span class="nv">Scope</span><span class="o">&lt;</span><span class="nv">S</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">()</span></code></td>
-<td>The callback to run at an interval. Receives an inner scope that is cleaned up per each interval.</td>
-</tr>
-<tr>
-<td>immediate</td>
-<td><code class="highlight"><span class="nv">boolean</span><span class="err">?</span></code></td>
-<td>Whether to spawn the callback immediately.</td>
-</tr>
-</tbody>
-</table>
+<h3 id="scope-scopes-typeoffusion">scope <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Scope</span><span class="p">&lt;</span><span class="nc">S</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="nb">typeof(</span><span class="nv">Fusion</span><span class="p">)&gt;</span></code></h3>
+<p>The scope to store cleanup tasks.</p>
+<h3 id="delay-usedasnumber">delay <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">UsedAs</span><span class="p">&lt;</span><span class="nc">number</span><span class="err">?</span><span class="p">&gt;</span></code></h3>
+<p>The delay, in seconds per each interval.</p>
+<h3 id="callback-scopes-">callback <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="nc">Scope</span><span class="p">&lt;</span><span class="nc">S</span><span class="p">&gt;)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="p">()</span></code></h3>
+<p>The callback to run at an interval. Receives an inner scope that is cleaned up per each interval.</p>
+<h3 id="immediate-boolean">immediate <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">boolean</span><span class="err">?</span></code></h3>
+<p>Whether to spawn the callback immediately.</p>
 
 <!-- Source file information -->
 

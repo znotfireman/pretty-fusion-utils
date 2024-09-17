@@ -704,12 +704,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-stateobjectt" class="md-nav__link">
+    <span class="md-ellipsis">
+      state : StateObject&lt;T&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predicate-t-t-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      predicate : ((T, T) -&gt; boolean)?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+  <a href="#returns-stateobjectt" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Returns : StateObject&lt;T?&gt;
     </span>
   </a>
   
@@ -878,12 +911,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-stateobjectt" class="md-nav__link">
+    <span class="md-ellipsis">
+      state : StateObject&lt;T&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predicate-t-t-boolean" class="md-nav__link">
+    <span class="md-ellipsis">
+      predicate : ((T, T) -&gt; boolean)?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+  <a href="#returns-stateobjectt" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Returns : StateObject&lt;T?&gt;
     </span>
   </a>
   
@@ -934,48 +1000,15 @@
 <p>Returns a state object with the previous value of an observable state object. Initially outputs <code>nil</code>.</p>
 <hr />
 <h2 id="arguments">Arguments</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>scope</td>
-<td><code class="highlight"><span class="nv">Scope</span></code></td>
-<td>The scope to store cleanup tasks.</td>
-</tr>
-<tr>
-<td>state</td>
-<td><code class="highlight"><span class="nv">StateObject</span><span class="o">&lt;</span><span class="nv">T</span><span class="o">&gt;</span></code></td>
-<td>The state object to observe for changes.</td>
-</tr>
-<tr>
-<td>predicate</td>
-<td><code class="highlight"><span class="p">((</span><span class="nv">T</span><span class="p">,</span><span class="w"> </span><span class="nv">T</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">boolean</span><span class="p">)</span><span class="err">?</span></code></td>
-<td>The predicate function to assert if the value is newer. Defaults to Fusion's similarity rules.</td>
-</tr>
-</tbody>
-</table>
+<h3 id="scope-scope">scope <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Scope</span></code></h3>
+<p>The scope to store cleanup tasks.</p>
+<h3 id="state-stateobjectt">state <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span></code></h3>
+<p>The state object to observe for changes.</p>
+<h3 id="predicate-t-t-boolean">predicate <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="p">((</span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="nc">T</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nc">boolean</span><span class="p">)</span><span class="err">?</span></code></h3>
+<p>The predicate function to assert if the value is newer. Defaults to Fusion's similarity rules.</p>
 <hr />
-<h2 id="returns">Returns</h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code class="highlight"><span class="nv">StateObject</span><span class="o">&lt;</span><span class="nv">T</span><span class="err">?</span><span class="o">&gt;</span></code></td>
-<td>A state object with the previous value of the state object.</td>
-</tr>
-</tbody>
-</table>
+<h2 id="returns-stateobjectt">Returns <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="err">?</span><span class="p">&gt;</span></code></h2>
+<p>A state object with the previous value of the state object.</p>
 <hr />
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">ReplicatedStorage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">game</span><span class="p">:</span><span class="nc">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>

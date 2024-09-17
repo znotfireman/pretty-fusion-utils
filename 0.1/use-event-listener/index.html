@@ -620,12 +620,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-fusionscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Fusion.Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-eventlike" class="md-nav__link">
+    <span class="md-ellipsis">
+      event : EventLike
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listener-any-" class="md-nav__link">
+    <span class="md-ellipsis">
+      listener : (...any) -&gt; ()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+  <a href="#returns-" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Returns : () -&gt; ()
     </span>
   </a>
   
@@ -869,12 +902,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-fusionscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Fusion.Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-eventlike" class="md-nav__link">
+    <span class="md-ellipsis">
+      event : EventLike
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listener-any-" class="md-nav__link">
+    <span class="md-ellipsis">
+      listener : (...any) -&gt; ()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+  <a href="#returns-" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Returns : () -&gt; ()
     </span>
   </a>
   
@@ -916,48 +982,15 @@
 <p>Connects to an event-like object. The connection is automatically disconnected when the scope is cleaned up.</p>
 <hr />
 <h2 id="arguments">Arguments</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>scope</td>
-<td><code class="highlight"><span class="nv">Fusion</span><span class="p">.</span><span class="nv">Scope</span></code></td>
-<td>The scope to store cleanup tasks.</td>
-</tr>
-<tr>
-<td>event</td>
-<td><code class="highlight"><span class="nv">EventLike</span></code></td>
-<td>An event-like object to connect. Can be a RBXScriptSignal, or an object with a <code>Connect</code> or <code>connect</code> method.</td>
-</tr>
-<tr>
-<td>listener</td>
-<td><code class="highlight"><span class="p">(...</span><span class="nv">any</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">()</span></code></td>
-<td>An event listener to be connected.</td>
-</tr>
-</tbody>
-</table>
+<h3 id="scope-fusionscope">scope <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span></code></h3>
+<p>The scope to store cleanup tasks.</p>
+<h3 id="event-eventlike">event <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">EventLike</span></code></h3>
+<p>An event-like object to connect. Can be a RBXScriptSignal, or an object with a <code>Connect</code> or <code>connect</code> method.</p>
+<h3 id="listener-any-">listener <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="p">(...</span><span class="nc">any</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="p">()</span></code></h3>
+<p>An event listener to be connected.</p>
 <hr />
-<h2 id="returns">Returns</h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code class="highlight"><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">()</span></code></td>
-<td>A function to disconnect the event listener.</td>
-</tr>
-</tbody>
-</table>
+<h2 id="returns-">Returns <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="p">()</span></code></h2>
+<p>A function to disconnect the event listener.</p>
 
 <!-- Source file information -->
 

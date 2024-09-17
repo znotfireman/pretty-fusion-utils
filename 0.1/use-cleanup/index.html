@@ -557,12 +557,36 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-fusionscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Fusion.Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      ... : Tasks...
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+  <a href="#returns-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Returns : Tasks...
     </span>
   </a>
   
@@ -878,12 +902,36 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-fusionscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Fusion.Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      ... : Tasks...
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+  <a href="#returns-tasks" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Returns : Tasks...
     </span>
   </a>
   
@@ -933,43 +981,13 @@
 <p>Add clean up tasks to the scope. Returns the clean up tasks, allowing it to be used in declarations.</p>
 <hr />
 <h2 id="arguments">Arguments</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>scope</td>
-<td><code class="highlight"><span class="nv">Fusion</span><span class="p">.</span><span class="nv">Scope</span></code></td>
-<td>The scope to store cleanup tasks.</td>
-</tr>
-<tr>
-<td>...</td>
-<td><code class="highlight"><span class="nv">Tasks</span><span class="p">...</span></code></td>
-<td>The tasks to be added.</td>
-</tr>
-</tbody>
-</table>
+<h3 id="scope-fusionscope">scope <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span></code></h3>
+<p>The scope to store cleanup tasks.</p>
+<h3 id="tasks">... <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Tasks</span><span class="p">.</span><span class="err">..</span></code></h3>
+<p>The tasks to be added.</p>
 <hr />
-<h2 id="returns">Returns</h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code class="highlight"><span class="nv">Tasks</span><span class="p">...</span></code></td>
-<td>The tasks that has been added.</td>
-</tr>
-</tbody>
-</table>
+<h2 id="returns-tasks">Returns <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Tasks</span><span class="p">.</span><span class="err">..</span></code></h2>
+<p>The tasks that has been added.</p>
 <hr />
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">Fusion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">require</span><span class="p">(</span><span class="nv">ReplicatedStorage</span><span class="p">.</span><span class="nv">Packages</span><span class="p">.</span><span class="nv">Fusion</span><span class="p">)</span>

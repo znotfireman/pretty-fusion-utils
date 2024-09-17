@@ -515,12 +515,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-scope-fusionscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Scope &amp; Fusion.Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallback-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      fallback : Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processor-use-fusionuse-become-become-scope-scope-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      processor : (use: Fusion.Use, become: Become, scope: Scope) -&gt; Result
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+  <a href="#returns-stateobjectresult" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Returns : StateObject&lt;Result&gt;
     </span>
   </a>
   
@@ -869,12 +902,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-scope-fusionscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Scope &amp; Fusion.Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallback-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      fallback : Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processor-use-fusionuse-become-become-scope-scope-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      processor : (use: Fusion.Use, become: Become, scope: Scope) -&gt; Result
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+  <a href="#returns-stateobjectresult" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Returns : StateObject&lt;Result&gt;
     </span>
   </a>
   
@@ -916,48 +982,15 @@
 <p>Returns a state object with an value from an asynchronous processor. The processor is given a Use callback that adds dependencies, a Become callback alter the current eventual value, and an inner scope to add cleanup tasks to.</p>
 <hr />
 <h2 id="arguments">Arguments</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>scope</td>
-<td><code class="highlight"><span class="nv">Scope</span><span class="w"> </span><span class="err">&amp;</span><span class="w"> </span><span class="nv">Fusion</span><span class="p">.</span><span class="nv">Scope</span></code></td>
-<td>The scope to store cleanup tasks.</td>
-</tr>
-<tr>
-<td>fallback</td>
-<td><code class="highlight"><span class="nv">Result</span></code></td>
-<td>The fallback value to display while the processor runs.</td>
-</tr>
-<tr>
-<td>processor</td>
-<td><code class="highlight"><span class="p">(</span><span class="nv">use</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Use</span><span class="p">,</span><span class="w"> </span><span class="nv">become</span><span class="p">:</span><span class="w"> </span><span class="nc">Become</span><span class="p">,</span><span class="w"> </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Scope</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">Result</span></code></td>
-<td>The processor of the eventual value. It receives a Use callback, a Become callback, and an inner scope.</td>
-</tr>
-</tbody>
-</table>
+<h3 id="scope-scope-fusionscope">scope <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Scope</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span></code></h3>
+<p>The scope to store cleanup tasks.</p>
+<h3 id="fallback-result">fallback <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Result</span></code></h3>
+<p>The fallback value to display while the processor runs.</p>
+<h3 id="processor-use-fusionuse-become-become-scope-scope-result">processor <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="nc">use</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Use</span><span class="p">,</span><span class="w"> </span><span class="nc">become</span><span class="p">:</span><span class="w"> </span><span class="nc">Become</span><span class="p">,</span><span class="w"> </span><span class="nc">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Scope</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nc">Result</span></code></h3>
+<p>The processor of the eventual value. It receives a Use callback, a Become callback, and an inner scope.</p>
 <hr />
-<h2 id="returns">Returns</h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code class="highlight"><span class="nv">StateObject</span><span class="o">&lt;</span><span class="nv">Result</span><span class="o">&gt;</span></code></td>
-<td>A state object with the asynchronous value.</td>
-</tr>
-</tbody>
-</table>
+<h2 id="returns-stateobjectresult">Returns <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">Result</span><span class="p">&gt;</span></code></h2>
+<p>A state object with the asynchronous value.</p>
 
 <!-- Source file information -->
 
