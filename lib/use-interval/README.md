@@ -18,9 +18,15 @@ Sets an interval that runs the callback function every `delay` seconds. If `dela
 
 ## Arguments
 
-| Name     | Type     | Description          |
-| -------- | -------- | -------------------- |
-| scope | `#!luau Scope<S & typeof(Fusion)>` | The scope to store cleanup tasks. |
-| delay | `#!luau UsedAs<number?>` | The delay, in seconds per each interval. |
-| callback | `#!luau (Scope<S>) -> ()` | The callback to run at an interval. Receives an inner scope that is cleaned up per each interval. |
-| immediate | `#!luau boolean?` | Whether to spawn the callback immediately. |
+### scope `#!luau : Scope<S & typeof(Fusion)>`
+The scope to store cleanup tasks.
+
+### delay `#!luau : UsedAs<number?>`
+The delay, in seconds per each interval.
+
+### callback `#!luau : (Scope<S>) -> ()`
+The callback to run at an interval. Receives an inner scope that is cleaned up per each interval.
+
+### immediate `#!luau : boolean?`
+Whether to spawn the callback immediately.
+

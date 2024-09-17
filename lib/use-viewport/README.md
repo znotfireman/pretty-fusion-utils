@@ -15,14 +15,12 @@ Returns the current viewport size. Updates when the current camera changes or wh
 
 ## Arguments
 
-| Name     | Type     | Description          |
-| -------- | -------- | -------------------- |
-| scope | `#!luau Fusion.Scope` | The scope to store cleanup tasks. |
+### scope `#!luau : Fusion.Scope`
+The scope to store cleanup tasks.
+
 
 ---
 
-## Returns
+## Returns `#!luau : StateObject<Vector2>`
 
-| Type     | Description                  |
-| -------- | ---------------------------- |
-| `#!luau StateObject<Vector2>` | A state object with the viewport size. |
+A state object with the viewport size.

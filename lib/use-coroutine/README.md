@@ -17,16 +17,18 @@ Spawns a new coroutine that is closed once the scope is cleaned up.
 
 ## Arguments
 
-| Name     | Type     | Description          |
-| -------- | -------- | -------------------- |
-| scope | `#!luau Fusion.Scope` | The scope to store clean up tasks. |
-| resume | `#!luau thread | (Args...) -> ()` | The thread to resume, or a function to spawn. |
-| ... | `#!luau Args...` | The arguments to spawn the coroutine with. |
+### scope `#!luau : Fusion.Scope`
+The scope to store clean up tasks.
+
+### resume `#!luau : thread | (Args...) -> ()`
+The thread to resume, or a function to spawn.
+
+### ... `#!luau : Args...`
+The arguments to spawn the coroutine with.
+
 
 ---
 
-## Returns
+## Returns `#!luau : thread`
 
-| Type     | Description                  |
-| -------- | ---------------------------- |
-| `#!luau thread` | A thread that is closed once the scope is cleaned up. |
+A thread that is closed once the scope is cleaned up.

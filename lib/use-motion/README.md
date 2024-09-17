@@ -17,15 +17,15 @@ Returns a state object following a Ripple Motion along with the Motion
 
 ## Arguments
 
-| Name     | Type     | Description          |
-| -------- | -------- | -------------------- |
-| scope | `#!luau Fusion.Scope` | The scope to store cleanup tasks. |
-| initialValue | `#!luau T & Ripple.MotionGoal` | The initial value of the motor. |
+### scope `#!luau : Fusion.Scope`
+The scope to store cleanup tasks.
+
+### initialValue `#!luau : T & Ripple.MotionGoal`
+The initial value of the motor.
+
 
 ---
 
-## Returns
+## Returns `#!luau : (Fusion.StateObject<T>, Ripple.Motion<T>)`
 
-| Type     | Description                  |
-| -------- | ---------------------------- |
-| `#!luau (Fusion.StateObject<T>, Ripple.Motion<T>)` | A state object following a Ripple Motion along with the Motion itself. |
+A state object following a Ripple Motion along with the Motion itself.

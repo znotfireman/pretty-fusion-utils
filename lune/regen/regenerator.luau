@@ -9,7 +9,7 @@ local stringer = require("../utils/stringer")
 
 local PATH_DOCS = path(process.cwd, "docs")
 local PATH_LIB = path(process.cwd, "lib")
-local PATH_TEMPLATES = path(process.cwd, ".lune", "regen", "templates")
+local PATH_TEMPLATES = path(process.cwd, "lune", "regen", "templates")
 local PATH_DOC_BUILD = path(process.cwd, "doc.build")
 local TEMPLATE_INDEX = path(PATH_TEMPLATES, "index.md")
 
@@ -233,14 +233,13 @@ function Regenerator.regenerate()
           :appendLine()
           :appendLine("## Arguments")
           :appendLine()
-          :appendLine("| Name     | Type     | Description          |")
-          :appendLine("| -------- | -------- | -------------------- |")
 
         local args = {}
         for _, arg in util.config.args do
           table.insert(args, `{arg.name}: {arg.type}`)
           codeDocumentation
-            :append("|", arg.name, "|", `\`#!luau {arg.type}\``, "|", arg.description, "|")
+            :appendLine("###", arg.name, `\`#!luau : {arg.type}\``)
+            :appendLine(arg.description)
             :appendLine()
           docComment:appendLine("@param", arg.name, stringer.cleanNewlines(arg.description))
         end
@@ -256,17 +255,10 @@ function Regenerator.regenerate()
           :appendLine()
           :appendLine("---")
           :appendLine()
-          :appendLine("## Returns")
+          :append("## Returns ")
+          :appendLine(`\`#!luau : {util.config.returns.type}\``)
           :appendLine()
-          :appendLine("| Type     | Description                  |")
-          :appendLine("| -------- | ---------------------------- |")
-          :appendLine(
-            "|",
-            `\`#!luau {util.config.returns.type}\``,
-            "|",
-            util.config.returns.description,
-            "|"
-          )
+          :appendLine(util.config.returns.description)
       end
 
       if util.config.example then

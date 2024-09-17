@@ -17,16 +17,18 @@ Returns a state object with an value from an asynchronous processor. The process
 
 ## Arguments
 
-| Name     | Type     | Description          |
-| -------- | -------- | -------------------- |
-| scope | `#!luau Scope & Fusion.Scope` | The scope to store cleanup tasks. |
-| fallback | `#!luau Result` | The fallback value to display while the processor runs. |
-| processor | `#!luau (use: Fusion.Use, become: Become, scope: Scope) -> Result` | The processor of the eventual value. It receives a Use callback, a Become callback, and an inner scope. |
+### scope `#!luau : Scope & Fusion.Scope`
+The scope to store cleanup tasks.
+
+### fallback `#!luau : Result`
+The fallback value to display while the processor runs.
+
+### processor `#!luau : (use: Fusion.Use, become: Become, scope: Scope) -> Result`
+The processor of the eventual value. It receives a Use callback, a Become callback, and an inner scope.
+
 
 ---
 
-## Returns
+## Returns `#!luau : StateObject<Result>`
 
-| Type     | Description                  |
-| -------- | ---------------------------- |
-| `#!luau StateObject<Result>` | A state object with the asynchronous value. |
+A state object with the asynchronous value.
