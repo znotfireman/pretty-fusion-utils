@@ -42,7 +42,6 @@
     "remove_unused_while",
     "filter_after_early_return",
     "remove_nil_declaration",
-    "remove_empty_do",
-    "remove_spaces"
+    "remove_empty_do"
   ]
 }

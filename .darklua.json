@@ -1,8 +1,5 @@
 {
-  "generator": {
-    "column_span": 999999999,
-    "name": "dense"
-  },
+  "generator": "retain_lines",
   "rules": [
     {
       "current": {
