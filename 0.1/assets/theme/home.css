@@ -127,6 +127,7 @@ h1.pfu-home-header::before {
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  gap: 1em;
 }
 
 @keyframes scroll {
@@ -146,7 +147,6 @@ h1.pfu-home-header::before {
   display: flex !important;
   flex-direction: row;
   width: auto;
-  gap: 1em;
 
   list-style: none;
   font-size: 3em;
@@ -163,16 +163,20 @@ h1.pfu-home-header::before {
   animation: scroll 200s linear infinite;
 }
 
-.pfu-home-list>ul>li:nth-child(odd) {
-  opacity: 0.4;
-}
-
-.pfu-home-list>ul>li:nth-child(even) {
-  opacity: 0.2;
+.pfu-home-list>ul>li {
+  background-color: var(--md-default-bg-color--light);
+  padding: 0.5em;
+  border-radius: 0.25em;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .pfu-home-list>ul a {
-  color: var(--md-default-fg-color);
+  color: oklch(from var(--md-default-fg-color) l c h / 0.5) !important;
+}
+
+.pfu-home-list>ul>li:has(a:hover) {
+  background-color: var(--md-default-bg-color--lighter);
+  transform: scale(1.0125);
 }
 
 /*
