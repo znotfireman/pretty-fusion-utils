@@ -27,4 +27,4 @@
 
 [config.returns]
   type = "Px"
-  description = "A `px` unit that scales with the viewport size.."
+  description = "A `px` unit that scales with the viewport size."
