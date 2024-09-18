@@ -21,6 +21,6 @@ The scope to store cleanup tasks.
 
 ---
 
-## Returns <span class="pfu-reference-type">-> Fusion.StateObject<Vector2> </span>
+## Returns <span class="pfu-reference-type">-> Fusion.StateObject&lt;Vector2&gt; </span>
 
 A state object with the viewport size.

@@ -20,16 +20,16 @@ Returns a state object with the previous value of an observable state object. In
 ### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### state <span class="pfu-reference-type">: Fusion.UsedAs<T> </span>
+### state <span class="pfu-reference-type">: Fusion.UsedAs&lt;T&gt; </span>
 The state object to observe for changes.
 
-### predicate <span class="pfu-reference-type">: ((T, T) -> boolean)? </span>
+### predicate <span class="pfu-reference-type">: ((T, T) -&gt; boolean)? </span>
 The predicate function to assert if the value is newer. Defaults to Fusion's similarity rules.
 
 
 ---
 
-## Returns <span class="pfu-reference-type">-> Fusion.StateObject<T> </span>
+## Returns <span class="pfu-reference-type">-> Fusion.StateObject&lt;T&gt; </span>
 
 A state object with the previous value of the state object. Initially outputs `nil`.
 

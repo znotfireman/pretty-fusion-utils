@@ -20,7 +20,7 @@ Spawns a new coroutine that is closed once the scope is cleaned up.
 ### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store clean up tasks.
 
-### resume <span class="pfu-reference-type">: thread | (Args...) -> () </span>
+### resume <span class="pfu-reference-type">: thread | (Args...) -&gt; () </span>
 The thread to resume, or a function to spawn.
 
 ### ... <span class="pfu-reference-type">: Args... </span>

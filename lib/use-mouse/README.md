@@ -19,12 +19,12 @@ Returns a state object with the mouse position. Updates when the mouse position 
 ### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### observer <span class="pfu-reference-type">: (mouse: Vector2) -> ()? </span>
+### observer <span class="pfu-reference-type">: (mouse: Vector2) -&gt; ()? </span>
 Optional observer tracking the mouse position.
 
 
 ---
 
-## Returns <span class="pfu-reference-type">-> Fusion.StateObject<Vector2> </span>
+## Returns <span class="pfu-reference-type">-> Fusion.StateObject&lt;Vector2&gt; </span>
 
 A state object with the mouse position.

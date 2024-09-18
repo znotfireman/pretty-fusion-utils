@@ -19,12 +19,12 @@ Returns a state object following a Ripple Motion along with the Motion itself.
 ### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### initialValue <span class="pfu-reference-type">: T & Ripple.MotionGoal </span>
+### initialValue <span class="pfu-reference-type">: T &amp; Ripple.MotionGoal </span>
 The initial value of the motor.
 
 
 ---
 
-## Returns <span class="pfu-reference-type">-> (Fusion.StateObject<T>, Ripple.Motion<T>) </span>
+## Returns <span class="pfu-reference-type">-> (Fusion.StateObject&lt;T&gt;, Ripple.Motion&lt;T&gt;) </span>
 
 A state object following a Ripple Motion along with the Motion itself.

@@ -250,7 +250,13 @@ function Regenerator.regenerate()
         for _, arg in util.config.args do
           table.insert(args, `{arg.name}: {arg.type}`)
           codeDocumentation
-            :appendLine("###", arg.name, '<span class="pfu-reference-type">:', arg.type, "</span>")
+            :appendLine(
+              "###",
+              arg.name,
+              '<span class="pfu-reference-type">:',
+              stringer.cleanHtmlTags(arg.type),
+              "</span>"
+            )
             :appendLine(arg.description)
             :appendLine()
           docComment:appendLine("@param", arg.name, stringer.cleanNewlines(arg.description))
@@ -268,7 +274,11 @@ function Regenerator.regenerate()
           :appendLine("---")
           :appendLine()
           :append("## Returns ")
-          :appendLine('<span class="pfu-reference-type">->', util.config.returns.type, "</span>")
+          :appendLine(
+            '<span class="pfu-reference-type">->',
+            stringer.cleanHtmlTags(util.config.returns.type),
+            "</span>"
+          )
           :appendLine()
           :appendLine(util.config.returns.description)
       end

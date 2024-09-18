@@ -18,13 +18,13 @@ Sets an interval that runs the callback function every `delay` seconds. If `dela
 
 ## Parameters
 
-### scope <span class="pfu-reference-type">: Fusion.Scope<S & typeof(Fusion)> </span>
+### scope <span class="pfu-reference-type">: Fusion.Scope&lt;S &amp; typeof(Fusion)&gt; </span>
 The scope to store cleanup tasks.
 
-### delay <span class="pfu-reference-type">: Fusion.UsedAs<number?> </span>
+### delay <span class="pfu-reference-type">: Fusion.UsedAs&lt;number?&gt; </span>
 The delay, in seconds per each interval.
 
-### callback <span class="pfu-reference-type">: (Fusion.Scope<S>) -> () </span>
+### callback <span class="pfu-reference-type">: (Fusion.Scope&lt;S&gt;) -&gt; () </span>
 The callback to run at an interval. Receives an inner scope that is cleaned up per each interval.
 
 ### immediate <span class="pfu-reference-type">: boolean? </span>

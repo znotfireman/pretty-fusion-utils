@@ -21,13 +21,13 @@ Returns a state object with the current `px` unit based on the current viewport 
 ### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### baseResolution <span class="pfu-reference-type">: Fusion.UsedAs<Vector2>? </span>
+### baseResolution <span class="pfu-reference-type">: Fusion.UsedAs&lt;Vector2&gt;? </span>
 TThe base resolution to scale from, defaults to a Macbook Air's resolution.
 
-### minimumScale <span class="pfu-reference-type">: Fusion.UsedAs<number>? </span>
+### minimumScale <span class="pfu-reference-type">: Fusion.UsedAs&lt;number&gt;? </span>
 The smallest scale, defaults to 50%.
 
-### dominantAxis <span class="pfu-reference-type">: Fusion.UsedAs<number>? </span>
+### dominantAxis <span class="pfu-reference-type">: Fusion.UsedAs&lt;number&gt;? </span>
 The axis to scale for, defaults to 1:1.
 
 

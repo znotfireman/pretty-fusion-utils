@@ -25,6 +25,6 @@ The CollectionService tag to track.
 
 ---
 
-## Returns <span class="pfu-reference-type">-> Fusion.StateObject<{ Instance }> </span>
+## Returns <span class="pfu-reference-type">-> Fusion.StateObject&lt;{ Instance }&gt; </span>
 
 A state object with every instance of the given tag.
