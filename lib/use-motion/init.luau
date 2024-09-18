@@ -1,10 +1,10 @@
+local RunService = game:GetService("RunService")
+
 local Finder = require("utils/finder")
 local Fusion = require("types/fusion")
 local Ripple = require("types/ripple")
 local lockValue = require("utils/lock-value")
 local useEventListener = require("use-event-listener")
-
-local RunService = game:GetService("RunService")
 
 --[=[
   Returns a state object following a Ripple Motion along with the Motion

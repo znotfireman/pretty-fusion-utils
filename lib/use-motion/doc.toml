@@ -1,7 +1,7 @@
 [config]
   name = "useMotion"
   brief = """\
-  Returns a state object following a Ripple Motion along with the Motion
+  Returns a state object following a Ripple Motion along with the Motion \
   itself.\
   """
 
