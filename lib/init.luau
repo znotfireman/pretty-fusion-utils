@@ -13,7 +13,7 @@ return table.freeze {
   useMouse = require("use-mouse"),
   usePrevious = require("use-previous"),
   usePx = require("use-px"),
-  useMotion = require("use-spring"),
+  useSpring = require("use-spring"),
   useTagged = require("use-tagged"),
   useThread = require("use-thread"),
   useTimer = require("use-timer"),

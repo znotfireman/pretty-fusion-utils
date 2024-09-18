@@ -1,10 +1,10 @@
 <!-- This file was @generated and is not intended for manual editing. -->
 <!-- Run `lune run regen` to generate a fresh README. -->
 
-# useMotion
+# useSpring
 
 ```Luau
-function useMotion<T>(
+function useSpring<T>(
   scope: Fusion.Scope,
   goal: Fusion.UsedAs<T & Ripple.MotionGoal>,
   options: Ripple.SpringOptions?
