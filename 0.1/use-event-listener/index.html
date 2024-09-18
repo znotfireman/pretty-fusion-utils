@@ -74,6 +74,8 @@
     
       <link rel="stylesheet" href="../assets/theme/404.css">
     
+      <link rel="stylesheet" href="../assets/theme/reference.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -614,13 +616,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arguments" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Arguments
+      Parameters
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Arguments">
+    <nav class="md-nav" aria-label="Parameters">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -658,7 +660,7 @@
         <li class="md-nav__item">
   <a href="#returns-" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns : () -&gt; ()
+      Returns -&gt; () -&gt; ()
     </span>
   </a>
   
@@ -917,13 +919,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arguments" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Arguments
+      Parameters
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Arguments">
+    <nav class="md-nav" aria-label="Parameters">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -961,7 +963,7 @@
         <li class="md-nav__item">
   <a href="#returns-" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns : () -&gt; ()
+      Returns -&gt; () -&gt; ()
     </span>
   </a>
   
@@ -993,7 +995,10 @@
 <!-- This file was @generated and is not intended for manual editing. -->
 <!-- Run `lune run regen` to generate a fresh README. -->
 
-<h1 id="useeventlistener">useEventListener</h1>
+<h1 class="pfu-reference-header" id="useeventlistener">
+<span class="pfu-reference-name"> useEventListener </span>
+<a class="pfu-reference-source" href="https://github.com/znotfireman/pretty-fusion-utils/blob/main/lib/use-event-listener/init.luau" markdown> <span class="twemoji" title="View source code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06m-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0"/></svg></span> </a>
+</h1>
 <div class="highlight"><pre><span></span><code><span class="kr">function</span><span class="w"> </span><span class="nf">useEventListener</span><span class="p">(</span>
 <span class="w">  </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">,</span>
 <span class="w">  </span><span class="nv">event</span><span class="p">:</span><span class="w"> </span><span class="nc">EventLike</span><span class="p">,</span>
@@ -1002,15 +1007,15 @@
 </code></pre></div>
 <p>Connects to an event-like object. The connection is automatically disconnected when the scope is cleaned up.</p>
 <hr />
-<h2 id="arguments">Arguments</h2>
-<h3 id="scope-fusionscope">scope <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span></code></h3>
+<h2 id="parameters">Parameters</h2>
+<h3 id="scope-fusionscope">scope <span class="pfu-reference-type">: Fusion.Scope </span></h3>
 <p>The scope to store cleanup tasks.</p>
-<h3 id="event-eventlike">event <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">EventLike</span></code></h3>
+<h3 id="event-eventlike">event <span class="pfu-reference-type">: EventLike </span></h3>
 <p>An event-like object to connect. Can be a RBXScriptSignal, or an object with a <code>Connect</code> or <code>connect</code> method.</p>
-<h3 id="listener-any-">listener <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="p">(...</span><span class="nc">any</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="p">()</span></code></h3>
+<h3 id="listener-any-">listener <span class="pfu-reference-type">: (...any) -&gt; () </span></h3>
 <p>An event listener to be connected.</p>
 <hr />
-<h2 id="returns-">Returns <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="p">()</span></code></h2>
+<h2 id="returns-">Returns <span class="pfu-reference-type">-&gt; () -&gt; () </span></h2>
 <p>A function to disconnect the event listener.</p>
 
 <!-- Source file information -->
@@ -1113,7 +1118,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.instant", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.tooltips", "navigation.top", "navigation.sections", "navigation.instant", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>

@@ -74,6 +74,8 @@
     
       <link rel="stylesheet" href="../assets/theme/404.css">
     
+      <link rel="stylesheet" href="../assets/theme/reference.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -698,13 +700,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arguments" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Arguments
+      Parameters
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Arguments">
+    <nav class="md-nav" aria-label="Parameters">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -717,9 +719,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#state-fusionstateobjectt" class="md-nav__link">
+  <a href="#state-fusionstateobject" class="md-nav__link">
     <span class="md-ellipsis">
-      state : Fusion.StateObject&lt;T&gt;
+      state : Fusion.StateObject
     </span>
   </a>
   
@@ -740,9 +742,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns-fusionstateobjectt" class="md-nav__link">
+  <a href="#returns-fusionstateobject" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns : Fusion.StateObject&lt;T&gt;
+      Returns -&gt; Fusion.StateObject
     </span>
   </a>
   
@@ -926,13 +928,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arguments" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Arguments
+      Parameters
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Arguments">
+    <nav class="md-nav" aria-label="Parameters">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -945,9 +947,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#state-fusionstateobjectt" class="md-nav__link">
+  <a href="#state-fusionstateobject" class="md-nav__link">
     <span class="md-ellipsis">
-      state : Fusion.StateObject&lt;T&gt;
+      state : Fusion.StateObject
     </span>
   </a>
   
@@ -968,9 +970,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns-fusionstateobjectt" class="md-nav__link">
+  <a href="#returns-fusionstateobject" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns : Fusion.StateObject&lt;T&gt;
+      Returns -&gt; Fusion.StateObject
     </span>
   </a>
   
@@ -1011,7 +1013,10 @@
 <!-- This file was @generated and is not intended for manual editing. -->
 <!-- Run `lune run regen` to generate a fresh README. -->
 
-<h1 id="useprevious">usePrevious</h1>
+<h1 class="pfu-reference-header" id="useprevious">
+<span class="pfu-reference-name"> usePrevious </span>
+<a class="pfu-reference-source" href="https://github.com/znotfireman/pretty-fusion-utils/blob/main/lib/use-previous/init.luau" markdown> <span class="twemoji" title="View source code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06m-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0"/></svg></span> </a>
+</h1>
 <div class="highlight"><pre><span></span><code><span class="kr">function</span><span class="w"> </span><span class="nf">usePrevious</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span>
 <span class="w">  </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">,</span>
 <span class="w">  </span><span class="nv">state</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;,</span>
@@ -1020,15 +1025,15 @@
 </code></pre></div>
 <p>Returns a state object with the previous value of an observable state object. Initially outputs <code>nil</code>.</p>
 <hr />
-<h2 id="arguments">Arguments</h2>
-<h3 id="scope-fusionscope">scope <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span></code></h3>
+<h2 id="parameters">Parameters</h2>
+<h3 id="scope-fusionscope">scope <span class="pfu-reference-type">: Fusion.Scope </span></h3>
 <p>The scope to store cleanup tasks.</p>
-<h3 id="state-fusionstateobjectt">state <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span></code></h3>
+<h3 id="state-fusionstateobject">state <span class="pfu-reference-type">: Fusion.StateObject<T> </span></h3>
 <p>The state object to observe for changes.</p>
-<h3 id="predicate-t-t-boolean">predicate <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="p">((</span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="nc">T</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nc">boolean</span><span class="p">)</span><span class="err">?</span></code></h3>
+<h3 id="predicate-t-t-boolean">predicate <span class="pfu-reference-type">: ((T, T) -&gt; boolean)? </span></h3>
 <p>The predicate function to assert if the value is newer. Defaults to Fusion's similarity rules.</p>
 <hr />
-<h2 id="returns-fusionstateobjectt">Returns <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span></code></h2>
+<h2 id="returns-fusionstateobject">Returns <span class="pfu-reference-type">-&gt; Fusion.StateObject<T> </span></h2>
 <p>A state object with the previous value of the state object. Initially outputs <code>nil</code>.</p>
 <hr />
 <h2 id="example">Example</h2>
@@ -1148,7 +1153,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "navigation.sections", "navigation.instant", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.tooltips", "navigation.top", "navigation.sections", "navigation.instant", "navigation.indexes", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>

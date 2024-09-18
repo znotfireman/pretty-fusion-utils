@@ -1,0 +1,21 @@
+.pfu-reference-header {
+  display: flex;
+  align-items: baseline;
+  margin: 0 !important;
+  flex-wrap: wrap;
+}
+
+.pfu-reference-type {
+  vertical-align: middle;
+  font-size: calc((0.5em + 1rem) / 2);
+  flex-shrink: 0;
+  margin-left: 0.5em;
+  font-family: var(--md-code-font-family);
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+a.pfu-reference-source {
+  color: var(--md-default-fg-color);
+  margin-left: auto;
+}
