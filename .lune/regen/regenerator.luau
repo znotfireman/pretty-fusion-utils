@@ -171,17 +171,20 @@ function Regenerator.aliases()
     },
   }
 
+  local darkluaSources = table.clone(aliases)
+  darkluaSources["@lune/"] = nil
+
   for _, rule in darkluaConfig.rules do
     if typeof(rule) == "table" and rule.rule == "convert_require" then
       local convertRequire = rule :: ConvertRequire
-      convertRequire.current.sources = aliases
+      convertRequire.current.sources = darkluaSources
     end
   end
 
   for _, rule in darkluaDevConfig.rules do
     if typeof(rule) == "table" and rule.rule == "convert_require" then
       local convertRequire = rule :: ConvertRequire
-      convertRequire.current.sources = aliases
+      convertRequire.current.sources = darkluaSources
     end
   end
 

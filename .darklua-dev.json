@@ -5,7 +5,6 @@
       "current": {
         "name": "path",
         "sources": {
-          "@lune/": "~/.lune/.typedefs/0.8.8/",
           "types": "lib/types",
           "use-camera": "lib/use-camera",
           "use-cleanup": "lib/use-cleanup",
