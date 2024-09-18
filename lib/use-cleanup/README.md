@@ -14,18 +14,18 @@ Add clean up tasks to the scope. Returns the clean up tasks, allowing it to be u
 
 ---
 
-## Arguments
+## Parameters
 
-### scope `#!luau : Fusion.Scope`
+### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### ... `#!luau : Tasks...`
+### ... <span class="pfu-reference-type">: Tasks... </span>
 The tasks to be added.
 
 
 ---
 
-## Returns `#!luau : Tasks...`
+## Returns <span class="pfu-reference-type">-> Tasks... </span>
 
 The tasks that has been added.
 

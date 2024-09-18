@@ -13,14 +13,14 @@ Returns the current viewport size. Updates when the current camera changes or wh
 
 ---
 
-## Arguments
+## Parameters
 
-### scope `#!luau : Fusion.Scope`
+### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
 
 ---
 
-## Returns `#!luau : StateObject<Vector2>`
+## Returns <span class="pfu-reference-type">-> StateObject<Vector2> </span>
 
 A state object with the viewport size.

@@ -14,17 +14,17 @@ Returns a state object following a Ripple Motion along with the Motion itself.
 
 ---
 
-## Arguments
+## Parameters
 
-### scope `#!luau : Fusion.Scope`
+### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### initialValue `#!luau : T & Ripple.MotionGoal`
+### initialValue <span class="pfu-reference-type">: T & Ripple.MotionGoal </span>
 The initial value of the motor.
 
 
 ---
 
-## Returns `#!luau : (Fusion.StateObject<T>, Ripple.Motion<T>)`
+## Returns <span class="pfu-reference-type">-> (Fusion.StateObject<T>, Ripple.Motion<T>) </span>
 
 A state object following a Ripple Motion along with the Motion itself.

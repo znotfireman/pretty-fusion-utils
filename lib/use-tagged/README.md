@@ -14,17 +14,17 @@ Returns a state object with every instance of a given tag. Updates when new inst
 
 ---
 
-## Arguments
+## Parameters
 
-### scope `#!luau : Fusion.Scope`
+### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### tag `#!luau : string`
+### tag <span class="pfu-reference-type">: string </span>
 The CollectionService tag to track.
 
 
 ---
 
-## Returns `#!luau : StateObject<{ Instance }>`
+## Returns <span class="pfu-reference-type">-> StateObject<{ Instance }> </span>
 
 A state object with every instance of the given tag.

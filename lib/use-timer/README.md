@@ -14,17 +14,17 @@ Creates a timer that can be used to track a value over time.
 
 ---
 
-## Arguments
+## Parameters
 
-### scope `#!luau : Fusion.Scope`
+### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### initial `#!luau : number?`
+### initial <span class="pfu-reference-type">: number? </span>
 The initial value of the timer.
 
 
 ---
 
-## Returns `#!luau : Timer`
+## Returns <span class="pfu-reference-type">-> Timer </span>
 
 A timer object.

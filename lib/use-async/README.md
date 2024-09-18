@@ -15,20 +15,20 @@ Returns a state object with an value from an asynchronous processor. The process
 
 ---
 
-## Arguments
+## Parameters
 
-### scope `#!luau : Scope & Fusion.Scope`
+### scope <span class="pfu-reference-type">: Scope & Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### fallback `#!luau : Result`
+### fallback <span class="pfu-reference-type">: Result </span>
 The fallback value to display while the processor runs.
 
-### processor `#!luau : (use: Fusion.Use, become: Become, scope: Scope) -> Result`
+### processor <span class="pfu-reference-type">: (use: Fusion.Use, become: Become, scope: Scope) -> Result </span>
 The processor of the eventual value. It receives a Use callback, a Become callback, and an inner scope.
 
 
 ---
 
-## Returns `#!luau : StateObject<Result>`
+## Returns <span class="pfu-reference-type">-> StateObject<Result> </span>
 
 A state object with the asynchronous value.

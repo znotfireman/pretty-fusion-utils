@@ -16,17 +16,17 @@ Sets an interval that runs the callback function every `delay` seconds. If `dela
 
 ---
 
-## Arguments
+## Parameters
 
-### scope `#!luau : Scope<S & typeof(Fusion)>`
+### scope <span class="pfu-reference-type">: Scope<S & typeof(Fusion)> </span>
 The scope to store cleanup tasks.
 
-### delay `#!luau : UsedAs<number?>`
+### delay <span class="pfu-reference-type">: UsedAs<number?> </span>
 The delay, in seconds per each interval.
 
-### callback `#!luau : (Scope<S>) -> ()`
+### callback <span class="pfu-reference-type">: (Scope<S>) -> () </span>
 The callback to run at an interval. Receives an inner scope that is cleaned up per each interval.
 
-### immediate `#!luau : boolean?`
+### immediate <span class="pfu-reference-type">: boolean? </span>
 Whether to spawn the callback immediately.
 

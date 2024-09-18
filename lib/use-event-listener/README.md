@@ -15,20 +15,20 @@ Connects to an event-like object. The connection is automatically disconnected w
 
 ---
 
-## Arguments
+## Parameters
 
-### scope `#!luau : Fusion.Scope`
+### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### event `#!luau : EventLike`
+### event <span class="pfu-reference-type">: EventLike </span>
 An event-like object to connect. Can be a RBXScriptSignal, or an object with a `Connect` or `connect` method.
 
-### listener `#!luau : (...any) -> ()`
+### listener <span class="pfu-reference-type">: (...any) -> () </span>
 An event listener to be connected.
 
 
 ---
 
-## Returns `#!luau : () -> ()`
+## Returns <span class="pfu-reference-type">-> () -> () </span>
 
 A function to disconnect the event listener.

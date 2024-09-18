@@ -15,21 +15,21 @@ Returns a state object with the previous value of an observable state object. In
 
 ---
 
-## Arguments
+## Parameters
 
-### scope `#!luau : Fusion.Scope`
+### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### state `#!luau : Fusion.StateObject<T>`
+### state <span class="pfu-reference-type">: Fusion.StateObject<T> </span>
 The state object to observe for changes.
 
-### predicate `#!luau : ((T, T) -> boolean)?`
+### predicate <span class="pfu-reference-type">: ((T, T) -> boolean)? </span>
 The predicate function to assert if the value is newer. Defaults to Fusion's similarity rules.
 
 
 ---
 
-## Returns `#!luau : Fusion.StateObject<T>`
+## Returns <span class="pfu-reference-type">-> Fusion.StateObject<T> </span>
 
 A state object with the previous value of the state object. Initially outputs `nil`.
 

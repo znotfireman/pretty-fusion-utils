@@ -39,6 +39,7 @@ return {
       code = "JetBrains Mono",
     },
     features = {
+      "content.tooltips",
       "navigation.top",
       "navigation.sections",
       "navigation.instant",
@@ -59,6 +60,7 @@ return {
     "assets/theme/page.css",
     "assets/theme/admonition.css",
     "assets/theme/404.css",
+    "assets/theme/reference.css",
   },
 
   extra_javascript = {
@@ -85,9 +87,11 @@ return {
     ["pymdownx.highlight"] = {
       guess_lang = false,
     },
-    ["pymdownx.emoji"] = {
-      emoji_index = "!!python/name:materialx.emoji.twemoji",
-      emoji_generator = "!!python/name:materialx.emoji.to_svg",
-    },
+    -- Are you actually fucking serious
+    -- Youre telling me my Lune cant serde a yaml tag? The fuck?
+    -- ["pymdownx.emoji"] = {
+    --   emoji_index = "!!python/name:materialx.emoji.twemoji",
+    --   emoji_generator = "!!python/name:materialx.emoji.to_svg",
+    -- },
   },
 }

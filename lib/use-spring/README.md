@@ -15,20 +15,20 @@ Applies spring animations to the given value, and updates the goal with the late
 
 ---
 
-## Arguments
+## Parameters
 
-### scope `#!luau : Fusion.Scope`
+### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### goal `#!luau : Fusion.UsedAs<T & Ripple.MotionGoal>`
+### goal <span class="pfu-reference-type">: Fusion.UsedAs<T & Ripple.MotionGoal> </span>
 The goal of the motor.
 
-### options `#!luau : Ripple.SpringOptions?`
+### options <span class="pfu-reference-type">: Ripple.SpringOptions? </span>
 Options for the spring.
 
 
 ---
 
-## Returns `#!luau : Fusion.StateObject<T>`
+## Returns <span class="pfu-reference-type">-> Fusion.StateObject<T> </span>
 
 A state object with the motor's value.

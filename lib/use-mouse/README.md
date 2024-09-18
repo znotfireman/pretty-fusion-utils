@@ -14,17 +14,17 @@ Returns a state object with the mouse position. Updates when the mouse position 
 
 ---
 
-## Arguments
+## Parameters
 
-### scope `#!luau : Fusion.Scope`
+### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### observer `#!luau : (mouse: Vector2) -> ()?`
+### observer <span class="pfu-reference-type">: (mouse: Vector2) -> ()? </span>
 Optional observer tracking the mouse position.
 
 
 ---
 
-## Returns `#!luau : StateObject<Vector2>`
+## Returns <span class="pfu-reference-type">-> StateObject<Vector2> </span>
 
 A state object with the mouse position.

@@ -12,6 +12,7 @@ local PATH_LIB = path(process.cwd, "lib")
 local PATH_TEMPLATES = path(process.cwd, ".lune", "regen", "templates")
 local PATH_DOC_BUILD = path(process.cwd, "doc.build")
 local TEMPLATE_INDEX = path(PATH_TEMPLATES, "index.md")
+local LIB_URL = "https://github.com/znotfireman/pretty-fusion-utils/blob/main/lib"
 
 type DocBuild = {
   build: {
@@ -117,17 +118,28 @@ function Regenerator.mkdocsConfig()
     },
   }
 
-  fs.writeFile(
-    path(process.cwd, "mkdocs.yaml"),
-    StringBuilder()
-      :appendLine("# This file was @generated and is not intended for manual editing.")
-      :appendLine("# Run `lune run regen` to generate a fresh configuration file.")
-      :appendLine()
-      :appendLine("# Edit the configuration at `.lune/regenerate/templates/mkdocs.yaml.luau`")
-      :appendLine()
-      :appendLine(serde.encode("yaml", newMkdocs))
-      :build()
-  )
+  fs.writeFile(path(process.cwd, "mkdocs.yaml"), (StringBuilder()
+    :appendLine("# This file was @generated and is not intended for manual editing.")
+    :appendLine("# Run `lune run regen` to generate a fresh configuration file.")
+    :appendLine()
+    :appendLine("# Edit the configuration at `.lune/regenerate/templates/mkdocs.yaml.luau`")
+    :appendLine()
+    :appendLine(serde.encode("yaml", newMkdocs))
+    :build()
+    -- HOLY SHIT LUNE. FUCK YOU MEAN I CANT SERDE A TAG?
+    :gsub(
+      "pymdownx%.inlinehilite",
+      function(old)
+        return StringBuilder("pymdownx.inlinehilite")
+          :appendLine()
+          :appendLine("- pymdownx.emoji:")
+          :indent()
+          :indent()
+          :appendLine("emoji_index: !!python/name:materialx.emoji.twemoji")
+          :appendLine("emoji_generator: !!python/name:materialx.emoji.to_svg")
+          :build()
+      end
+    )))
 end
 
 function Regenerator.aliases()
@@ -231,14 +243,14 @@ function Regenerator.regenerate()
           :appendLine()
           :appendLine("---")
           :appendLine()
-          :appendLine("## Arguments")
+          :appendLine("## Parameters")
           :appendLine()
 
         local args = {}
         for _, arg in util.config.args do
           table.insert(args, `{arg.name}: {arg.type}`)
           codeDocumentation
-            :appendLine("###", arg.name, `\`#!luau : {arg.type}\``)
+            :appendLine("###", arg.name, '<span class="pfu-reference-type">:', arg.type, "</span>")
             :appendLine(arg.description)
             :appendLine()
           docComment:appendLine("@param", arg.name, stringer.cleanNewlines(arg.description))
@@ -256,7 +268,7 @@ function Regenerator.regenerate()
           :appendLine("---")
           :appendLine()
           :append("## Returns ")
-          :appendLine(`\`#!luau : {util.config.returns.type}\``)
+          :appendLine('<span class="pfu-reference-type">->', util.config.returns.type, "</span>")
           :appendLine()
           :appendLine(util.config.returns.description)
       end
@@ -299,11 +311,15 @@ function Regenerator.regenerate()
       usefulFor:append("Useful for", util.config.useful_for)
     end
 
-    local content = StringBuilder()
+    -- stylua: ignore
+    pages[util] = StringBuilder()
       :appendLine("<!-- This file was @generated and is not intended for manual editing. -->")
       :appendLine("<!-- Run `lune run regen` to generate a fresh README. -->")
       :appendLine()
-      :appendLine("#", util.config.name)
+      :appendLine('<h1 class="pfu-reference-header" markdown>')
+      :appendLine('<span class="pfu-reference-name">', util.config.name, "</span>")
+      :appendLine(`<a class="pfu-reference-source" href="{path(LIB_URL, util.dir, "init.luau")}" markdown> :octicons-code-24:\{ title="View source code" } </a>`)
+      :appendLine("</h1>")
       :appendLine()
       :appendLine("```Luau")
       :appendLine(code:build())
@@ -312,9 +328,25 @@ function Regenerator.regenerate()
       :appendLine(util.config.brief)
       :appendStringBuilder(usefulFor)
       :append(codeDocumentation:build())
+      :build()
 
-    pages[util] = content:build()
-    fs.writeFile(path(PATH_LIB, util.dir, "README.md"), content:build())
+    fs.writeFile(
+      path(PATH_LIB, util.dir, "README.md"),
+      StringBuilder()
+        :appendLine("<!-- This file was @generated and is not intended for manual editing. -->")
+        :appendLine("<!-- Run `lune run regen` to generate a fresh README. -->")
+        :appendLine()
+        :appendLine("#", util.config.name)
+        :appendLine()
+        :appendLine("```Luau")
+        :appendLine(code:build())
+        :appendLine("```")
+        :appendLine()
+        :appendLine(util.config.brief)
+        :appendStringBuilder(usefulFor)
+        :append(codeDocumentation:build())
+        :build()
+    )
 
     local libFilepath = path(PATH_LIB, util.dir, "init.luau")
     local libFile = fs.readFile(libFilepath)

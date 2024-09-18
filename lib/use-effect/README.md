@@ -14,11 +14,11 @@ Perform side effects with state objects.
 
 ---
 
-## Arguments
+## Parameters
 
-### scope `#!luau : Scope & Fusion.Scope`
+### scope <span class="pfu-reference-type">: Scope & Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### callback `#!luau : (Fusion.Use, Scope) -> ()`
+### callback <span class="pfu-reference-type">: (Fusion.Use, Scope) -> () </span>
 A callback with a Use callback for tracking side effects and an inner scope scope to track cleanup tasks. This callback may not yield..
 

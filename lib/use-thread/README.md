@@ -15,20 +15,20 @@ Spawns a new thread that is cancelled once the scope is cleaned up.
 
 ---
 
-## Arguments
+## Parameters
 
-### scope `#!luau : Fusion.Scope`
+### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store clean up tasks.
 
-### resume `#!luau : thread | (Args...) -> ()`
+### resume <span class="pfu-reference-type">: thread | (Args...) -> () </span>
 The thread to resume, or a function to spawn.
 
-### ... `#!luau : Args...`
+### ... <span class="pfu-reference-type">: Args... </span>
 The arguments to spawn the thread with.
 
 
 ---
 
-## Returns `#!luau : thread`
+## Returns <span class="pfu-reference-type">-> thread </span>
 
 A thread that is cancelled once the scope is cleaned up.
