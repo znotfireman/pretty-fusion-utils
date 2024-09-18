@@ -34,12 +34,6 @@ The tasks that has been added.
 ## Example
 
 ```Luau
-local Fusion = require(ReplicatedStorage.Packages.Fusion)
-local fusionUtils = require(ReplicatedStorage.Packages.fusionUtils)
-
-local peek = Fusion.peek
-local scope = Fusion:scoped(fusionUtils)
-
 local timeElapsed = scope:Value(0)
 local connection = scope:useTasks(
   RunService.PostSimulation:Connect(function(dt)
@@ -50,6 +44,4 @@ local connection = scope:useTasks(
 task.wait(5)
 connection:Disconnect()
 print(`Took around {peek(timeElapsed)} seconds`)
-
-
 ```

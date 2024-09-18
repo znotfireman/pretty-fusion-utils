@@ -19,7 +19,7 @@ end
   @param scope The scope to store cleanup tasks.
   @param state The state object to observe for changes.
   @param predicate The predicate function to assert if the value is newer. Defaults to Fusion's similarity rules.
-  @return A state object with the previous value of the state object.
+  @return A state object with the previous value of the state object. Initially outputs `nil`.
 ]=]
 local function usePrevious<T>(
   scope: Fusion.FusionScope,
