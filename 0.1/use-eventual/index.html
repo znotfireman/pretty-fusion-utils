@@ -626,9 +626,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scope-fusionscope" class="md-nav__link">
+  <a href="#scope-fusionscopes-typeoffusion" class="md-nav__link">
     <span class="md-ellipsis">
-      scope : Fusion.Scope
+      scope : Fusion.Scope&lt;S &amp; typeof(Fusion)&gt;
     </span>
   </a>
   
@@ -644,9 +644,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#processor-use-fusionuse-become-become-scope-fusionscope-t" class="md-nav__link">
+  <a href="#processor-use-fusionuse-become-become-scope-fusionscopes-t" class="md-nav__link">
     <span class="md-ellipsis">
-      processor : (use: Fusion.Use, become: Become, scope: Fusion.Scope) -&gt; T
+      processor : (use: Fusion.Use, become: Become, scope: Fusion.Scope&lt;S&gt;) -&gt; T
     </span>
   </a>
   
@@ -658,9 +658,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns-fusionstateobject" class="md-nav__link">
+  <a href="#returns-fusionstateobjectt" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns -&gt; Fusion.StateObject
+      Returns -&gt; Fusion.StateObject&lt;T&gt;
     </span>
   </a>
   
@@ -929,9 +929,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scope-fusionscope" class="md-nav__link">
+  <a href="#scope-fusionscopes-typeoffusion" class="md-nav__link">
     <span class="md-ellipsis">
-      scope : Fusion.Scope
+      scope : Fusion.Scope&lt;S &amp; typeof(Fusion)&gt;
     </span>
   </a>
   
@@ -947,9 +947,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#processor-use-fusionuse-become-become-scope-fusionscope-t" class="md-nav__link">
+  <a href="#processor-use-fusionuse-become-become-scope-fusionscopes-t" class="md-nav__link">
     <span class="md-ellipsis">
-      processor : (use: Fusion.Use, become: Become, scope: Fusion.Scope) -&gt; T
+      processor : (use: Fusion.Use, become: Become, scope: Fusion.Scope&lt;S&gt;) -&gt; T
     </span>
   </a>
   
@@ -961,9 +961,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns-fusionstateobject" class="md-nav__link">
+  <a href="#returns-fusionstateobjectt" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns -&gt; Fusion.StateObject
+      Returns -&gt; Fusion.StateObject&lt;T&gt;
     </span>
   </a>
   
@@ -1008,14 +1008,14 @@
 <p>Returns a state object with an eventual value from a processor. The processor is given a Use callback that adds dependencies, a Become callback alter the current eventual value, and an inner scope to add cleanup tasks to.</p>
 <hr />
 <h2 id="parameters">Parameters</h2>
-<h3 id="scope-fusionscope">scope <span class="pfu-reference-type">: Fusion.Scope<S & typeof(Fusion)> </span></h3>
+<h3 id="scope-fusionscopes-typeoffusion">scope <span class="pfu-reference-type">: Fusion.Scope&lt;S &amp; typeof(Fusion)&gt; </span></h3>
 <p>The scope to store cleanup tasks.</p>
 <h3 id="fallback-t">fallback <span class="pfu-reference-type">: T </span></h3>
 <p>The fallback value to display while the processor runs.</p>
-<h3 id="processor-use-fusionuse-become-become-scope-fusionscope-t">processor <span class="pfu-reference-type">: (use: Fusion.Use, become: Become, scope: Fusion.Scope<S>) -&gt; T </span></h3>
+<h3 id="processor-use-fusionuse-become-become-scope-fusionscopes-t">processor <span class="pfu-reference-type">: (use: Fusion.Use, become: Become, scope: Fusion.Scope&lt;S&gt;) -&gt; T </span></h3>
 <p>The processor of the eventual value. It receives a Use callback, a Become callback, and an inner scope.</p>
 <hr />
-<h2 id="returns-fusionstateobject">Returns <span class="pfu-reference-type">-&gt; Fusion.StateObject<T> </span></h2>
+<h2 id="returns-fusionstateobjectt">Returns <span class="pfu-reference-type">-&gt; Fusion.StateObject&lt;T&gt; </span></h2>
 <p>A state object with the asynchronous value.</p>
 
 <!-- Source file information -->

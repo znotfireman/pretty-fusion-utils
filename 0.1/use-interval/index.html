@@ -647,27 +647,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scope-fusionscope" class="md-nav__link">
+  <a href="#scope-fusionscopes-typeoffusion" class="md-nav__link">
     <span class="md-ellipsis">
-      scope : Fusion.Scope
+      scope : Fusion.Scope&lt;S &amp; typeof(Fusion)&gt;
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#delay-fusionusedas" class="md-nav__link">
+  <a href="#delay-fusionusedasnumber" class="md-nav__link">
     <span class="md-ellipsis">
-      delay : Fusion.UsedAs
+      delay : Fusion.UsedAs&lt;number?&gt;
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#callback-fusionscope-" class="md-nav__link">
+  <a href="#callback-fusionscopes-" class="md-nav__link">
     <span class="md-ellipsis">
-      callback : (Fusion.Scope) -&gt; ()
+      callback : (Fusion.Scope&lt;S&gt;) -&gt; ()
     </span>
   </a>
   
@@ -929,27 +929,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scope-fusionscope" class="md-nav__link">
+  <a href="#scope-fusionscopes-typeoffusion" class="md-nav__link">
     <span class="md-ellipsis">
-      scope : Fusion.Scope
+      scope : Fusion.Scope&lt;S &amp; typeof(Fusion)&gt;
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#delay-fusionusedas" class="md-nav__link">
+  <a href="#delay-fusionusedasnumber" class="md-nav__link">
     <span class="md-ellipsis">
-      delay : Fusion.UsedAs
+      delay : Fusion.UsedAs&lt;number?&gt;
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#callback-fusionscope-" class="md-nav__link">
+  <a href="#callback-fusionscopes-" class="md-nav__link">
     <span class="md-ellipsis">
-      callback : (Fusion.Scope) -&gt; ()
+      callback : (Fusion.Scope&lt;S&gt;) -&gt; ()
     </span>
   </a>
   
@@ -1009,11 +1009,11 @@
 <p>Sets an interval that runs the callback function every <code>delay</code> seconds. If <code>delay</code> is <code>undefined</code>, the interval is cleared. If the delay changes, the the interval is cleared. If the delay changes, the interval is reset.</p>
 <hr />
 <h2 id="parameters">Parameters</h2>
-<h3 id="scope-fusionscope">scope <span class="pfu-reference-type">: Fusion.Scope<S & typeof(Fusion)> </span></h3>
+<h3 id="scope-fusionscopes-typeoffusion">scope <span class="pfu-reference-type">: Fusion.Scope&lt;S &amp; typeof(Fusion)&gt; </span></h3>
 <p>The scope to store cleanup tasks.</p>
-<h3 id="delay-fusionusedas">delay <span class="pfu-reference-type">: Fusion.UsedAs<number?> </span></h3>
+<h3 id="delay-fusionusedasnumber">delay <span class="pfu-reference-type">: Fusion.UsedAs&lt;number?&gt; </span></h3>
 <p>The delay, in seconds per each interval.</p>
-<h3 id="callback-fusionscope-">callback <span class="pfu-reference-type">: (Fusion.Scope<S>) -&gt; () </span></h3>
+<h3 id="callback-fusionscopes-">callback <span class="pfu-reference-type">: (Fusion.Scope&lt;S&gt;) -&gt; () </span></h3>
 <p>The callback to run at an interval. Receives an inner scope that is cleaned up per each interval.</p>
 <h3 id="immediate-boolean">immediate <span class="pfu-reference-type">: boolean? </span></h3>
 <p>Whether to spawn the callback immediately.</p>

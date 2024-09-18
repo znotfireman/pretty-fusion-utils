@@ -584,18 +584,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scope-fusionscope" class="md-nav__link">
+  <a href="#scope-fusionscopes-typeoffusion" class="md-nav__link">
     <span class="md-ellipsis">
-      scope : Fusion.Scope
+      scope : Fusion.Scope&lt;S &amp; typeof(Fusion)&gt;
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#callback-fusionuse-fusionscope-" class="md-nav__link">
+  <a href="#callback-fusionuse-fusionscopes-" class="md-nav__link">
     <span class="md-ellipsis">
-      callback : (Fusion.Use, Fusion.Scope) -&gt; ()
+      callback : (Fusion.Use, Fusion.Scope&lt;S&gt;) -&gt; ()
     </span>
   </a>
   
@@ -911,18 +911,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scope-fusionscope" class="md-nav__link">
+  <a href="#scope-fusionscopes-typeoffusion" class="md-nav__link">
     <span class="md-ellipsis">
-      scope : Fusion.Scope
+      scope : Fusion.Scope&lt;S &amp; typeof(Fusion)&gt;
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#callback-fusionuse-fusionscope-" class="md-nav__link">
+  <a href="#callback-fusionuse-fusionscopes-" class="md-nav__link">
     <span class="md-ellipsis">
-      callback : (Fusion.Use, Fusion.Scope) -&gt; ()
+      callback : (Fusion.Use, Fusion.Scope&lt;S&gt;) -&gt; ()
     </span>
   </a>
   
@@ -971,9 +971,9 @@
 <p>Perform side effects with state objects.</p>
 <hr />
 <h2 id="parameters">Parameters</h2>
-<h3 id="scope-fusionscope">scope <span class="pfu-reference-type">: Fusion.Scope<S & typeof(Fusion)> </span></h3>
+<h3 id="scope-fusionscopes-typeoffusion">scope <span class="pfu-reference-type">: Fusion.Scope&lt;S &amp; typeof(Fusion)&gt; </span></h3>
 <p>The scope to store cleanup tasks.</p>
-<h3 id="callback-fusionuse-fusionscope-">callback <span class="pfu-reference-type">: (Fusion.Use, Fusion.Scope<S>) -&gt; () </span></h3>
+<h3 id="callback-fusionuse-fusionscopes-">callback <span class="pfu-reference-type">: (Fusion.Use, Fusion.Scope&lt;S&gt;) -&gt; () </span></h3>
 <p>A callback with a Use callback for tracking side effects and an inner scope scope to track cleanup tasks. This callback may not yield.</p>
 
 <!-- Source file information -->
