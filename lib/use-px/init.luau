@@ -25,9 +25,9 @@ local MACBOOK_AIR_RESOLUTION = Vector2.new(1280, 832)
 ]=]
 local function usePx(
   scope: Fusion.FusionScope,
-  baseResolution: Vector2?,
-  minimumScale: number?,
-  dominantAxis: number?
+  baseResolution: Fusion.UsedAs<Vector2>?,
+  minimumScale: Fusion.UsedAs<number>?,
+  dominantAxis: Fusion.UsedAs<number>?
 ): Px
   local baseResolution = baseResolution or MACBOOK_AIR_RESOLUTION
   local minimumScale = minimumScale or 0.5
@@ -36,10 +36,10 @@ local function usePx(
   local viewport = useViewport(scope)
   local scale = scope:Computed(function(use)
     local viewport = use(viewport)
-    local width = math.log(viewport.X / baseResolution.X, 2)
-    local height = math.log(viewport.Y / baseResolution.Y, 2)
-    local centered = width + (height - width) * dominantAxis
-    return math.max(2 * centered, minimumScale)
+    local width = math.log(viewport.X / use(baseResolution).X, 2)
+    local height = math.log(viewport.Y / use(baseResolution).Y, 2)
+    local centered = width + (height - width) * use(dominantAxis)
+    return math.max(2 * centered, use(minimumScale))
   end)
 
   local px = {} :: any

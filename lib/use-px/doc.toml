@@ -12,17 +12,17 @@
 
 [[config.args]]
   name = "baseResolution"
-  type = "Vector2?"
+  type = "Fusion.UsedAs<Vector2>?"
   description = "TThe base resolution to scale from, defaults to a Macbook Air's resolution."
 
 [[config.args]]
   name = "minimumScale"
-  type = "number?"
+  type = "Fusion.UsedAs<number>?"
   description = "The smallest scale, defaults to 50%."
 
 [[config.args]]
   name = "dominantAxis"
-  type = "number?"
+  type = "Fusion.UsedAs<number>?"
   description = "The axis to scale for, defaults to 1:1."
 
 [config.returns]
