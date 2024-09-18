@@ -465,27 +465,6 @@
   
   
     <li class="md-nav__item">
-      <a href="use-async/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    useAsync
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="use-camera/" class="md-nav__link">
         
   
@@ -575,6 +554,27 @@
   
   <span class="md-ellipsis">
     useEventListener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="use-eventual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    useEventual
   </span>
   
 
@@ -830,15 +830,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#useasync" class="md-nav__link">
-    <span class="md-ellipsis">
-      useAsync
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#usecamera" class="md-nav__link">
     <span class="md-ellipsis">
       useCamera
@@ -878,6 +869,15 @@
   <a href="#useeventlistener" class="md-nav__link">
     <span class="md-ellipsis">
       useEventListener
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useeventual" class="md-nav__link">
+    <span class="md-ellipsis">
+      useEventual
     </span>
   </a>
   
@@ -1023,17 +1023,17 @@ Spread the joy of Fusion
 </section>
 <div class="pfu-home-list">
 <ul class="pfu-home-list">
-<li> <a href="use-camera">useCamera</a></li>
-<li> <a href="use-coroutine">useCoroutine</a></li>
-<li> <a href="use-event-listener">useEventListener</a></li>
+<li> <a href="use-cleanup">useCleanup</a></li>
+<li> <a href="use-effect">useEffect</a></li>
+<li> <a href="use-eventual">useEventual</a></li>
 <li> <a href="use-motion">useMotion</a></li>
 <li> <a href="use-previous">usePrevious</a></li>
 <li> <a href="use-spring">useSpring</a></li>
 <li> <a href="use-thread">useThread</a></li>
 <li> <a href="use-viewport">useViewport</a></li>
-<li> <a href="use-camera">useCamera</a></li>
-<li> <a href="use-coroutine">useCoroutine</a></li>
-<li> <a href="use-event-listener">useEventListener</a></li>
+<li> <a href="use-cleanup">useCleanup</a></li>
+<li> <a href="use-effect">useEffect</a></li>
+<li> <a href="use-eventual">useEventual</a></li>
 <li> <a href="use-motion">useMotion</a></li>
 <li> <a href="use-previous">usePrevious</a></li>
 <li> <a href="use-spring">useSpring</a></li>
@@ -1041,17 +1041,17 @@ Spread the joy of Fusion
 <li> <a href="use-viewport">useViewport</a></li>
 </ul>
 <ul class="pfu-home-list" style="animation-direction: reverse;">
-<li> <a href="use-async">useAsync</a></li>
-<li> <a href="use-cleanup">useCleanup</a></li>
-<li> <a href="use-effect">useEffect</a></li>
+<li> <a href="use-camera">useCamera</a></li>
+<li> <a href="use-coroutine">useCoroutine</a></li>
+<li> <a href="use-event-listener">useEventListener</a></li>
 <li> <a href="use-interval">useInterval</a></li>
 <li> <a href="use-mouse">useMouse</a></li>
 <li> <a href="use-px">usePx</a></li>
 <li> <a href="use-tagged">useTagged</a></li>
 <li> <a href="use-timer">useTimer</a></li>
-<li> <a href="use-async">useAsync</a></li>
-<li> <a href="use-cleanup">useCleanup</a></li>
-<li> <a href="use-effect">useEffect</a></li>
+<li> <a href="use-camera">useCamera</a></li>
+<li> <a href="use-coroutine">useCoroutine</a></li>
+<li> <a href="use-event-listener">useEventListener</a></li>
 <li> <a href="use-interval">useInterval</a></li>
 <li> <a href="use-mouse">useMouse</a></li>
 <li> <a href="use-px">usePx</a></li>
@@ -1062,12 +1062,6 @@ Spread the joy of Fusion
 </section>
 </section>
 <section class="grid pfu-utils-grid">
-<section>
-<a href="./use-async/">
-<h2 id="useasync"> useAsync </h2>
-Returns a state object with an value from an asynchronous processor. The processor is given a Use callback that adds dependencies, a Become callback alter the current eventual value, and an inner scope to add cleanup tasks to.
-</a>
-</section>
 <section>
 <a href="./use-camera/">
 <h2 id="usecamera"> useCamera </h2>
@@ -1096,6 +1090,12 @@ Perform side effects with state objects.
 <a href="./use-event-listener/">
 <h2 id="useeventlistener"> useEventListener </h2>
 Connects to an event-like object. The connection is automatically disconnected when the scope is cleaned up.
+</a>
+</section>
+<section>
+<a href="./use-eventual/">
+<h2 id="useeventual"> useEventual </h2>
+Returns a state object with an eventual value from a processor. The processor is given a Use callback that adds dependencies, a Become callback alter the current eventual value, and an inner scope to add cleanup tasks to.
 </a>
 </section>
 <section>

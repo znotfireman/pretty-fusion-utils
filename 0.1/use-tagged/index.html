@@ -465,27 +465,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../use-async/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    useAsync
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../use-camera/" class="md-nav__link">
         
   
@@ -575,6 +554,27 @@
   
   <span class="md-ellipsis">
     useEventListener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../use-eventual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    useEventual
   </span>
   
 
@@ -796,9 +796,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns-stateobject-instance" class="md-nav__link">
+  <a href="#returns-fusionstateobject-instance" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns -&gt; StateObject&lt;{ Instance }&gt;
+      Returns -&gt; Fusion.StateObject&lt;{ Instance }&gt;
     </span>
   </a>
   
@@ -943,9 +943,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns-stateobject-instance" class="md-nav__link">
+  <a href="#returns-fusionstateobject-instance" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns -&gt; StateObject&lt;{ Instance }&gt;
+      Returns -&gt; Fusion.StateObject&lt;{ Instance }&gt;
     </span>
   </a>
   
@@ -984,7 +984,7 @@
 <div class="highlight"><pre><span></span><code><span class="kr">function</span><span class="w"> </span><span class="nf">useTagged</span><span class="p">(</span>
 <span class="w">  </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">,</span>
 <span class="w">  </span><span class="nv">tag</span><span class="p">:</span><span class="w"> </span><span class="nc">string</span>
-<span class="p">):</span><span class="w"> </span><span class="nc">StateObject</span><span class="p">&lt;{</span><span class="w"> </span><span class="nc">Instance</span><span class="w"> </span><span class="p">}&gt;</span>
+<span class="p">):</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">StateObject</span><span class="p">&lt;{</span><span class="w"> </span><span class="nc">Instance</span><span class="w"> </span><span class="p">}&gt;</span>
 </code></pre></div>
 <p>Returns a state object with every instance of a given tag. Updates when new instances get tagged or old instances get untagged.</p>
 <hr />
@@ -994,7 +994,7 @@
 <h3 id="tag-string">tag <span class="pfu-reference-type">: string </span></h3>
 <p>The CollectionService tag to track.</p>
 <hr />
-<h2 id="returns-stateobject-instance">Returns <span class="pfu-reference-type">-&gt; StateObject&lt;{ Instance }&gt; </span></h2>
+<h2 id="returns-fusionstateobject-instance">Returns <span class="pfu-reference-type">-&gt; Fusion.StateObject&lt;{ Instance }&gt; </span></h2>
 <p>A state object with every instance of the given tag.</p>
 
 <!-- Source file information -->

@@ -465,27 +465,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../use-async/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    useAsync
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../use-camera/" class="md-nav__link">
         
   
@@ -575,6 +554,27 @@
   
   <span class="md-ellipsis">
     useEventListener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../use-eventual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    useEventual
   </span>
   
 
@@ -719,9 +719,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#state-fusionstateobject" class="md-nav__link">
+  <a href="#state-fusionusedas" class="md-nav__link">
     <span class="md-ellipsis">
-      state : Fusion.StateObject
+      state : Fusion.UsedAs
     </span>
   </a>
   
@@ -947,9 +947,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#state-fusionstateobject" class="md-nav__link">
+  <a href="#state-fusionusedas" class="md-nav__link">
     <span class="md-ellipsis">
-      state : Fusion.StateObject
+      state : Fusion.UsedAs
     </span>
   </a>
   
@@ -1019,7 +1019,7 @@
 </h1>
 <div class="highlight"><pre><span></span><code><span class="kr">function</span><span class="w"> </span><span class="nf">usePrevious</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span>
 <span class="w">  </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">,</span>
-<span class="w">  </span><span class="nv">state</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;,</span>
+<span class="w">  </span><span class="nv">state</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">UsedAs</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;,</span>
 <span class="w">  </span><span class="nv">predicate</span><span class="p">:</span><span class="w"> </span><span class="p">((</span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="nc">T</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nc">boolean</span><span class="p">)</span><span class="err">?</span>
 <span class="p">):</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -1028,7 +1028,7 @@
 <h2 id="parameters">Parameters</h2>
 <h3 id="scope-fusionscope">scope <span class="pfu-reference-type">: Fusion.Scope </span></h3>
 <p>The scope to store cleanup tasks.</p>
-<h3 id="state-fusionstateobject">state <span class="pfu-reference-type">: Fusion.StateObject<T> </span></h3>
+<h3 id="state-fusionusedas">state <span class="pfu-reference-type">: Fusion.UsedAs<T> </span></h3>
 <p>The state object to observe for changes.</p>
 <h3 id="predicate-t-t-boolean">predicate <span class="pfu-reference-type">: ((T, T) -&gt; boolean)? </span></h3>
 <p>The predicate function to assert if the value is newer. Defaults to Fusion's similarity rules.</p>

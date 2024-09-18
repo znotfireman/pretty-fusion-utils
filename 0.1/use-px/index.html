@@ -465,27 +465,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../use-async/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    useAsync
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../use-camera/" class="md-nav__link">
         
   
@@ -575,6 +554,27 @@
   
   <span class="md-ellipsis">
     useEventListener
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../use-eventual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    useEventual
   </span>
   
 
@@ -740,27 +740,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#baseresolution-vector2" class="md-nav__link">
+  <a href="#baseresolution-fusionusedas" class="md-nav__link">
     <span class="md-ellipsis">
-      baseResolution : Vector2?
+      baseResolution : Fusion.UsedAs?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#minimumscale-number" class="md-nav__link">
+  <a href="#minimumscale-fusionusedas" class="md-nav__link">
     <span class="md-ellipsis">
-      minimumScale : number?
+      minimumScale : Fusion.UsedAs?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#dominantaxis-number" class="md-nav__link">
+  <a href="#dominantaxis-fusionusedas" class="md-nav__link">
     <span class="md-ellipsis">
-      dominantAxis : number?
+      dominantAxis : Fusion.UsedAs?
     </span>
   </a>
   
@@ -947,27 +947,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#baseresolution-vector2" class="md-nav__link">
+  <a href="#baseresolution-fusionusedas" class="md-nav__link">
     <span class="md-ellipsis">
-      baseResolution : Vector2?
+      baseResolution : Fusion.UsedAs?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#minimumscale-number" class="md-nav__link">
+  <a href="#minimumscale-fusionusedas" class="md-nav__link">
     <span class="md-ellipsis">
-      minimumScale : number?
+      minimumScale : Fusion.UsedAs?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#dominantaxis-number" class="md-nav__link">
+  <a href="#dominantaxis-fusionusedas" class="md-nav__link">
     <span class="md-ellipsis">
-      dominantAxis : number?
+      dominantAxis : Fusion.UsedAs?
     </span>
   </a>
   
@@ -1019,9 +1019,9 @@
 </h1>
 <div class="highlight"><pre><span></span><code><span class="kr">function</span><span class="w"> </span><span class="nf">usePx</span><span class="p">(</span>
 <span class="w">  </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">,</span>
-<span class="w">  </span><span class="nv">baseResolution</span><span class="p">:</span><span class="w"> </span><span class="nc">Vector2</span><span class="err">?</span><span class="p">,</span>
-<span class="w">  </span><span class="nv">minimumScale</span><span class="p">:</span><span class="w"> </span><span class="nc">number</span><span class="err">?</span><span class="p">,</span>
-<span class="w">  </span><span class="nv">dominantAxis</span><span class="p">:</span><span class="w"> </span><span class="nc">number</span><span class="err">?</span>
+<span class="w">  </span><span class="nv">baseResolution</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">UsedAs</span><span class="p">&lt;</span><span class="nc">Vector2</span><span class="p">&gt;</span><span class="err">?</span><span class="p">,</span>
+<span class="w">  </span><span class="nv">minimumScale</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">UsedAs</span><span class="p">&lt;</span><span class="nc">number</span><span class="p">&gt;</span><span class="err">?</span><span class="p">,</span>
+<span class="w">  </span><span class="nv">dominantAxis</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">UsedAs</span><span class="p">&lt;</span><span class="nc">number</span><span class="p">&gt;</span><span class="err">?</span>
 <span class="p">):</span><span class="w"> </span><span class="nc">Px</span>
 </code></pre></div>
 <p>Returns a state object with the current <code>px</code> unit based on the current viewport size.</p>
@@ -1029,11 +1029,11 @@
 <h2 id="parameters">Parameters</h2>
 <h3 id="scope-fusionscope">scope <span class="pfu-reference-type">: Fusion.Scope </span></h3>
 <p>The scope to store cleanup tasks.</p>
-<h3 id="baseresolution-vector2">baseResolution <span class="pfu-reference-type">: Vector2? </span></h3>
+<h3 id="baseresolution-fusionusedas">baseResolution <span class="pfu-reference-type">: Fusion.UsedAs<Vector2>? </span></h3>
 <p>TThe base resolution to scale from, defaults to a Macbook Air's resolution.</p>
-<h3 id="minimumscale-number">minimumScale <span class="pfu-reference-type">: number? </span></h3>
+<h3 id="minimumscale-fusionusedas">minimumScale <span class="pfu-reference-type">: Fusion.UsedAs<number>? </span></h3>
 <p>The smallest scale, defaults to 50%.</p>
-<h3 id="dominantaxis-number">dominantAxis <span class="pfu-reference-type">: number? </span></h3>
+<h3 id="dominantaxis-fusionusedas">dominantAxis <span class="pfu-reference-type">: Fusion.UsedAs<number>? </span></h3>
 <p>The axis to scale for, defaults to 1:1.</p>
 <hr />
 <h2 id="returns-px">Returns <span class="pfu-reference-type">-&gt; Px </span></h2>

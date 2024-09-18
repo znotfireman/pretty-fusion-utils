@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://znotfireman.github.com/pretty-fusion-utils/0.1/use-async/">
+        <link rel="canonical" href="https://znotfireman.github.com/pretty-fusion-utils/0.1/use-eventual/">
       
       
-        <link rel="prev" href="../getting-started/">
+        <link rel="prev" href="../use-event-listener/">
       
       
-        <link rel="next" href="../use-camera/">
+        <link rel="next" href="../use-interval/">
       
       
       <link rel="icon" href="../assets/logo.svg">
@@ -22,7 +22,7 @@
     
     
       
-        <title>useAsync - pretty fusion hooks</title>
+        <title>useEventual - pretty fusion hooks</title>
       
     
     
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#useasync" class="md-skip">
+        <a href="#useeventual" class="md-skip">
           Skip to content
         </a>
       
@@ -157,7 +157,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              useAsync
+              useEventual
             
           </span>
         </div>
@@ -462,118 +462,6 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    useAsync
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    useAsync
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scope-scope-fusionscope" class="md-nav__link">
-    <span class="md-ellipsis">
-      scope : Scope &amp; Fusion.Scope
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fallback-result" class="md-nav__link">
-    <span class="md-ellipsis">
-      fallback : Result
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#processor-use-fusionuse-become-become-scope-scope-result" class="md-nav__link">
-    <span class="md-ellipsis">
-      processor : (use: Fusion.Use, become: Become, scope: Scope) -&gt; Result
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#returns-stateobject" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returns -&gt; StateObject
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
@@ -670,6 +558,118 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    useEventual
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    useEventual
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-fusionscope" class="md-nav__link">
+    <span class="md-ellipsis">
+      scope : Fusion.Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallback-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      fallback : T
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processor-use-fusionuse-become-become-scope-fusionscope-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      processor : (use: Fusion.Use, become: Become, scope: Fusion.Scope) -&gt; T
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-fusionstateobject" class="md-nav__link">
+    <span class="md-ellipsis">
+      Returns -&gt; Fusion.StateObject
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -929,27 +929,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scope-scope-fusionscope" class="md-nav__link">
+  <a href="#scope-fusionscope" class="md-nav__link">
     <span class="md-ellipsis">
-      scope : Scope &amp; Fusion.Scope
+      scope : Fusion.Scope
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#fallback-result" class="md-nav__link">
+  <a href="#fallback-t" class="md-nav__link">
     <span class="md-ellipsis">
-      fallback : Result
+      fallback : T
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#processor-use-fusionuse-become-become-scope-scope-result" class="md-nav__link">
+  <a href="#processor-use-fusionuse-become-become-scope-fusionscope-t" class="md-nav__link">
     <span class="md-ellipsis">
-      processor : (use: Fusion.Use, become: Become, scope: Scope) -&gt; Result
+      processor : (use: Fusion.Use, become: Become, scope: Fusion.Scope) -&gt; T
     </span>
   </a>
   
@@ -961,9 +961,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns-stateobject" class="md-nav__link">
+  <a href="#returns-fusionstateobject" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns -&gt; StateObject
+      Returns -&gt; Fusion.StateObject
     </span>
   </a>
   
@@ -995,27 +995,27 @@
 <!-- This file was @generated and is not intended for manual editing. -->
 <!-- Run `lune run regen` to generate a fresh README. -->
 
-<h1 class="pfu-reference-header" id="useasync">
-<span class="pfu-reference-name"> useAsync </span>
-<a class="pfu-reference-source" href="https://github.com/znotfireman/pretty-fusion-utils/blob/main/lib/use-async/init.luau" markdown> <span class="twemoji" title="View source code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06m-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0"/></svg></span> </a>
+<h1 class="pfu-reference-header" id="useeventual">
+<span class="pfu-reference-name"> useEventual </span>
+<a class="pfu-reference-source" href="https://github.com/znotfireman/pretty-fusion-utils/blob/main/lib/use-eventual/init.luau" markdown> <span class="twemoji" title="View source code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06m-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0"/></svg></span> </a>
 </h1>
-<div class="highlight"><pre><span></span><code><span class="kr">function</span><span class="w"> </span><span class="nf">useAsync</span><span class="p">&lt;</span><span class="nc">Scope</span><span class="p">,</span><span class="w"> </span><span class="nc">Result</span><span class="p">&gt;(</span>
-<span class="w">  </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Scope</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">,</span>
-<span class="w">  </span><span class="nv">fallback</span><span class="p">:</span><span class="w"> </span><span class="nc">Result</span><span class="p">,</span>
-<span class="w">  </span><span class="nv">processor</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="nc">use</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Use</span><span class="p">,</span><span class="w"> </span><span class="nc">become</span><span class="p">:</span><span class="w"> </span><span class="nc">Become</span><span class="p">,</span><span class="w"> </span><span class="nc">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Scope</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nc">Result</span>
-<span class="p">):</span><span class="w"> </span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">Result</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="kr">function</span><span class="w"> </span><span class="nf">useEventual</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="nc">S</span><span class="p">&gt;(</span>
+<span class="w">  </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">&lt;</span><span class="nc">S</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="nb">typeof(</span><span class="nv">Fusion</span><span class="p">)&gt;,</span>
+<span class="w">  </span><span class="nv">fallback</span><span class="p">:</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span>
+<span class="w">  </span><span class="nv">processor</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="nc">use</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Use</span><span class="p">,</span><span class="w"> </span><span class="nc">become</span><span class="p">:</span><span class="w"> </span><span class="nc">Become</span><span class="p">,</span><span class="w"> </span><span class="nc">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">&lt;</span><span class="nc">S</span><span class="p">&gt;)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nc">T</span>
+<span class="p">):</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Returns a state object with an value from an asynchronous processor. The processor is given a Use callback that adds dependencies, a Become callback alter the current eventual value, and an inner scope to add cleanup tasks to.</p>
+<p>Returns a state object with an eventual value from a processor. The processor is given a Use callback that adds dependencies, a Become callback alter the current eventual value, and an inner scope to add cleanup tasks to.</p>
 <hr />
 <h2 id="parameters">Parameters</h2>
-<h3 id="scope-scope-fusionscope">scope <span class="pfu-reference-type">: Scope &amp; Fusion.Scope </span></h3>
+<h3 id="scope-fusionscope">scope <span class="pfu-reference-type">: Fusion.Scope<S & typeof(Fusion)> </span></h3>
 <p>The scope to store cleanup tasks.</p>
-<h3 id="fallback-result">fallback <span class="pfu-reference-type">: Result </span></h3>
+<h3 id="fallback-t">fallback <span class="pfu-reference-type">: T </span></h3>
 <p>The fallback value to display while the processor runs.</p>
-<h3 id="processor-use-fusionuse-become-become-scope-scope-result">processor <span class="pfu-reference-type">: (use: Fusion.Use, become: Become, scope: Scope) -&gt; Result </span></h3>
+<h3 id="processor-use-fusionuse-become-become-scope-fusionscope-t">processor <span class="pfu-reference-type">: (use: Fusion.Use, become: Become, scope: Fusion.Scope<S>) -&gt; T </span></h3>
 <p>The processor of the eventual value. It receives a Use callback, a Become callback, and an inner scope.</p>
 <hr />
-<h2 id="returns-stateobject">Returns <span class="pfu-reference-type">-&gt; StateObject<Result> </span></h2>
+<h2 id="returns-fusionstateobject">Returns <span class="pfu-reference-type">-&gt; Fusion.StateObject<T> </span></h2>
 <p>A state object with the asynchronous value.</p>
 
 <!-- Source file information -->
@@ -1049,9 +1049,9 @@
 		
 		  
 		  <a
-			href="../getting-started/"
+			href="../use-event-listener/"
 			class="md-footer__link md-footer__link--prev"
-			aria-label="Previous: Getting Started"
+			aria-label="Previous: useEventListener"
 			rel="prev"
 		  >
 			<div class="md-footer__button md-icon">
@@ -1062,7 +1062,7 @@
 				<span class="md-footer__direction">
 				  Previous
 				</span>
-				Getting Started
+				useEventListener
 			  </div>
 			</div>
 		  </a>
@@ -1072,9 +1072,9 @@
 		
 		  
 		  <a
-			href="../use-camera/"
+			href="../use-interval/"
 			class="md-footer__link md-footer__link--next"
-			aria-label="Next: useCamera"
+			aria-label="Next: useInterval"
 			rel="next"
 		  >
 			<div class="md-footer__title">
@@ -1082,7 +1082,7 @@
 				<span class="md-footer__direction">
 				  Next
 				</span>
-				useCamera
+				useInterval
 			  </div>
 			</div>
 			<div class="md-footer__button md-icon">
