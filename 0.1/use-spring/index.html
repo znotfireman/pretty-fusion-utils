@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://znotfireman.github.com/pretty-fusion-utils/0.1/use-px/">
+        <link rel="canonical" href="https://znotfireman.github.com/pretty-fusion-utils/0.1/use-spring/">
       
       
-        <link rel="prev" href="../use-previous/">
+        <link rel="prev" href="../use-px/">
       
       
-        <link rel="next" href="../use-spring/">
+        <link rel="next" href="../use-tagged/">
       
       
       <link rel="icon" href="../assets/logo.svg">
@@ -22,7 +22,7 @@
     
     
       
-        <title>usePx - pretty fusion hooks</title>
+        <title>useMotion - pretty fusion hooks</title>
       
     
     
@@ -100,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#usepx" class="md-skip">
+        <a href="#usemotion" class="md-skip">
           Skip to content
         </a>
       
@@ -155,7 +155,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              usePx
+              useMotion
             
           </span>
         </div>
@@ -670,6 +670,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../use-px/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    usePx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -686,7 +707,7 @@
           
   
   <span class="md-ellipsis">
-    usePx
+    useMotion
   </span>
   
 
@@ -697,7 +718,7 @@
         
   
   <span class="md-ellipsis">
-    usePx
+    useMotion
   </span>
   
 
@@ -738,27 +759,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#baseresolution-vector2" class="md-nav__link">
+  <a href="#goal-fusionusedast-ripplemotiongoal" class="md-nav__link">
     <span class="md-ellipsis">
-      baseResolution : Vector2?
+      goal : Fusion.UsedAs&lt;T &amp; Ripple.MotionGoal&gt;
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#minimumscale-number" class="md-nav__link">
+  <a href="#options-ripplespringoptions" class="md-nav__link">
     <span class="md-ellipsis">
-      minimumScale : number?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dominantaxis-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      dominantAxis : number?
+      options : Ripple.SpringOptions?
     </span>
   </a>
   
@@ -770,9 +782,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns-px" class="md-nav__link">
+  <a href="#returns-fusionstateobjectt" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns : Px
+      Returns : Fusion.StateObject&lt;T&gt;
     </span>
   </a>
   
@@ -782,27 +794,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../use-spring/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    useMotion
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -945,27 +936,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#baseresolution-vector2" class="md-nav__link">
+  <a href="#goal-fusionusedast-ripplemotiongoal" class="md-nav__link">
     <span class="md-ellipsis">
-      baseResolution : Vector2?
+      goal : Fusion.UsedAs&lt;T &amp; Ripple.MotionGoal&gt;
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#minimumscale-number" class="md-nav__link">
+  <a href="#options-ripplespringoptions" class="md-nav__link">
     <span class="md-ellipsis">
-      minimumScale : number?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dominantaxis-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      dominantAxis : number?
+      options : Ripple.SpringOptions?
     </span>
   </a>
   
@@ -977,9 +959,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns-px" class="md-nav__link">
+  <a href="#returns-fusionstateobjectt" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns : Px
+      Returns : Fusion.StateObject&lt;T&gt;
     </span>
   </a>
   
@@ -1011,28 +993,25 @@
 <!-- This file was @generated and is not intended for manual editing. -->
 <!-- Run `lune run regen` to generate a fresh README. -->
 
-<h1 id="usepx">usePx</h1>
-<div class="highlight"><pre><span></span><code><span class="kr">function</span><span class="w"> </span><span class="nf">usePx</span><span class="p">(</span>
+<h1 id="usemotion">useMotion</h1>
+<div class="highlight"><pre><span></span><code><span class="kr">function</span><span class="w"> </span><span class="nf">useMotion</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span>
 <span class="w">  </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">,</span>
-<span class="w">  </span><span class="nv">baseResolution</span><span class="p">:</span><span class="w"> </span><span class="nc">Vector2</span><span class="err">?</span><span class="p">,</span>
-<span class="w">  </span><span class="nv">minimumScale</span><span class="p">:</span><span class="w"> </span><span class="nc">number</span><span class="err">?</span><span class="p">,</span>
-<span class="w">  </span><span class="nv">dominantAxis</span><span class="p">:</span><span class="w"> </span><span class="nc">number</span><span class="err">?</span>
-<span class="p">):</span><span class="w"> </span><span class="nc">Px</span>
+<span class="w">  </span><span class="nv">goal</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">UsedAs</span><span class="p">&lt;</span><span class="nc">T</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="nc">Ripple</span><span class="p">.</span><span class="nc">MotionGoal</span><span class="p">&gt;,</span>
+<span class="w">  </span><span class="nv">options</span><span class="p">:</span><span class="w"> </span><span class="nc">Ripple</span><span class="p">.</span><span class="nc">SpringOptions</span><span class="err">?</span>
+<span class="p">):</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Returns a state object with the current <code>px</code> unit based on the current viewport size.</p>
+<p>Applies spring animations to the given value, and updates the goal with the latest value on every re-render. Returns a state object with the motor's value.</p>
 <hr />
 <h2 id="arguments">Arguments</h2>
 <h3 id="scope-fusionscope">scope <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span></code></h3>
 <p>The scope to store cleanup tasks.</p>
-<h3 id="baseresolution-vector2">baseResolution <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Vector2</span><span class="err">?</span></code></h3>
-<p>TThe base resolution to scale from, defaults to a Macbook Air's resolution.</p>
-<h3 id="minimumscale-number">minimumScale <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">number</span><span class="err">?</span></code></h3>
-<p>The smallest scale, defaults to 50%.</p>
-<h3 id="dominantaxis-number">dominantAxis <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">number</span><span class="err">?</span></code></h3>
-<p>The axis to scale for, defaults to 1:1.</p>
+<h3 id="goal-fusionusedast-ripplemotiongoal">goal <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">UsedAs</span><span class="p">&lt;</span><span class="nc">T</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="nc">Ripple</span><span class="p">.</span><span class="nc">MotionGoal</span><span class="p">&gt;</span></code></h3>
+<p>The goal of the motor.</p>
+<h3 id="options-ripplespringoptions">options <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Ripple</span><span class="p">.</span><span class="nc">SpringOptions</span><span class="err">?</span></code></h3>
+<p>Options for the spring.</p>
 <hr />
-<h2 id="returns-px">Returns <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Px</span></code></h2>
-<p>A <code>px</code> unit that scales with the viewport size.</p>
+<h2 id="returns-fusionstateobjectt">Returns <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span></code></h2>
+<p>A state object with the motor's value.</p>
 
 <!-- Source file information -->
 
@@ -1065,9 +1044,9 @@
 		
 		  
 		  <a
-			href="../use-previous/"
+			href="../use-px/"
 			class="md-footer__link md-footer__link--prev"
-			aria-label="Previous: usePrevious"
+			aria-label="Previous: usePx"
 			rel="prev"
 		  >
 			<div class="md-footer__button md-icon">
@@ -1078,7 +1057,7 @@
 				<span class="md-footer__direction">
 				  Previous
 				</span>
-				usePrevious
+				usePx
 			  </div>
 			</div>
 		  </a>
@@ -1088,9 +1067,9 @@
 		
 		  
 		  <a
-			href="../use-spring/"
+			href="../use-tagged/"
 			class="md-footer__link md-footer__link--next"
-			aria-label="Next: useMotion"
+			aria-label="Next: useTagged"
 			rel="next"
 		  >
 			<div class="md-footer__title">
@@ -1098,7 +1077,7 @@
 				<span class="md-footer__direction">
 				  Next
 				</span>
-				useMotion
+				useTagged
 			  </div>
 			</div>
 			<div class="md-footer__button md-icon">
