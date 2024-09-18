@@ -16,5 +16,5 @@
   description = "Optional observer tracking the mouse position."
 
 [config.returns]
-  type = "StateObject<Vector2>"
+  type = "Fusion.StateObject<Vector2>"
   description = "A state object with the mouse position."

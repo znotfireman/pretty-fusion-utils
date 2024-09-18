@@ -5,7 +5,7 @@ local lockValue = require("utils/lock-value")
 type Become = <T>(value: T) -> T
 
 --[=[
-  Returns a state object with an value from an asynchronous processor. The processor is given a Use callback that adds dependencies, a Become callback alter the current eventual value, and an inner scope to add cleanup tasks to.
+  Returns a state object with an eventual value from a processor. The processor is given a Use callback that adds dependencies, a Become callback alter the current eventual value, and an inner scope to add cleanup tasks to.
   @param scope The scope to store cleanup tasks.
   @param fallback The fallback value to display while the processor runs.
   @param processor The processor of the eventual value. It receives a Use callback, a Become callback, and an inner scope.
@@ -15,15 +15,15 @@ type Become = <T>(value: T) -> T
 -- FUTURE: This util is to be obsolete once Fusion issue #4 is implemented:
 -- https://github.com/dphfox/Fusion/issues/4
 -- FIXME: should restore old dependencies on error
-local function useAsync<Scope, Result>(
-  outerScope: Scope & Fusion.FusionScope,
-  fallback: Result,
+local function useEventual<T, S>(
+  outerScope: Fusion.Scope<S & Fusion.Fusion>,
+  fallback: T,
   processor: (
     use: Fusion.Use,
     become: Become,
-    scope: Scope
-  ) -> Result
-): Fusion.StateObject<Result>
+    scope: Fusion.Scope<S>
+  ) -> T
+): Fusion.StateObject<T>
   local scope = outerScope:scoped()
   local peek = scope.peek
 
@@ -77,4 +77,4 @@ local function useAsync<Scope, Result>(
   return lockValue(eventual)
 end
 
-return useAsync
+return useEventual

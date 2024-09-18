@@ -10,17 +10,17 @@
 
 [[config.args]]
   name = "scope"
-  type = "Scope<S & typeof(Fusion)>"
+  type = "Fusion.Scope<S & typeof(Fusion)>"
   description = "The scope to store cleanup tasks."
 
 [[config.args]]
   name = "delay"
-  type = "UsedAs<number?>"
+  type = "Fusion.UsedAs<number?>"
   description = "The delay, in seconds per each interval."
 
 [[config.args]]
   name = "callback"
-  type = "(Scope<S>) -> ()"
+  type = "(Fusion.Scope<S>) -> ()"
   description = "The callback to run at an interval. Receives an inner scope that is cleaned up per each interval."
 
 [[config.args]]

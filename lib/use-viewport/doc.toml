@@ -11,5 +11,5 @@
   description = "The scope to store cleanup tasks."
 
 [config.returns]
-  type = "StateObject<Vector2>"
+  type = "Fusion.StateObject<Vector2>"
   description = "A state object with the viewport size."

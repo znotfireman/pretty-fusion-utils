@@ -10,7 +10,7 @@ local lockValue = require("utils/lock-value")
   @return A state object with the mouse position.
 ]=]
 local function useMouse(
-  scope: Fusion.Scope<Fusion.Fusion>,
+  scope: Fusion.FusionScope,
   observer: (mouse: Vector2) -> ()?
 ): Fusion.StateObject<Vector2>
   local peek = scope.peek

@@ -7,12 +7,12 @@
         "sources": {
           "@lune/": "~/.lune/.typedefs/0.8.8/",
           "types": "lib/types",
-          "use-async": "lib/use-async",
           "use-camera": "lib/use-camera",
           "use-cleanup": "lib/use-cleanup",
           "use-coroutine": "lib/use-coroutine",
           "use-effect": "lib/use-effect",
           "use-event-listener": "lib/use-event-listener",
+          "use-eventual": "lib/use-eventual",
           "use-interval": "lib/use-interval",
           "use-motion": "lib/use-motion",
           "use-mouse": "lib/use-mouse",

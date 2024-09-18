@@ -2,12 +2,12 @@
 -- Run `lune run regen` to generate a fresh init file.
 
 return table.freeze {
-  useAsync = require("use-async"),
   useCamera = require("use-camera"),
   useCleanup = require("use-cleanup"),
   useCoroutine = require("use-coroutine"),
   useEffect = require("use-effect"),
   useEventListener = require("use-event-listener"),
+  useEventual = require("use-eventual"),
   useInterval = require("use-interval"),
   useMotion = require("use-motion"),
   useMouse = require("use-mouse"),

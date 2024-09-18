@@ -7,7 +7,7 @@
 function useMouse(
   scope: Fusion.Scope,
   observer: (mouse: Vector2) -> ()?
-): StateObject<Vector2>
+): Fusion.StateObject<Vector2>
 ```
 
 Returns a state object with the mouse position. Updates when the mouse position changes.
@@ -25,6 +25,6 @@ Optional observer tracking the mouse position.
 
 ---
 
-## Returns <span class="pfu-reference-type">-> StateObject<Vector2> </span>
+## Returns <span class="pfu-reference-type">-> Fusion.StateObject<Vector2> </span>
 
 A state object with the mouse position.

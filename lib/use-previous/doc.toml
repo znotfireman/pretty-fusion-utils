@@ -30,7 +30,7 @@ end)'''
 
 [[config.args]]
   name = "state"
-  type = "Fusion.StateObject<T>"
+  type = "Fusion.UsedAs<T>"
   description = "The state object to observe for changes."
 
 [[config.args]]

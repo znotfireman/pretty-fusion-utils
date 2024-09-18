@@ -64,7 +64,7 @@ end
   @return A function to disconnect the event listener.
 ]=]
 local function useEventListener(
-  scope: Fusion.Scope<Fusion.Fusion>,
+  scope: Fusion.FusionScope,
   event: EventLike,
   listener: (...any) -> ()
 )

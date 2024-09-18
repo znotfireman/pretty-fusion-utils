@@ -16,5 +16,5 @@
   description = "The CollectionService tag to track."
 
 [config.returns]
-  type = "StateObject<{ Instance }>"
+  type = "Fusion.StateObject<{ Instance }>"
   description = "A state object with every instance of the given tag."

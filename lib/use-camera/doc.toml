@@ -11,5 +11,5 @@
   description = "The scope to store cleanup tasks."
 
 [config.returns]
-  type = "StateObject<Camera>"
+  type = "Fusion.StateObject<Camera>"
   description = "A state object with the current camera."

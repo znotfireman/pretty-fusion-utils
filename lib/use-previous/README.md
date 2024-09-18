@@ -6,7 +6,7 @@
 ```Luau
 function usePrevious<T>(
   scope: Fusion.Scope,
-  state: Fusion.StateObject<T>,
+  state: Fusion.UsedAs<T>,
   predicate: ((T, T) -> boolean)?
 ): Fusion.StateObject<T>
 ```
@@ -20,7 +20,7 @@ Returns a state object with the previous value of an observable state object. In
 ### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### state <span class="pfu-reference-type">: Fusion.StateObject<T> </span>
+### state <span class="pfu-reference-type">: Fusion.UsedAs<T> </span>
 The state object to observe for changes.
 
 ### predicate <span class="pfu-reference-type">: ((T, T) -> boolean)? </span>

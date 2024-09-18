@@ -23,7 +23,7 @@ end
 ]=]
 local function usePrevious<T>(
   scope: Fusion.FusionScope,
-  state: Fusion.StateObject<T>,
+  state: Fusion.UsedAs<T>,
   predicate: ((T, T) -> boolean)?
 ): Fusion.StateObject<T?>
   local peek = scope.peek

@@ -15,7 +15,7 @@ type Timer = Fusion.Value<number> & {
   @param initial The initial value of the timer.
   @return A timer object.
 ]=]
-local function useTimer(scope: Fusion.Scope<Fusion.Fusion>, initial: number?): Timer
+local function useTimer(scope: Fusion.FusionScope, initial: number?): Timer
   local timer = scope:Value(initial or 0)
   local running = true
 

@@ -6,7 +6,7 @@
 ```Luau
 function useCamera(
   scope: Fusion.Scope
-): StateObject<Camera>
+): Fusion.StateObject<Camera>
 ```
 
 Returns a state object with the current camera. Updates when the current camera changes.
@@ -21,6 +21,6 @@ The scope to store cleanup tasks.
 
 ---
 
-## Returns <span class="pfu-reference-type">-> StateObject<Camera> </span>
+## Returns <span class="pfu-reference-type">-> Fusion.StateObject<Camera> </span>
 
 A state object with the current camera.

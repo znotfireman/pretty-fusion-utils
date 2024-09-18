@@ -7,7 +7,7 @@
 function useTagged(
   scope: Fusion.Scope,
   tag: string
-): StateObject<{ Instance }>
+): Fusion.StateObject<{ Instance }>
 ```
 
 Returns a state object with every instance of a given tag. Updates when new instances get tagged or old instances get untagged.
@@ -25,6 +25,6 @@ The CollectionService tag to track.
 
 ---
 
-## Returns <span class="pfu-reference-type">-> StateObject<{ Instance }> </span>
+## Returns <span class="pfu-reference-type">-> Fusion.StateObject<{ Instance }> </span>
 
 A state object with every instance of the given tag.

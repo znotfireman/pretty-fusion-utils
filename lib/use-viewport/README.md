@@ -6,7 +6,7 @@
 ```Luau
 function useViewport(
   scope: Fusion.Scope
-): StateObject<Vector2>
+): Fusion.StateObject<Vector2>
 ```
 
 Returns the current viewport size. Updates when the current camera changes or when the viewport size is changed.
@@ -21,6 +21,6 @@ The scope to store cleanup tasks.
 
 ---
 
-## Returns <span class="pfu-reference-type">-> StateObject<Vector2> </span>
+## Returns <span class="pfu-reference-type">-> Fusion.StateObject<Vector2> </span>
 
 A state object with the viewport size.

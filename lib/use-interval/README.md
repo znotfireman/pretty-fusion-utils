@@ -5,9 +5,9 @@
 
 ```Luau
 function useInterval<S>(
-  scope: Scope<S & typeof(Fusion)>,
-  delay: UsedAs<number?>,
-  callback: (Scope<S>) -> (),
+  scope: Fusion.Scope<S & typeof(Fusion)>,
+  delay: Fusion.UsedAs<number?>,
+  callback: (Fusion.Scope<S>) -> (),
   immediate: boolean?
 )
 ```
@@ -18,13 +18,13 @@ Sets an interval that runs the callback function every `delay` seconds. If `dela
 
 ## Parameters
 
-### scope <span class="pfu-reference-type">: Scope<S & typeof(Fusion)> </span>
+### scope <span class="pfu-reference-type">: Fusion.Scope<S & typeof(Fusion)> </span>
 The scope to store cleanup tasks.
 
-### delay <span class="pfu-reference-type">: UsedAs<number?> </span>
+### delay <span class="pfu-reference-type">: Fusion.UsedAs<number?> </span>
 The delay, in seconds per each interval.
 
-### callback <span class="pfu-reference-type">: (Scope<S>) -> () </span>
+### callback <span class="pfu-reference-type">: (Fusion.Scope<S>) -> () </span>
 The callback to run at an interval. Receives an inner scope that is cleaned up per each interval.
 
 ### immediate <span class="pfu-reference-type">: boolean? </span>

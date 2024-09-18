@@ -8,7 +8,7 @@ local useCamera = require("use-camera")
   @return A state object with the viewport size.
 ]=]
 local function useViewport(
-  outerScope: Fusion.Scope<Fusion.Fusion>,
+  outerScope: Fusion.FusionScope,
   observer: (viewport: Vector2) -> ()?
 ): Fusion.StateObject<Vector2>
   local scope = outerScope:innerScope()

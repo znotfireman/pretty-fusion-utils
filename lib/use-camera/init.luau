@@ -11,7 +11,7 @@ local onCameraChanged = Workspace:GetPropertyChangedSignal("CurrentCamera")
   @param scope The scope to store cleanup tasks.
   @return A state object with the current camera.
 ]=]
-local function useCamera(scope: Fusion.Scope<Fusion.Fusion>)
+local function useCamera(scope: Fusion.FusionScope)
   local camera = scope:Value(Workspace.CurrentCamera)
 
   useEventListener(scope, onCameraChanged, function()
