@@ -28,3 +28,11 @@ The initial value of the timer.
 ## Returns <span class="pfu-reference-type">-> Timer </span>
 
 A timer object.
+
+---
+
+## Example Usage
+
+```Luau
+-- TODO: write example
+```

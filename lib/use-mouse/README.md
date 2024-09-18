@@ -28,3 +28,11 @@ Optional observer tracking the mouse position.
 ## Returns <span class="pfu-reference-type">-> Fusion.StateObject&lt;Vector2&gt; </span>
 
 A state object with the mouse position.
+
+---
+
+## Example Usage
+
+```Luau
+-- TODO: write example
+```

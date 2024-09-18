@@ -32,3 +32,11 @@ The processor of the eventual value. It receives a Use callback, a Become callba
 ## Returns <span class="pfu-reference-type">-> Fusion.StateObject&lt;T&gt; </span>
 
 A state object with the asynchronous value.
+
+---
+
+## Example Usage
+
+```Luau
+-- TODO: write example
+```

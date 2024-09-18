@@ -5,6 +5,9 @@
   camera changes.\
   """
 
+  example = '''
+-- TODO: write example'''
+
 [[config.args]]
   name = "scope"
   type = "Fusion.Scope"

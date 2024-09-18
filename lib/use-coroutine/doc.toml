@@ -4,6 +4,9 @@
   Spawns a new coroutine that is closed once the scope is cleaned up.\
   """
 
+  example = '''
+  -- TODO: write example'''
+
   variadics = ["Args..."]
 
 [[config.args]]

@@ -35,7 +35,7 @@ A state object with the previous value of the state object. Initially outputs `n
 
 ---
 
-## Example
+## Example Usage
 
 ```Luau
 local function randomColor(): Color3

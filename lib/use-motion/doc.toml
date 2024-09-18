@@ -5,6 +5,9 @@
   itself.\
   """
 
+  example = '''
+-- TODO: write example'''
+
   variadics = ["T"]
 
 [[config.args]]

@@ -24,3 +24,11 @@ The scope to store cleanup tasks.
 ## Returns <span class="pfu-reference-type">-> Fusion.StateObject&lt;Camera&gt; </span>
 
 A state object with the current camera.
+
+---
+
+## Example Usage
+
+```Luau
+-- TODO: write example
+```

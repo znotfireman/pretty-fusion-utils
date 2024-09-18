@@ -5,6 +5,9 @@
   or when the viewport size is changed.\
   """
 
+  example = '''
+-- TODO: write example'''
+
 [[config.args]]
   name = "scope"
   type = "Fusion.Scope"

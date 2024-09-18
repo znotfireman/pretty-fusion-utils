@@ -4,6 +4,9 @@
   Creates a timer that can be used to track a value over time.\
   """
 
+  example = '''
+-- TODO: write example'''
+
 [[config.args]]
   name = "scope"
   type = "Fusion.Scope"

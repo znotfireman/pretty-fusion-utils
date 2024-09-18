@@ -28,3 +28,11 @@ The initial value of the motor.
 ## Returns <span class="pfu-reference-type">-> (Fusion.StateObject&lt;T&gt;, Ripple.Motion&lt;T&gt;) </span>
 
 A state object following a Ripple Motion along with the Motion itself.
+
+---
+
+## Example Usage
+
+```Luau
+-- TODO: write example
+```

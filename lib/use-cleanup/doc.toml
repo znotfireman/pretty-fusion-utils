@@ -5,7 +5,6 @@
   be used in declarations.\
   """
 
-  variadics = ["Tasks..."]
   example = '''
 local timeElapsed = scope:Value(0)
 local connection = scope:useTasks(
@@ -17,6 +16,8 @@ local connection = scope:useTasks(
 task.wait(5)
 connection:Disconnect()
 print(`Took around {peek(timeElapsed)} seconds`)'''
+
+variadics = ["Tasks..."]
 
 [[config.args]]
   name = "scope"

@@ -32,3 +32,11 @@ The arguments to spawn the coroutine with.
 ## Returns <span class="pfu-reference-type">-> thread </span>
 
 A thread that is closed once the scope is cleaned up.
+
+---
+
+## Example Usage
+
+```Luau
+  -- TODO: write example
+```

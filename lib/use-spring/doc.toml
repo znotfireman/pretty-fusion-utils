@@ -6,6 +6,9 @@
   value. Not to be confused with Fusion's own Spring objects.\
   """
 
+  example = '''
+-- TODO: write example'''
+
   variadics = ["T"]
 
 [[config.args]]

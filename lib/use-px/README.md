@@ -36,3 +36,11 @@ The axis to scale for, defaults to 1:1.
 ## Returns <span class="pfu-reference-type">-> Px </span>
 
 A `px` unit that scales with the viewport size.
+
+---
+
+## Example Usage
+
+```Luau
+-- TODO: write example
+```

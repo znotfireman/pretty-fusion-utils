@@ -4,6 +4,9 @@
   Perform side effects with state objects.\
   """
 
+  example = '''
+-- TODO: write example'''
+
   variadics = ["Scope"]
 
 [[config.args]]

@@ -31,7 +31,7 @@ The tasks that has been added.
 
 ---
 
-## Example
+## Example Usage
 
 ```Luau
 local timeElapsed = scope:Value(0)

@@ -30,3 +30,11 @@ The callback to run at an interval. Receives an inner scope that is cleaned up p
 ### immediate <span class="pfu-reference-type">: boolean? </span>
 Whether to spawn the callback immediately.
 
+
+---
+
+## Example Usage
+
+```Luau
+-- TODO: write example
+```

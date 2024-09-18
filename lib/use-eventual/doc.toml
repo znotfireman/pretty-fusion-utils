@@ -7,6 +7,9 @@
   to.\
   """
 
+  example = '''
+-- TODO: write example'''
+
   variadics = ["T", "S"]
 
 [[config.args]]

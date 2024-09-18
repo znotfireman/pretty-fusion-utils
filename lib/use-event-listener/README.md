@@ -32,3 +32,11 @@ An event listener to be connected.
 ## Returns <span class="pfu-reference-type">-> () -&gt; () </span>
 
 A function to disconnect the event listener.
+
+---
+
+## Example Usage
+
+```Luau
+-- TODO: write example
+```

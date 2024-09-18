@@ -32,3 +32,11 @@ Options for the spring.
 ## Returns <span class="pfu-reference-type">-> Fusion.StateObject&lt;T&gt; </span>
 
 A state object with the motor's value.
+
+---
+
+## Example Usage
+
+```Luau
+-- TODO: write example
+```

@@ -6,6 +6,9 @@
   the interval is cleared. If the delay changes, the interval is reset.\
   """
 
+  example = '''
+-- TODO: write example'''
+
   variadics = ["S"]
 
 [[config.args]]

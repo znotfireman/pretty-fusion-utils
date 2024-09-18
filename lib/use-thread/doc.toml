@@ -4,6 +4,9 @@
   Spawns a new thread that is cancelled once the scope is cleaned up.\
   """
 
+  example = '''
+-- TODO: write example'''
+
   variadics = ["Args..."]
 
 [[config.args]]
