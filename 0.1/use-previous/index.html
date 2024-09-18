@@ -708,18 +708,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scope-scope" class="md-nav__link">
+  <a href="#scope-fusionscope" class="md-nav__link">
     <span class="md-ellipsis">
-      scope : Scope
+      scope : Fusion.Scope
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#state-stateobjectt" class="md-nav__link">
+  <a href="#state-fusionstateobjectt" class="md-nav__link">
     <span class="md-ellipsis">
-      state : StateObject&lt;T&gt;
+      state : Fusion.StateObject&lt;T&gt;
     </span>
   </a>
   
@@ -740,9 +740,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns-stateobjectt" class="md-nav__link">
+  <a href="#returns-fusionstateobjectt" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns : StateObject&lt;T?&gt;
+      Returns : Fusion.StateObject&lt;T&gt;
     </span>
   </a>
   
@@ -936,18 +936,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#scope-scope" class="md-nav__link">
+  <a href="#scope-fusionscope" class="md-nav__link">
     <span class="md-ellipsis">
-      scope : Scope
+      scope : Fusion.Scope
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#state-stateobjectt" class="md-nav__link">
+  <a href="#state-fusionstateobjectt" class="md-nav__link">
     <span class="md-ellipsis">
-      state : StateObject&lt;T&gt;
+      state : Fusion.StateObject&lt;T&gt;
     </span>
   </a>
   
@@ -968,9 +968,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#returns-stateobjectt" class="md-nav__link">
+  <a href="#returns-fusionstateobjectt" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns : StateObject&lt;T?&gt;
+      Returns : Fusion.StateObject&lt;T&gt;
     </span>
   </a>
   
@@ -1013,75 +1013,39 @@
 
 <h1 id="useprevious">usePrevious</h1>
 <div class="highlight"><pre><span></span><code><span class="kr">function</span><span class="w"> </span><span class="nf">usePrevious</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;(</span>
-<span class="w">  </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Scope</span><span class="p">,</span>
-<span class="w">  </span><span class="nv">state</span><span class="p">:</span><span class="w"> </span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;,</span>
+<span class="w">  </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">,</span>
+<span class="w">  </span><span class="nv">state</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;,</span>
 <span class="w">  </span><span class="nv">predicate</span><span class="p">:</span><span class="w"> </span><span class="p">((</span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="nc">T</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nc">boolean</span><span class="p">)</span><span class="err">?</span>
-<span class="p">):</span><span class="w"> </span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="err">?</span><span class="p">&gt;</span>
+<span class="p">):</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Returns a state object with the previous value of an observable state object. Initially outputs <code>nil</code>.</p>
 <hr />
 <h2 id="arguments">Arguments</h2>
-<h3 id="scope-scope">scope <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Scope</span></code></h3>
+<h3 id="scope-fusionscope">scope <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span></code></h3>
 <p>The scope to store cleanup tasks.</p>
-<h3 id="state-stateobjectt">state <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span></code></h3>
+<h3 id="state-fusionstateobjectt">state <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span></code></h3>
 <p>The state object to observe for changes.</p>
 <h3 id="predicate-t-t-boolean">predicate <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="p">((</span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="nc">T</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nc">boolean</span><span class="p">)</span><span class="err">?</span></code></h3>
 <p>The predicate function to assert if the value is newer. Defaults to Fusion's similarity rules.</p>
 <hr />
-<h2 id="returns-stateobjectt">Returns <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="err">?</span><span class="p">&gt;</span></code></h2>
-<p>A state object with the previous value of the state object.</p>
+<h2 id="returns-fusionstateobjectt">Returns <code class="highlight"><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">StateObject</span><span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span></code></h2>
+<p>A state object with the previous value of the state object. Initially outputs <code>nil</code>.</p>
 <hr />
 <h2 id="example">Example</h2>
-<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="nv">ReplicatedStorage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">game</span><span class="p">:</span><span class="nc">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
-<span class="kd">local</span><span class="w"> </span><span class="nv">Fusion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">require</span><span class="p">(</span><span class="nv">ReplicatedStorage</span><span class="p">.</span><span class="nv">Packages</span><span class="p">.</span><span class="nv">Fusion</span><span class="p">)</span>
-<span class="kd">local</span><span class="w"> </span><span class="nv">fusionUtils</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">require</span><span class="p">(</span><span class="nv">ReplicatedStorage</span><span class="p">.</span><span class="nv">Packages</span><span class="p">.</span><span class="nv">fusionUtils</span><span class="p">)</span>
-
-<span class="kd">local</span><span class="w"> </span><span class="nv">Children</span><span class="p">,</span><span class="w"> </span><span class="nv">Child</span><span class="p">,</span><span class="w"> </span><span class="nv">OnEvent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Fusion</span><span class="p">.</span><span class="nv">Children</span><span class="p">,</span><span class="w"> </span><span class="nv">Fusion</span><span class="p">.</span><span class="nv">Child</span><span class="p">,</span><span class="w"> </span><span class="nv">Fusion</span><span class="p">.</span><span class="nv">OnEvent</span>
-
-<span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">randomColor</span><span class="p">():</span><span class="w"> </span><span class="nc">Color3</span>
-<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nv">Color3</span><span class="p">.</span><span class="nf">fromHSV</span><span class="p">(</span><span class="nb">math</span><span class="p">.</span><span class="nf">random</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">360</span><span class="p">),</span><span class="w"> </span><span class="mf">0.75</span><span class="w"> </span><span class="mf">0.75</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">randomColor</span><span class="p">():</span><span class="w"> </span><span class="nc">Color3</span>
+<span class="w">  </span><span class="kr">return</span><span class="w"> </span><span class="nv">Color3</span><span class="p">.</span><span class="nf">fromHSV</span><span class="p">(</span><span class="nb">math</span><span class="p">.</span><span class="nf">random</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">360</span><span class="p">),</span><span class="w"> </span><span class="mf">0.75</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span>
 <span class="kr">end</span>
 
-<span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">App</span><span class="p">(</span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">&lt;</span><span class="nb">typeof(</span><span class="nv">Fusion</span><span class="p">)</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="nb">typeof(</span><span class="nv">fusionUtils</span><span class="p">)&gt;)</span>
-<span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">currentColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">scope</span><span class="p">:</span><span class="nc">Value</span><span class="p">(</span><span class="nf">randomColor</span><span class="p">())</span>
-<span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">previousColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">scope</span><span class="p">:</span><span class="nc">usePrevious</span><span class="p">(</span><span class="nv">currentColor</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">currentColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">scope</span><span class="p">:</span><span class="nc">Value</span><span class="p">(</span><span class="nf">randomColor</span><span class="p">())</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">previousColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">scope</span><span class="p">:</span><span class="nc">usePrevious</span><span class="p">(</span><span class="nv">currentColor</span><span class="p">)</span>
 
-<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nv">scope</span><span class="p">:</span><span class="nc">New</span><span class="w"> </span><span class="s2">&quot;Frame&quot;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nv">AnchorPoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Vector2</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">),</span>
-<span class="w">        </span><span class="nv">Size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">UDim2</span><span class="p">.</span><span class="nf">fromScale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">),</span>
-<span class="w">        </span><span class="nv">Position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">UDim2</span><span class="p">.</span><span class="nf">fromScale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">),</span>
+<span class="nv">scope</span><span class="p">:</span><span class="nc">useInterval</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
+<span class="w">  </span><span class="nv">currentColor</span><span class="p">:</span><span class="nc">set</span><span class="p">(</span><span class="nv">randomColor</span><span class="p">)</span>
+<span class="kr">end</span><span class="p">)</span>
 
-<span class="w">        </span><span class="p">[</span><span class="nv">Children</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">Child</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nv">scope</span><span class="p">:</span><span class="nc">New</span><span class="w"> </span><span class="s2">&quot;TextLabel&quot;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nv">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;usePrevious&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nv">Size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">UDim2</span><span class="p">.</span><span class="nf">fromScale</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.25</span><span class="p">),</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nv">scope</span><span class="p">:</span><span class="nc">New</span><span class="w"> </span><span class="s2">&quot;TextButton&quot;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nv">Text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Next&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nv">Size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">UDim2</span><span class="p">.</span><span class="nf">fromScale</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.25</span><span class="p">),</span>
-<span class="w">                </span><span class="nv">Position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">UDim2</span><span class="p">.</span><span class="nf">fromScale</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.25</span><span class="p">),</span>
-
-<span class="w">                </span><span class="p">[</span><span class="nf">OnEvent</span><span class="w"> </span><span class="s2">&quot;Activated&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
-<span class="w">                    </span><span class="nv">currentColor</span><span class="p">:</span><span class="nc">set</span><span class="p">(</span><span class="nf">randomColor</span><span class="p">())</span>
-<span class="w">                </span><span class="kr">end</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nv">scope</span><span class="p">:</span><span class="nc">New</span><span class="w"> </span><span class="s2">&quot;Frame&quot;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nv">BackgroundColor3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">currentColor</span><span class="p">,</span>
-<span class="w">                </span><span class="nv">Size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">UDim2</span><span class="p">.</span><span class="nf">fromScale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">),</span>
-<span class="w">                </span><span class="nv">Position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">UDim2</span><span class="p">.</span><span class="nf">fromScale</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">),</span>
-<span class="w">            </span><span class="p">},</span>
-<span class="w">            </span><span class="nv">scope</span><span class="p">:</span><span class="nc">New</span><span class="w"> </span><span class="s2">&quot;Frame&quot;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nv">BackgroundColor3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">scope</span><span class="p">:</span><span class="nc">Computed</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="nv">use</span><span class="p">))</span>
-<span class="w">                    </span><span class="kr">return</span><span class="w"> </span><span class="nf">use</span><span class="p">(</span><span class="nv">previousColor</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nv">Color3</span><span class="p">.</span><span class="nf">new</span><span class="p">()</span>
-<span class="w">                </span><span class="kr">end</span><span class="p">),</span>
-<span class="w">                </span><span class="nv">Size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">UDim2</span><span class="p">.</span><span class="nf">fromScale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">),</span>
-<span class="w">                </span><span class="nv">Position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">UDim2</span><span class="p">.</span><span class="nf">fromScale</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">),</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="kr">end</span>
-
-<span class="kr">return</span><span class="w"> </span><span class="nv">App</span>
+<span class="nv">scope</span><span class="p">:</span><span class="nc">Observer</span><span class="p">(</span><span class="nv">currentColor</span><span class="p">):</span><span class="nc">onChange</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span>
+<span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="s2">&quot;Current color:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">peek</span><span class="p">(</span><span class="nv">currentColor</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;Previous color:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">peek</span><span class="p">(</span><span class="nv">previousColor</span><span class="p">))</span>
+<span class="kr">end</span><span class="p">)</span>
 </code></pre></div>
 
 <!-- Source file information -->
