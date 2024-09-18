@@ -1,0 +1,28 @@
+[config]
+  name = "useMotion"
+  brief = """\
+  Applies spring animations to the given value, and updates the goal with the \
+  latest value on every re-render. Returns a state object with the motor's \
+  value.\
+  """
+
+  variadics = ["T"]
+
+[[config.args]]
+  name = "scope"
+  type = "Fusion.Scope"
+  description = "The scope to store cleanup tasks."
+
+[[config.args]]
+  name = "goal"
+  type = "Fusion.UsedAs<T & Ripple.MotionGoal>"
+  description = "The goal of the motor."
+
+  [[config.args]]
+    name = "options"
+    type = "Ripple.SpringOptions?"
+    description = "Options for the spring."
+
+[config.returns]
+  type = "Fusion.StateObject<T>"
+  description = "A state object with the motor's value."

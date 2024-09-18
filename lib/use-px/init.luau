@@ -21,7 +21,7 @@ local MACBOOK_AIR_RESOLUTION = Vector2.new(1280, 832)
   @param baseResolution TThe base resolution to scale from, defaults to a Macbook Air's resolution.
   @param minimumScale The smallest scale, defaults to 50%.
   @param dominantAxis The axis to scale for, defaults to 1:1.
-  @return A `px` unit that scales with the viewport size..
+  @return A `px` unit that scales with the viewport size.
 ]=]
 local function usePx(
   scope: Fusion.FusionScope,

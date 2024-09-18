@@ -10,8 +10,7 @@ function useMotion<T>(
 ): (Fusion.StateObject<T>, Ripple.Motion<T>)
 ```
 
-Returns a state object following a Ripple Motion along with the Motion
-  itself.
+Returns a state object following a Ripple Motion along with the Motion itself.
 
 ---
 

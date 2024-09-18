@@ -21,6 +21,7 @@
           "use-mouse": "lib/use-mouse",
           "use-previous": "lib/use-previous",
           "use-px": "lib/use-px",
+          "use-spring": "lib/use-spring",
           "use-tagged": "lib/use-tagged",
           "use-thread": "lib/use-thread",
           "use-timer": "lib/use-timer",

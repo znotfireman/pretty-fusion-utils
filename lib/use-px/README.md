@@ -35,4 +35,4 @@ The axis to scale for, defaults to 1:1.
 
 ## Returns `#!luau : Px`
 
-A `px` unit that scales with the viewport size..
+A `px` unit that scales with the viewport size.

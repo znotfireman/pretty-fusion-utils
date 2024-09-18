@@ -7,8 +7,7 @@ local lockValue = require("utils/lock-value")
 local useEventListener = require("use-event-listener")
 
 --[=[
-  Returns a state object following a Ripple Motion along with the Motion
-    itself.
+  Returns a state object following a Ripple Motion along with the Motion itself.
   @param scope The scope to store cleanup tasks.
   @param initialValue The initial value of the motor.
   @return A state object following a Ripple Motion along with the Motion itself.
