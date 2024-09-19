@@ -10,23 +10,42 @@ local useEventListener = require("use-event-listener")
   @param tag The CollectionService tag to track.
   @return A state object with every instance of the given tag.
 ]=]
-local function useTagged(scope: Fusion.FusionScope, tag: string): Fusion.StateObject<{ Instance }>
+local function useTagged(
+  scope: Fusion.FusionScope,
+  tag: Fusion.UsedAs<string>
+): Fusion.StateObject<{ Instance }>
+  local scope = scope:innerScope()
   local peek = scope.peek
-  local instances = scope:Value(CollectionService:GetTagged(tag))
 
-  useEventListener(scope, CollectionService:GetInstanceAddedSignal(tag), function(instance)
-    local freshInstances = table.clone(peek(instances))
-    table.insert(freshInstances, instance)
-    instances:set(freshInstances)
-  end)
-
-  useEventListener(scope, CollectionService:GetInstanceRemovedSignal(tag), function(instance)
-    local freshInstances = table.clone(peek(instances))
-    local index = table.find(freshInstances, instance)
-    if index then
-      table.remove(freshInstances, index)
+  local instances = scope:Value({} :: { Instance })
+  local eventScope: typeof(scope)? = nil
+  scope:Observer(tag):onBind(function()
+    if eventScope then
+      eventScope:doCleanup()
     end
-    instances:set(freshInstances)
+
+    eventScope = scope:innerScope()
+    instances = CollectionService:GetTagged(peek(tag))
+
+    useEventListener(
+      assert(eventScope, "Luau"),
+      CollectionService:GetInstanceAddedSignal(tag),
+      function(instance)
+        local freshInstances = table.clone(peek(instances))
+        table.insert(freshInstances, instance)
+        instances:set(freshInstances)
+      end
+    )
+
+    useEventListener(
+      assert(eventScope, "Luau"),
+      CollectionService:GetInstanceAddedSignal(tag),
+      function(instance)
+        local freshInstances = table.clone(peek(instances))
+        table.insert(freshInstances, instance)
+        instances:set(freshInstances)
+      end
+    )
   end)
 
   return lockValue(instances)
