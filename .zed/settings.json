@@ -51,6 +51,11 @@
               "utils": "lib/utils"
             },
             "mode": "relativeToFile"
+          },
+          "types": {
+            "definitionFiles": [
+              "testez.d.luau"
+            ]
           }
         }
       }

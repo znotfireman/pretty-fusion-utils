@@ -1,4 +1,5 @@
 -- Holy shit Zed why the fuck do you need all this
+
 return {
   lsp = {
     ["luau-lsp"] = {
@@ -14,6 +15,11 @@ return {
           },
         },
         ["luau-lsp"] = {
+          types = {
+            definitionFiles = {
+              "testez.d.luau",
+            },
+          },
           require = {
             mode = "relativeToFile",
             directoryAliases = {},

@@ -23,5 +23,8 @@
     "use-viewport": "lib/use-viewport",
     "utils": "lib/utils"
   },
-  "luau-lsp.require.mode": "relativeToFile"
+  "luau-lsp.require.mode": "relativeToFile",
+  "luau-lsp.types.definitionFiles": [
+    "testez.d.luau"
+  ]
 }

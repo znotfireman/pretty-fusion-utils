@@ -1,5 +1,5 @@
 std = "selene-std"
-exclude = ["dist/**"]
+exclude = ["dist/**", "**.d.luau"]
 
 [config]
   global_usage = { ignore_pattern = "^__" }
