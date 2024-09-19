@@ -6,7 +6,7 @@
 ```Luau
 function useTagged(
   scope: Fusion.Scope,
-  tag: string
+  tag: Fusion.UsedAs<string>
 ): Fusion.StateObject<{ Instance }>
 ```
 
@@ -19,7 +19,7 @@ Returns a state object with every instance of a given tag. Updates when new inst
 ### scope <span class="pfu-reference-type">: Fusion.Scope </span>
 The scope to store cleanup tasks.
 
-### tag <span class="pfu-reference-type">: string </span>
+### tag <span class="pfu-reference-type">: Fusion.UsedAs&lt;string&gt; </span>
 The CollectionService tag to track.
 
 

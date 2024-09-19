@@ -15,7 +15,7 @@
 
 [[config.args]]
   name = "tag"
-  type = "string"
+  type = "Fusion.UsedAs<string>"
   description = "The CollectionService tag to track."
 
 [config.returns]
