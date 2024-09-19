@@ -782,9 +782,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tag-string" class="md-nav__link">
+  <a href="#tag-fusionusedasstring" class="md-nav__link">
     <span class="md-ellipsis">
-      tag : string
+      tag : Fusion.UsedAs&lt;string&gt;
     </span>
   </a>
   
@@ -938,9 +938,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tag-string" class="md-nav__link">
+  <a href="#tag-fusionusedasstring" class="md-nav__link">
     <span class="md-ellipsis">
-      tag : string
+      tag : Fusion.UsedAs&lt;string&gt;
     </span>
   </a>
   
@@ -1001,7 +1001,7 @@
 </h1>
 <div class="highlight"><pre><span></span><code><span class="kr">function</span><span class="w"> </span><span class="nf">useTagged</span><span class="p">(</span>
 <span class="w">  </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">,</span>
-<span class="w">  </span><span class="nv">tag</span><span class="p">:</span><span class="w"> </span><span class="nc">string</span>
+<span class="w">  </span><span class="nv">tag</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">UsedAs</span><span class="p">&lt;</span><span class="nc">string</span><span class="p">&gt;</span>
 <span class="p">):</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">StateObject</span><span class="p">&lt;{</span><span class="w"> </span><span class="nc">Instance</span><span class="w"> </span><span class="p">}&gt;</span>
 </code></pre></div>
 <p>Returns a state object with every instance of a given tag. Updates when new instances get tagged or old instances get untagged.</p>
@@ -1009,7 +1009,7 @@
 <h2 id="parameters">Parameters</h2>
 <h3 id="scope-fusionscope">scope <span class="pfu-reference-type">: Fusion.Scope </span></h3>
 <p>The scope to store cleanup tasks.</p>
-<h3 id="tag-string">tag <span class="pfu-reference-type">: string </span></h3>
+<h3 id="tag-fusionusedasstring">tag <span class="pfu-reference-type">: Fusion.UsedAs&lt;string&gt; </span></h3>
 <p>The CollectionService tag to track.</p>
 <hr />
 <h2 id="returns-fusionstateobject-instance">Returns <span class="pfu-reference-type">-&gt; Fusion.StateObject&lt;{ Instance }&gt; </span></h2>
