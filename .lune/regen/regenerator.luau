@@ -129,7 +129,7 @@ function Regenerator.mkdocsConfig()
     -- HOLY SHIT LUNE. FUCK YOU MEAN I CANT SERDE A TAG?
     :gsub(
       "pymdownx%.inlinehilite",
-      function(old)
+      function()
         return StringBuilder("pymdownx.inlinehilite")
           :appendLine()
           :appendLine("- pymdownx.emoji:")
