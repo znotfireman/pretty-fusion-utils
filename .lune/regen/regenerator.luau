@@ -342,9 +342,8 @@ function Regenerator.regenerate()
     if isUnstable then
       version:append(' title="Not recommended for production usage">'):appendLine("unstable")
     else
-      version
-        :append(` title="Stable since version {stableSince}">`)
-        :appendLine(assert(stableSince, "Luau"))
+      assert(stableSince, "Luau")
+      version:append(` title="Stable since version {stableSince}">`):appendLine(stableSince)
     end
 
     version:appendLine("</span>")
@@ -360,7 +359,7 @@ function Regenerator.regenerate()
       :appendLine("</span>")
       :appendLine('<span class="pfu-reference-meta">')
       :appendStringBuilder(version)
-      :appendLine(`<a class="pfu-reference-source" href="{path(LIB_URL, util.dir, "init.luau")}" title="View source code">source</a>`)
+      :appendLine(`<a class="pfu-reference-source" href="{path(LIB_URL, util.dir, "init.luau")}" title="View source code on GitHub">view source</a>`)
       :appendLine("</span>")
       :appendLine("</h1>")
       :appendLine()
