@@ -3,6 +3,7 @@
   align-items: baseline;
   margin: 0 !important;
   flex-wrap: wrap;
+  /* margin-bottom: -0.3333em !important; */
 }
 
 .pfu-reference-type {
@@ -15,7 +16,34 @@
   opacity: 0.8;
 }
 
-a.pfu-reference-source {
-  color: var(--md-default-fg-color);
+.pfu-reference-meta {
+  display: flex;
+  gap: 0.25em;
+
   margin-left: auto;
+  font-size: 0.5em;
+}
+
+.pfu-reference-meta * {
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  color: var(--md-default-bg-color) !important;
+  transition: background-color 125ms;
+}
+
+.pfu-reference-meta>.pfu-reference-version {
+  background-color: var(--md-default-fg-color);
+}
+
+.pfu-reference-meta>.pfu-reference-source {
+  background-color: var(--md-typeset-a-color);
+}
+
+.pfu-reference-meta>*:hover {
+  cursor: help;
+  background-color: var(--md-accent-fg-color);
+}
+
+.pfu-reference-meta>a:hover {
+  cursor: pointer;
 }

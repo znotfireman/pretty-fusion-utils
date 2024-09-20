@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#useeventlistener" class="md-skip">
+        <a href="#parameters" class="md-skip">
           Skip to content
         </a>
       
@@ -555,8 +555,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -584,8 +582,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -918,8 +914,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1013,10 +1007,17 @@
 <!-- This file was @generated and is not intended for manual editing. -->
 <!-- Run `lune run regen` to generate a fresh README. -->
 
-<h1 class="pfu-reference-header" id="useeventlistener">
-<span class="pfu-reference-name"> useEventListener </span>
-<a class="pfu-reference-source" href="https://github.com/znotfireman/pretty-fusion-utils/blob/main/lib/use-event-listener/init.luau" markdown> <span class="twemoji" title="View source code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.22 4.97a.75.75 0 0 1 1.06 0l6.5 6.5a.75.75 0 0 1 0 1.06l-6.5 6.5a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L21.19 12l-5.97-5.97a.75.75 0 0 1 0-1.06m-6.44 0a.75.75 0 0 1 0 1.06L2.81 12l5.97 5.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-6.5-6.5a.75.75 0 0 1 0-1.06l6.5-6.5a.75.75 0 0 1 1.06 0"/></svg></span> </a>
+<h1 class="pfu-reference-header">
+<span class="pfu-reference-name">
+useEventListener
+</span>
+<span class="pfu-reference-meta">
+<span class="pfu-reference-version" title="Stable since version 0.1.0">0.1.0 Luau
+</span>
+<a class="pfu-reference-source" href="https://github.com/znotfireman/pretty-fusion-utils/blob/main/lib/use-event-listener/init.luau" title="View source code">source</a>
+</span>
 </h1>
+
 <div class="highlight"><pre><span></span><code><span class="kr">function</span><span class="w"> </span><span class="nf">useEventListener</span><span class="p">(</span>
 <span class="w">  </span><span class="nv">scope</span><span class="p">:</span><span class="w"> </span><span class="nc">Fusion</span><span class="p">.</span><span class="nc">Scope</span><span class="p">,</span>
 <span class="w">  </span><span class="nv">event</span><span class="p">:</span><span class="w"> </span><span class="nc">EventLike</span><span class="p">,</span>
@@ -1026,10 +1027,10 @@
 <p>Connects to an event-like object. The connection is automatically disconnected when the scope is cleaned up.</p>
 <hr />
 <h2 id="parameters">Parameters</h2>
-<h3 id="scope-fusionscope">scope <span class="pfu-reference-type">: Fusion.Scope </span></h3>
+<h3 id="scope-fusionscope">scope <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/memory/types/scope/">Scope</a> </span></h3>
 <p>The scope to store cleanup tasks.</p>
 <h3 id="event-eventlike">event <span class="pfu-reference-type">: EventLike </span></h3>
-<p>An event-like object to connect. Can be a RBXScriptSignal, or an object with a <code>Connect</code> or <code>connect</code> method.</p>
+<p>An event-like object to connect. Can be a &lt;a href="https://create.roblox.com/docs/reference/engine/datatypes/<a href="https://create.roblox.com/docs/reference/engine/datatypes/RBXScriptSignal">RBXScriptSignal</a></a>, or an object with a <code>Connect</code> or <code>connect</code> method.</p>
 <h3 id="listener-any-">listener <span class="pfu-reference-type">: (...any) -&gt; () </span></h3>
 <p>An event listener to be connected.</p>
 <hr />
