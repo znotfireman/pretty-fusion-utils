@@ -10,17 +10,47 @@
 }
 
 .pfu-home-hero {
-  position: relative;
   min-height: calc(100vh - 5rem - var(--distance-to-top-of-page));
   padding-bottom: var(--distance-to-top-of-page);
-  margin-left: auto;
-  margin-right: auto;
-  transform: translateX(-3.25rem);
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  overflow: hidden;
+}
+
+.pfu-home-hero::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+
+  background-image: url("../pattern.svg");
+  background-size: 25em;
+  background-repeat: repeat;
+  opacity: 0.025;
+  transform: rotate(15deg);
+  animation: hero-bg 150s linear infinite;
+}
+
+@keyframes hero-bg {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: calc(100% + 25em) calc(100% + 25em);
+  }
 }
 
 .pfu-home-main {
@@ -164,18 +194,18 @@ h1.pfu-home-header::before {
 }
 
 .pfu-home-list>ul>li {
-  background-color: var(--md-default-bg-color--light);
+  background-color: var(--md-default-fg-color);
   padding: 0.5em;
   border-radius: 0.25em;
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .pfu-home-list>ul a {
-  color: oklch(from var(--md-default-fg-color) l c h / 0.5) !important;
+  color: var(--md-default-bg-color) !important;
 }
 
 .pfu-home-list>ul>li:has(a:hover) {
-  background-color: var(--md-default-bg-color--lighter);
+  background-color: var(--md-typeset-a-color);
   transform: scale(1.0125);
 }
 
