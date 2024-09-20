@@ -4,6 +4,7 @@ local fs = require("@lune/fs")
 local mkdocs = require("./templates/mkdocs.yaml")
 local path = require("../utils/path")
 local process = require("@lune/process")
+local replaceLinks = require("./replace-links")
 local serde = require("@lune/serde")
 local stringer = require("../utils/stringer")
 
@@ -19,6 +20,15 @@ type DocBuild = {
     generated_files: { string },
   },
 }
+
+local unstableNotice = StringBuilder('!!! warning "Not recommended for production usage"')
+  :indent()
+  :indent()
+  :appendLine()
+  :appendLine()
+  :appendLine(
+    "This API has not been stablized. It's call signature may be altered in the future, it may throw bugs, or it may be outright removed in later releases. Use at your own risk."
+  )
 
 local function reset()
   if fs.isFile(PATH_DOC_BUILD) then
@@ -285,18 +295,19 @@ function Regenerator.regenerate()
           :appendLine()
           :appendLine(util.config.returns.description)
       end
+    end
 
-      if util.config.example then
-        codeDocumentation
-          :appendLine()
-          :appendLine("---")
-          :appendLine()
-          :appendLine("## Example Usage")
-          :appendLine()
-          :appendLine("```Luau")
-          :appendLine(util.config.example)
-          :appendLine("```")
-      end
+    local example = StringBuilder()
+    if util.config.example then
+      example
+        :appendLine()
+        :appendLine("---")
+        :appendLine()
+        :appendLine("## Example Usage")
+        :appendLine()
+        :appendLine("```Luau")
+        :appendLine(util.config.example)
+        :appendLine("```")
     end
 
     table.insert(
@@ -324,14 +335,33 @@ function Regenerator.regenerate()
       usefulFor:append("Useful for", util.config.useful_for)
     end
 
+    local version = StringBuilder('<span class="pfu-reference-version"')
+    local stableSince = util.config.stable_since
+    local isUnstable = stableSince == nil
+
+    if isUnstable then
+      version:append(' title="Not recommended for production usage">'):appendLine("unstable")
+    else
+      version
+        :append(` title="Stable since version {stableSince}">`)
+        :appendLine(assert(stableSince, "Luau"))
+    end
+
+    version:appendLine("</span>")
+
     -- stylua: ignore
     pages[util] = StringBuilder()
       :appendLine("<!-- This file was @generated and is not intended for manual editing. -->")
       :appendLine("<!-- Run `lune run regen` to generate a fresh README. -->")
       :appendLine()
-      :appendLine('<h1 class="pfu-reference-header" markdown>')
-      :appendLine('<span class="pfu-reference-name">', util.config.name, "</span>")
-      :appendLine(`<a class="pfu-reference-source" href="{path(LIB_URL, util.dir, "init.luau")}" markdown> :octicons-code-24:\{ title="View source code" } </a>`)
+      :appendLine('<h1 class="pfu-reference-header">')
+      :appendLine('<span class="pfu-reference-name">')
+      :appendLine(util.config.name)
+      :appendLine("</span>")
+      :appendLine('<span class="pfu-reference-meta">')
+      :appendStringBuilder(version)
+      :appendLine(`<a class="pfu-reference-source" href="{path(LIB_URL, util.dir, "init.luau")}" title="View source code">source</a>`)
+      :appendLine("</span>")
       :appendLine("</h1>")
       :appendLine()
       :appendLine("```Luau")
@@ -339,8 +369,10 @@ function Regenerator.regenerate()
       :appendLine("```")
       :appendLine()
       :appendLine(util.config.brief)
+      :append(if isUnstable then unstableNotice:build() else "")
       :appendStringBuilder(usefulFor)
-      :append(codeDocumentation:build())
+      :append(replaceLinks(codeDocumentation:build()))
+      :appendStringBuilder(example)
       :build()
 
     fs.writeFile(
@@ -357,7 +389,8 @@ function Regenerator.regenerate()
         :appendLine()
         :appendLine(util.config.brief)
         :appendStringBuilder(usefulFor)
-        :append(codeDocumentation:build())
+        :append(replaceLinks(codeDocumentation:build()))
+        :appendStringBuilder(example)
         :build()
     )
 

@@ -16,16 +16,16 @@ Returns a state object with every instance of a given tag. Updates when new inst
 
 ## Parameters
 
-### scope <span class="pfu-reference-type">: Fusion.Scope </span>
+### scope <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/memory/types/scope/">Scope</a> </span>
 The scope to store cleanup tasks.
 
-### tag <span class="pfu-reference-type">: Fusion.UsedAs&lt;string&gt; </span>
-The CollectionService tag to track.
+### tag <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/state/types/usedas/">UsedAs</a>&lt;string&gt; </span>
+The <a href="https://create.roblox.com/docs/reference/engine/classes/CollectionService">CollectionService</a> tag to track.
 
 
 ---
 
-## Returns <span class="pfu-reference-type">-> Fusion.StateObject&lt;{ Instance }&gt; </span>
+## Returns <span class="pfu-reference-type">-> Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/state/types/stateobject/">StateObject</a>&lt;{ <a href="https://create.roblox.com/docs/reference/engine/classes/Instance">Instance</a> }&gt; </span>
 
 A state object with every instance of the given tag.
 

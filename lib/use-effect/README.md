@@ -16,10 +16,10 @@ Perform side effects with state objects.
 
 ## Parameters
 
-### scope <span class="pfu-reference-type">: Fusion.Scope&lt;S &amp; typeof(Fusion)&gt; </span>
+### scope <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/memory/types/scope/">Scope</a>&lt;S &amp; typeof(Fusion)&gt; </span>
 The scope to store cleanup tasks.
 
-### callback <span class="pfu-reference-type">: (Fusion.Use, Fusion.Scope&lt;S&gt;) -&gt; () </span>
+### callback <span class="pfu-reference-type">: (Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/state/types/use/">Use</a>, Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/memory/types/scope/">Scope</a>&lt;S&gt;) -&gt; () </span>
 A callback with a Use callback for tracking side effects and an inner scope scope to track cleanup tasks. This callback may not yield.
 
 

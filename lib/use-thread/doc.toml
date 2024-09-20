@@ -1,29 +1,30 @@
 [config]
-  name = "useThread"
-  brief = """\
+name = "useThread"
+stable_since = "0.1.0"
+brief = """\
   Spawns a new thread that is cancelled once the scope is cleaned up.\
   """
 
-  example = '''
+example = '''
 -- TODO: write example'''
 
-  variadics = ["Args..."]
+variadics = ["Args..."]
 
 [[config.args]]
-  name = "scope"
-  type = "Fusion.Scope"
-  description = "The scope to store clean up tasks."
+name = "scope"
+type = "Fusion.Scope"
+description = "The scope to store clean up tasks."
 
 [[config.args]]
-  name = "resume"
-  type = "thread | (Args...) -> ()"
-  description = "The thread to resume, or a function to spawn."
+name = "resume"
+type = "thread | (Args...) -> ()"
+description = "The thread to resume, or a function to spawn."
 
 [[config.args]]
-  name = "..."
-  type = "Args..."
-  description = "The arguments to spawn the thread with."
+name = "..."
+type = "Args..."
+description = "The arguments to spawn the thread with."
 
 [config.returns]
-  type = "thread"
-  description = "A thread that is cancelled once the scope is cleaned up."
+type = "thread"
+description = "A thread that is cancelled once the scope is cleaned up."

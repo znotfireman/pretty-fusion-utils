@@ -16,7 +16,7 @@ Add clean up tasks to the scope. Returns the clean up tasks, allowing it to be u
 
 ## Parameters
 
-### scope <span class="pfu-reference-type">: Fusion.Scope </span>
+### scope <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/memory/types/scope/">Scope</a> </span>
 The scope to store cleanup tasks.
 
 ### ... <span class="pfu-reference-type">: Tasks... </span>
@@ -35,7 +35,7 @@ The tasks that has been added.
 
 ```Luau
 local timeElapsed = scope:Value(0)
-local connection = scope:useTasks(
+local connection = scope:useCleanup(
   RunService.PostSimulation:Connect(function(dt)
     timeElapsed:set(peek(timeElapsed) + dt)
   end)

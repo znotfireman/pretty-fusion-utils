@@ -1,13 +1,14 @@
 [config]
-  name = "useCleanup"
-  brief = """\
+name = "useCleanup"
+stable_since = "0.1.0"
+brief = """\
   Add clean up tasks to the scope. Returns the clean up tasks, allowing it to \
   be used in declarations.\
   """
 
-  example = '''
+example = '''
 local timeElapsed = scope:Value(0)
-local connection = scope:useTasks(
+local connection = scope:useCleanup(
   RunService.PostSimulation:Connect(function(dt)
     timeElapsed:set(peek(timeElapsed) + dt)
   end)
@@ -20,15 +21,15 @@ print(`Took around {peek(timeElapsed)} seconds`)'''
 variadics = ["Tasks..."]
 
 [[config.args]]
-  name = "scope"
-  type = "Fusion.Scope"
-  description = "The scope to store cleanup tasks."
+name = "scope"
+type = "Fusion.Scope"
+description = "The scope to store cleanup tasks."
 
 [[config.args]]
-  name = "..."
-  type = "Tasks..."
-  description = "The tasks to be added."
+name = "..."
+type = "Tasks..."
+description = "The tasks to be added."
 
 [config.returns]
-  type = "Tasks..."
-  description = "The tasks that has been added."
+type = "Tasks..."
+description = "The tasks that has been added."

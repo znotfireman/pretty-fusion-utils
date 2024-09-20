@@ -5,6 +5,7 @@ export type Config = {
     useful_for: string?,
 
     example: string?,
+    stable_since: string?,
 
     variadics: { string }?,
     args: {

@@ -1,22 +1,23 @@
 [config]
-  name = "useTimer"
-  brief = """\
+name = "useTimer"
+stable_since = "0.1.0"
+brief = """\
   Creates a timer that can be used to track a value over time.\
   """
 
-  example = '''
+example = '''
 -- TODO: write example'''
 
 [[config.args]]
-  name = "scope"
-  type = "Fusion.Scope"
-  description = "The scope to store cleanup tasks."
+name = "scope"
+type = "Fusion.Scope"
+description = "The scope to store cleanup tasks."
 
 [[config.args]]
-  name = "initial"
-  type = "number?"
-  description = "The initial value of the timer."
+name = "initial"
+type = "number?"
+description = "The initial value of the timer."
 
 [config.returns]
-  type = "Timer"
-  description = "A timer object."
+type = "Timer"
+description = "A timer object."

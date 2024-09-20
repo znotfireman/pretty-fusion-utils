@@ -16,16 +16,16 @@ Returns a state object with the mouse position. Updates when the mouse position 
 
 ## Parameters
 
-### scope <span class="pfu-reference-type">: Fusion.Scope </span>
+### scope <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/memory/types/scope/">Scope</a> </span>
 The scope to store cleanup tasks.
 
-### observer <span class="pfu-reference-type">: (mouse: Vector2) -&gt; ()? </span>
+### observer <span class="pfu-reference-type">: (mouse: <a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector2">Vector2</a>) -&gt; ()? </span>
 Optional observer tracking the mouse position.
 
 
 ---
 
-## Returns <span class="pfu-reference-type">-> Fusion.StateObject&lt;Vector2&gt; </span>
+## Returns <span class="pfu-reference-type">-> Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/state/types/stateobject/">StateObject</a>&lt;<a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector2">Vector2</a>&gt; </span>
 
 A state object with the mouse position.
 

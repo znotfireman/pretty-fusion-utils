@@ -1,11 +1,12 @@
 [config]
-  name = "usePrevious"
-  brief = """\
+name = "usePrevious"
+stable_since = "0.1.0"
+brief = """\
   Returns a state object with the previous value of an observable state \
   object. Initially outputs `nil`.\
   """
 
-  example = '''
+example = '''
 local function randomColor(): Color3
   return Color3.fromHSV(math.random(0, 360), 0.75, 1)
 end
@@ -21,23 +22,23 @@ scope:Observer(currentColor):onChange(function()
   print("Current color:", peek(currentColor), "Previous color:", peek(previousColor))
 end)'''
 
-  variadics = ["T"]
+variadics = ["T"]
 
 [[config.args]]
-  name = "scope"
-  type = "Fusion.Scope"
-  description = "The scope to store cleanup tasks."
+name = "scope"
+type = "Fusion.Scope"
+description = "The scope to store cleanup tasks."
 
 [[config.args]]
-  name = "state"
-  type = "Fusion.UsedAs<T>"
-  description = "The state object to observe for changes."
+name = "state"
+type = "Fusion.UsedAs<T>"
+description = "The state object to observe for changes."
 
 [[config.args]]
-  name = "predicate"
-  type = "((T, T) -> boolean)?"
-  description = "The predicate function to assert if the value is newer. Defaults to Fusion's similarity rules."
+name = "predicate"
+type = "((T, T) -> boolean)?"
+description = "The predicate function to assert if the value is newer. Defaults to Fusion's similarity rules."
 
 [config.returns]
-  type = "Fusion.StateObject<T>"
-  description = "A state object with the previous value of the state object. Initially outputs `nil`."
+type = "Fusion.StateObject<T>"
+description = "A state object with the previous value of the state object. Initially outputs `nil`."

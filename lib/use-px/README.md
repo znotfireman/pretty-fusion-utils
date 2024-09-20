@@ -18,16 +18,16 @@ Returns a state object with the current `px` unit based on the current viewport 
 
 ## Parameters
 
-### scope <span class="pfu-reference-type">: Fusion.Scope </span>
+### scope <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/memory/types/scope/">Scope</a> </span>
 The scope to store cleanup tasks.
 
-### baseResolution <span class="pfu-reference-type">: Fusion.UsedAs&lt;Vector2&gt;? </span>
+### baseResolution <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/state/types/usedas/">UsedAs</a>&lt;<a href="https://create.roblox.com/docs/reference/engine/datatypes/Vector2">Vector2</a>&gt;? </span>
 TThe base resolution to scale from, defaults to a Macbook Air's resolution.
 
-### minimumScale <span class="pfu-reference-type">: Fusion.UsedAs&lt;number&gt;? </span>
+### minimumScale <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/state/types/usedas/">UsedAs</a>&lt;number&gt;? </span>
 The smallest scale, defaults to 50%.
 
-### dominantAxis <span class="pfu-reference-type">: Fusion.UsedAs&lt;number&gt;? </span>
+### dominantAxis <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/state/types/usedas/">UsedAs</a>&lt;number&gt;? </span>
 The axis to scale for, defaults to 1:1.
 
 

@@ -17,19 +17,19 @@ Returns a state object with an eventual value from a processor. The processor is
 
 ## Parameters
 
-### scope <span class="pfu-reference-type">: Fusion.Scope&lt;S &amp; typeof(Fusion)&gt; </span>
+### scope <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/memory/types/scope/">Scope</a>&lt;S &amp; typeof(Fusion)&gt; </span>
 The scope to store cleanup tasks.
 
 ### fallback <span class="pfu-reference-type">: T </span>
 The fallback value to display while the processor runs.
 
-### processor <span class="pfu-reference-type">: (use: Fusion.Use, become: Become, scope: Fusion.Scope&lt;S&gt;) -&gt; T </span>
+### processor <span class="pfu-reference-type">: (use: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/state/types/use/">Use</a>, become: Become, scope: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/memory/types/scope/">Scope</a>&lt;S&gt;) -&gt; T </span>
 The processor of the eventual value. It receives a Use callback, a Become callback, and an inner scope.
 
 
 ---
 
-## Returns <span class="pfu-reference-type">-> Fusion.StateObject&lt;T&gt; </span>
+## Returns <span class="pfu-reference-type">-> Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/state/types/stateobject/">StateObject</a>&lt;T&gt; </span>
 
 A state object with the asynchronous value.
 

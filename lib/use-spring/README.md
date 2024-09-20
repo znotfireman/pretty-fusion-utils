@@ -17,10 +17,10 @@ Applies spring animations to the given value, and updates the goal with the late
 
 ## Parameters
 
-### scope <span class="pfu-reference-type">: Fusion.Scope </span>
+### scope <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/memory/types/scope/">Scope</a> </span>
 The scope to store cleanup tasks.
 
-### goal <span class="pfu-reference-type">: Fusion.UsedAs&lt;T &amp; Ripple.MotionGoal&gt; </span>
+### goal <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/state/types/usedas/">UsedAs</a>&lt;T &amp; Ripple.MotionGoal&gt; </span>
 The goal of the motor.
 
 ### options <span class="pfu-reference-type">: Ripple.SpringOptions? </span>
@@ -29,7 +29,7 @@ Options for the spring.
 
 ---
 
-## Returns <span class="pfu-reference-type">-> Fusion.StateObject&lt;T&gt; </span>
+## Returns <span class="pfu-reference-type">-> Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/state/types/stateobject/">StateObject</a>&lt;T&gt; </span>
 
 A state object with the motor's value.
 

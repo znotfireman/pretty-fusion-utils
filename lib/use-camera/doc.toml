@@ -1,18 +1,19 @@
 [config]
-  name = "useCamera"
-  brief = """\
+name = "useCamera"
+stable_since = "0.1.0"
+brief = """\
   Returns a state object with the current camera. Updates when the current \
   camera changes.\
   """
 
-  example = '''
+example = '''
 -- TODO: write example'''
 
 [[config.args]]
-  name = "scope"
-  type = "Fusion.Scope"
-  description = "The scope to store cleanup tasks."
+name = "scope"
+type = "Fusion.Scope"
+description = "The scope to store cleanup tasks."
 
 [config.returns]
-  type = "Fusion.StateObject<Camera>"
-  description = "A state object with the current camera."
+type = "Fusion.StateObject<Camera>"
+description = "A state object with the current camera."

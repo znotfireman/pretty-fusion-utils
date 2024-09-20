@@ -15,13 +15,13 @@ Returns a state object with the current camera. Updates when the current camera 
 
 ## Parameters
 
-### scope <span class="pfu-reference-type">: Fusion.Scope </span>
+### scope <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/memory/types/scope/">Scope</a> </span>
 The scope to store cleanup tasks.
 
 
 ---
 
-## Returns <span class="pfu-reference-type">-> Fusion.StateObject&lt;Camera&gt; </span>
+## Returns <span class="pfu-reference-type">-> Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/state/types/stateobject/">StateObject</a>&lt;<a href="https://create.roblox.com/docs/reference/engine/classes/Camera">Camera</a>&gt; </span>
 
 A state object with the current camera.
 

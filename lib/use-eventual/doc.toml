@@ -1,35 +1,35 @@
 [config]
-  name = "useEventual"
-  brief = """\
+name = "useEventual"
+brief = """\
   Returns a state object with an eventual value from a processor. The \
   processor is given a Use callback that adds dependencies, a Become callback \
   alter the current eventual value, and an inner scope to add cleanup tasks \
   to.\
   """
 
-  example = '''
+example = '''
 -- TODO: write example'''
 
-  variadics = ["T", "S"]
+variadics = ["T", "S"]
 
 [[config.args]]
-  name = "scope"
-  type = "Fusion.Scope<S & typeof(Fusion)>"
-  description = "The scope to store cleanup tasks."
+name = "scope"
+type = "Fusion.Scope<S & typeof(Fusion)>"
+description = "The scope to store cleanup tasks."
 
 [[config.args]]
-  name = "fallback"
-  type = "T"
-  description = "The fallback value to display while the processor runs."
+name = "fallback"
+type = "T"
+description = "The fallback value to display while the processor runs."
 
 [[config.args]]
-  name = "processor"
-  type = "(use: Fusion.Use, become: Become, scope: Fusion.Scope<S>) -> T"
-  description = """\
+name = "processor"
+type = "(use: Fusion.Use, become: Become, scope: Fusion.Scope<S>) -> T"
+description = """\
   The processor of the eventual value. It receives a Use callback, a Become \
   callback, and an inner scope.\
   """
 
 [config.returns]
-  type = "Fusion.StateObject<T>"
-  description = "A state object with the asynchronous value."
+type = "Fusion.StateObject<T>"
+description = "A state object with the asynchronous value."

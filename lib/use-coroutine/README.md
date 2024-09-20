@@ -17,7 +17,7 @@ Spawns a new coroutine that is closed once the scope is cleaned up.
 
 ## Parameters
 
-### scope <span class="pfu-reference-type">: Fusion.Scope </span>
+### scope <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/memory/types/scope/">Scope</a> </span>
 The scope to store clean up tasks.
 
 ### resume <span class="pfu-reference-type">: thread | (Args...) -&gt; () </span>

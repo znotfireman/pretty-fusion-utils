@@ -1,20 +1,20 @@
 [config]
-  name = "useEffect"
-  brief = """\
+name = "useEffect"
+brief = """\
   Perform side effects with state objects.\
   """
 
-  example = '''
+example = '''
 -- TODO: write example'''
 
-  variadics = ["Scope"]
+variadics = ["Scope"]
 
 [[config.args]]
-  name = "scope"
-  type = "Fusion.Scope<S & typeof(Fusion)>"
-  description = "The scope to store cleanup tasks."
+name = "scope"
+type = "Fusion.Scope<S & typeof(Fusion)>"
+description = "The scope to store cleanup tasks."
 
 [[config.args]]
-  name = "callback"
-  type = "(Fusion.Use, Fusion.Scope<S>) -> ()"
-  description = "A callback with a Use callback for tracking side effects and an inner scope scope to track cleanup tasks. This callback may not yield."
+name = "callback"
+type = "(Fusion.Use, Fusion.Scope<S>) -> ()"
+description = "A callback with a Use callback for tracking side effects and an inner scope scope to track cleanup tasks. This callback may not yield."

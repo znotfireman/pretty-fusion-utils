@@ -16,7 +16,7 @@ Creates a timer that can be used to track a value over time.
 
 ## Parameters
 
-### scope <span class="pfu-reference-type">: Fusion.Scope </span>
+### scope <span class="pfu-reference-type">: Fusion.<a href="https://elttob.uk/Fusion/0.3/api-reference/memory/types/scope/">Scope</a> </span>
 The scope to store cleanup tasks.
 
 ### initial <span class="pfu-reference-type">: number? </span>
