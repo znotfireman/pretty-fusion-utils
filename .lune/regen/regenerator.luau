@@ -9,11 +9,11 @@ local serde = require("@lune/serde")
 local stringer = require("../utils/stringer")
 
 local PATH_DOCS = path(process.cwd, "docs")
-local PATH_LIB = path(process.cwd, "lib")
+local PATH_LIB = path(process.cwd, "src")
 local PATH_TEMPLATES = path(process.cwd, ".lune", "regen", "templates")
 local PATH_DOC_BUILD = path(process.cwd, "doc.build")
 local TEMPLATE_INDEX = path(PATH_TEMPLATES, "index.md")
-local LIB_URL = "https://github.com/znotfireman/pretty-fusion-utils/blob/main/lib"
+local LIB_URL = "https://github.com/znotfireman/pretty-fusion-utils/blob/main/src"
 
 type DocBuild = {
   build: {
