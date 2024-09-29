@@ -13,13 +13,11 @@ return {
           roblox = {
             enabled = true,
           },
+          definitions = {
+            "testez.d.luau",
+          },
         },
         ["luau-lsp"] = {
-          types = {
-            definitionFiles = {
-              "testez.d.luau",
-            },
-          },
           require = {
             mode = "relativeToFile",
             directoryAliases = {},
