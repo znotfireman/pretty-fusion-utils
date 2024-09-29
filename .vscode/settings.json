@@ -4,6 +4,7 @@
 {
   "luau-lsp.require.directoryAliases": {
     "@lune/": "~/.lune/.typedefs/0.8.8/",
+    "test/": "test/types",
     "types": "lib/types",
     "use-camera": "lib/use-camera",
     "use-cleanup": "lib/use-cleanup",

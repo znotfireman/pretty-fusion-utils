@@ -160,6 +160,7 @@ function Regenerator.aliases()
 
   local aliases = {}
   aliases["@lune/"] = "~/.lune/.typedefs/0.8.8/"
+  aliases["test/"] = "test/types"
 
   for _, dir in fs.readDir(PATH_LIB) do
     if not fs.isDir(path(PATH_LIB, dir)) then

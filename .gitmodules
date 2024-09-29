@@ -1,0 +1,6 @@
+[submodule "test/vendor/fusion"]
+	path = test/vendor/fusion
+	url = https://github.com/dphfox/Fusion.git
+[submodule "test/vendor/testez"]
+	path = test/vendor/testez
+	url = https://github.com/Roblox/testez.git

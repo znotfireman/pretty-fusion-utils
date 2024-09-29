@@ -5,6 +5,7 @@
       "current": {
         "name": "path",
         "sources": {
+          "test/": "test/types",
           "types": "lib/types",
           "use-camera": "lib/use-camera",
           "use-cleanup": "lib/use-cleanup",
