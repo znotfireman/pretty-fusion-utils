@@ -10,7 +10,7 @@ return {
     default = "https://github.com/daimond113/pesde-index",
   },
   exports = {
-    lib = "./lib/init.luau",
+    lib = "./src/init.luau",
   },
   dependencies = {},
 }

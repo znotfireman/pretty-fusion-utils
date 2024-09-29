@@ -19,7 +19,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Run Selene
         run: |
-          selene lib/
+          selene src/
   formatting:
     name: Formatting
     runs-on: ubuntu-latest
@@ -35,4 +35,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           version: v0.20.0
-          args: --check lib/
+          args: --check src/

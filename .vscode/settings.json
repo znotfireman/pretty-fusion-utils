@@ -1,28 +1,27 @@
 // This file was @generated and is not intended for manual editing.
 // Run `lune run regen` to generate fresh workspace settings.
-
 {
   "luau-lsp.require.directoryAliases": {
     "@lune/": "~/.lune/.typedefs/0.8.8/",
     "test/": "test/types",
-    "types": "lib/types",
-    "use-camera": "lib/use-camera",
-    "use-cleanup": "lib/use-cleanup",
-    "use-coroutine": "lib/use-coroutine",
-    "use-effect": "lib/use-effect",
-    "use-event-listener": "lib/use-event-listener",
-    "use-eventual": "lib/use-eventual",
-    "use-interval": "lib/use-interval",
-    "use-motion": "lib/use-motion",
-    "use-mouse": "lib/use-mouse",
-    "use-previous": "lib/use-previous",
-    "use-px": "lib/use-px",
-    "use-spring": "lib/use-spring",
-    "use-tagged": "lib/use-tagged",
-    "use-thread": "lib/use-thread",
-    "use-timer": "lib/use-timer",
-    "use-viewport": "lib/use-viewport",
-    "utils": "lib/utils"
+    "types": "src/types",
+    "use-camera": "src/use-camera",
+    "use-cleanup": "src/use-cleanup",
+    "use-coroutine": "src/use-coroutine",
+    "use-effect": "src/use-effect",
+    "use-event-listener": "src/use-event-listener",
+    "use-eventual": "src/use-eventual",
+    "use-interval": "src/use-interval",
+    "use-motion": "src/use-motion",
+    "use-mouse": "src/use-mouse",
+    "use-previous": "src/use-previous",
+    "use-px": "src/use-px",
+    "use-spring": "src/use-spring",
+    "use-tagged": "src/use-tagged",
+    "use-thread": "src/use-thread",
+    "use-timer": "src/use-timer",
+    "use-viewport": "src/use-viewport",
+    "utils": "src/utils"
   },
   "luau-lsp.require.mode": "relativeToFile",
   "luau-lsp.types.definitionFiles": [

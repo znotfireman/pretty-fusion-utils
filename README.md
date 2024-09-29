@@ -43,7 +43,7 @@ and <a href="https://github.com/littensy/pretty-react-hooks/">React hooks</a>.
 - [X] `useTasks`
 - [X] `useThread`
 - [X] `useAsync` (analogous to [Fusion Eventuals])
-- [X] `useEffect` (somewhat broken, see `lib/use-effect/init.luau`)
+- [X] `useEffect` (somewhat broken, see `src/use-effect/init.luau`)
 
 ### Misc
 
