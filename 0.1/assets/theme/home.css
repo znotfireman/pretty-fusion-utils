@@ -15,7 +15,8 @@
 
   position: relative;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50.5%);
+  fill: none;
   width: 100vw;
 
   display: flex;
@@ -38,9 +39,18 @@
   background-image: url("../pattern.svg");
   background-size: 25em;
   background-repeat: repeat;
-  opacity: 0.025;
+  opacity: 0.1;
   transform: rotate(15deg);
-  animation: hero-bg 150s linear infinite;
+  animation: hero-bg 180s linear infinite;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 75%);
+}
+
+[data-md-color-scheme="fusiondoc-dark"] .pfu-home-hero::before {
+  filter: brightness(0) saturate(100%) invert(88%) sepia(23%) saturate(439%) hue-rotate(199deg) brightness(102%) contrast(108%);
+}
+
+[data-md-color-scheme="fusiondoc-light"] .pfu-home-hero::before {
+  filter: brightness(0) saturate(100%) invert(7%) sepia(14%) saturate(7488%) hue-rotate(245deg) brightness(85%) contrast(117%);
 }
 
 @keyframes hero-bg {
