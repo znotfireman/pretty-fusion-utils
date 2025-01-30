@@ -39,7 +39,7 @@ local function usePx(
     local width = math.log(viewport.X / use(baseResolution).X, 2)
     local height = math.log(viewport.Y / use(baseResolution).Y, 2)
     local centered = width + (height - width) * use(dominantAxis)
-    return math.max(2 * centered, use(minimumScale))
+    return math.max(2 ^ centered, use(minimumScale))
   end)
 
   local px = {} :: any
